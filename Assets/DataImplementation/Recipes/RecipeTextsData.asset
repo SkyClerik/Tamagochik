@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffbc0c2e79e278249a15608fd519a4a8, type: 3}
+  m_Name: RecipeTextsData
+  m_EditorClassIdentifier: 
+  _recipe_1_name: "\u0420\u0435\u0446\u0435\u043F\u0442"
+  _recipe_2_name: "2\u0420\u0435\u0446\u0435\u043F\u0442\u0443 \u0442\u043E\u0436\u0435
+    \u043D\u0435 \u043D\u0443\u0436\u043D\u043E \u043D\u0430\u0432\u0435\u0440\u043D\u043E\u0435
+    \u0438\u043C\u044F2"
+  _recipe_3_name: "3\u0420\u0435\u0446\u0435\u043F\u0442\u0443 \u0442\u043E\u0436\u0435
+    \u043D\u0435 \u043D\u0443\u0436\u043D\u043E \u043D\u0430\u0432\u0435\u0440\u043D\u043E\u0435
+    \u0438\u043C\u044F3"
+  _recipe_4_name: "4\u0420\u0435\u0446\u0435\u043F\u0442\u0443 \u0442\u043E\u0436\u0435
+    \u043D\u0435 \u043D\u0443\u0436\u043D\u043E \u043D\u0430\u0432\u0435\u0440\u043D\u043E\u0435
+    \u0438\u043C\u044F4"

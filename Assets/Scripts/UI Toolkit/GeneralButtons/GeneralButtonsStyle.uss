@@ -1,0 +1,53 @@
+.button {
+    height: 48px;
+    min-width: 240px;
+    max-height: 48px;
+    min-height: 48px;
+    font-size: 16px;
+    -unity-text-align: middle-left;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left-width: 3px;
+    border-right-width: 3px;
+    border-top-width: 3px;
+    border-bottom-width: 3px;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+}
+
+.icon {
+    width: 48px;
+    height: 48px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+}
+
+.box_button {
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 16px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-left-width: 3px;
+    border-right-width: 3px;
+    border-top-width: 3px;
+    border-bottom-width: 3px;
+    -unity-text-align: middle-center;
+    width: 48px;
+    height: 48px;
+}
+
+.label {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 255);
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    -unity-text-align: middle-left;
+}

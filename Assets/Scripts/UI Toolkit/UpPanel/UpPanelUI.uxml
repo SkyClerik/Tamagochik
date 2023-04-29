@@ -1,0 +1,19 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/Scripts/GUI/Toolkit/UpPanel/UpPanelStyle.uss?fileID=7433441132597879392&amp;guid=246e2bc51664a00449b1d279721bc408&amp;type=3#UpPanelStyle" />
+    <ui:VisualElement style="height: 48px; flex-direction: row; align-items: center; justify-content: space-between; translate: 0 0; transform-origin: right top; -unity-slice-right: 0; border-right-width: 0; border-bottom-left-radius: 0; width: auto;">
+        <ui:VisualElement style="flex-direction: row-reverse; flex-grow: 1; background-color: rgba(0, 0, 0, 0.3); transform-origin: right top; translate: 0 0; height: 48px; justify-content: space-around; flex-shrink: 0; margin-left: 0; margin-right: 400px;">
+            <ui:VisualElement name="Cash" style="flex-direction: row;">
+                <ui:Label text="Серебро:" display-tooltip-when-elided="true" name="CashTitle" class="label" />
+                <ui:Label text="0" display-tooltip-when-elided="true" name="CashValue" class="value" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Month" style="flex-direction: row;">
+                <ui:Label text="Месяц:" display-tooltip-when-elided="true" name="MonthTitle" class="label" />
+                <ui:Label text="0" display-tooltip-when-elided="true" name="MonthValue" class="value" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Day" style="flex-direction: row;">
+                <ui:Label text="День:" display-tooltip-when-elided="true" name="DayTitle" class="label" />
+                <ui:Label text="0" display-tooltip-when-elided="true" name="DayValue" class="value" style="font-size: 30px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

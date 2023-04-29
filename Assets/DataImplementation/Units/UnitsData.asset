@@ -1,0 +1,126 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ac53015e8d0c0a418bba1a9b702bf6b, type: 3}
+  m_Name: UnitsData
+  m_EditorClassIdentifier: 
+  _masters:
+  - _staticName: 
+    _name: Masdter1
+    _icon: {fileID: 0}
+    _energy: 0
+    _busy: 0
+    _visible: 0
+    _eqiupments: []
+    _inventory:
+      _itemList:
+      - _name: "\u041C\u0435\u0447 \u0441\u043A\u0432\u0430\u0435\u0440\u0430"
+        _description: _item_1_Description
+        _icon: {fileID: -2000780637, guid: 6ff283cd38d04cd4fb0ec3a37ea43030, type: 3}
+        _amount: 2
+        _id: 0
+        _storageType: 0
+        _recipesIndex: 00000000
+        _coast: 0
+        _important: 0
+        _equipType: 1
+      - _name: 
+        _description: 
+        _icon: {fileID: 0}
+        _amount: 0
+        _id: 0
+        _storageType: 0
+        _recipesIndex: 
+        _coast: 0
+        _important: 0
+        _equipType: 0
+      - _name: 
+        _description: 
+        _icon: {fileID: 0}
+        _amount: 0
+        _id: 0
+        _storageType: 0
+        _recipesIndex: 
+        _coast: 0
+        _important: 0
+        _equipType: 0
+      - _name: 
+        _description: 
+        _icon: {fileID: 0}
+        _amount: 0
+        _id: 0
+        _storageType: 0
+        _recipesIndex: 
+        _coast: 0
+        _important: 0
+        _equipType: 0
+      - _name: 
+        _description: 
+        _icon: {fileID: 0}
+        _amount: 0
+        _id: 0
+        _storageType: 0
+        _recipesIndex: 
+        _coast: 0
+        _important: 0
+        _equipType: 0
+      - _name: 
+        _description: 
+        _icon: {fileID: 0}
+        _amount: 0
+        _id: 0
+        _storageType: 0
+        _recipesIndex: 
+        _coast: 0
+        _important: 0
+        _equipType: 0
+      - _name: 
+        _description: 
+        _icon: {fileID: 0}
+        _amount: 0
+        _id: 0
+        _storageType: 0
+        _recipesIndex: 
+        _coast: 0
+        _important: 0
+        _equipType: 0
+      - _name: 
+        _description: 
+        _icon: {fileID: 0}
+        _amount: 0
+        _id: 0
+        _storageType: 0
+        _recipesIndex: 
+        _coast: 0
+        _important: 0
+        _equipType: 0
+      - _name: 
+        _description: 
+        _icon: {fileID: 0}
+        _amount: 0
+        _id: 0
+        _storageType: 0
+        _recipesIndex: 
+        _coast: 0
+        _important: 0
+        _equipType: 0
+      - _name: 
+        _description: 
+        _icon: {fileID: 0}
+        _amount: 0
+        _id: 0
+        _storageType: 0
+        _recipesIndex: 
+        _coast: 0
+        _important: 0
+        _equipType: 0
+  _humanoids: []
+  _animals: []

@@ -1,0 +1,21 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Scripts/GUI/Toolkit/MainMenu/MainMenuStyle.uss?fileID=7433441132597879392&amp;guid=6b4784e1116495e4eabf930d9ecc44bb&amp;type=3#MainMenuStyle" />
+    <ui:VisualElement style="flex-grow: 1; background-image: none; -unity-background-image-tint-color: rgba(255, 255, 255, 0.97);">
+        <ui:VisualElement name="Background" class="background" style="position: absolute; background-image: url(&apos;project://database/Assets/Images/Sprites/276565.jpg?fileID=2800000&amp;guid=d5ddba22c96cdcd43a748b8d381d809b&amp;type=3#276565&apos;); width: 100%; height: 100%; rotate: 0; -unity-background-image-tint-color: rgba(79, 79, 79, 0.84);" />
+        <ui:VisualElement style="align-items: center; justify-content: space-between; flex-grow: 1; flex-direction: row;">
+            <ui:VisualElement style="width: 48%; height: 100%; margin-left: 8%;">
+                <ui:VisualElement name="FirstList" style="align-items: stretch; justify-content: space-around; width: 600px; flex-grow: 0; flex-shrink: 0; height: 400px; transform-origin: left; flex-direction: column; translate: 0 0; display: flex; margin-top: 10%; margin-bottom: 10%; bottom: 0; top: 30%; left: 120px;">
+                    <ui:Button text="Play" display-tooltip-when-elided="true" name="PlayButton" class="Button" />
+                    <ui:Button text="Settings" display-tooltip-when-elided="true" name="SettingsButton" class="Button" />
+                    <ui:Button text="Authors" display-tooltip-when-elided="true" name="AuthorsButton" class="Button" />
+                    <ui:Button text="Exit" display-tooltip-when-elided="true" name="ExitButton" class="Button" />
+                </ui:VisualElement>
+                <ui:VisualElement name="SecondList" style="align-items: stretch; justify-content: space-around; width: 600px; flex-grow: 0; flex-shrink: 0; height: 400px; transform-origin: left; flex-direction: column; translate: 0 0; display: none; margin-top: 10%; margin-bottom: 10%; bottom: 0; top: 30%; left: 120px;">
+                    <ui:Button text="New Game" display-tooltip-when-elided="true" name="NewGameButton" class="Button" />
+                    <ui:Button text="Load Game" display-tooltip-when-elided="true" name="LoadGameButton" class="Button" />
+                    <ui:Button text="Back" display-tooltip-when-elided="true" name="BackButton" class="Button" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

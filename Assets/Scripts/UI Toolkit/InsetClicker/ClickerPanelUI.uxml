@@ -1,0 +1,40 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Scripts/GUI/Toolkit/GeneralButtons/GeneralButtonsStyle.uss?fileID=7433441132597879392&amp;guid=8ce447452c3464443bf4700e9b6b801b&amp;type=3#GeneralButtonsStyle" />
+    <ui:VisualElement style="-unity-background-scale-mode: stretch-to-fill; justify-content: space-around; align-items: stretch; flex-grow: 1; flex-shrink: 0; top: 48px; right: 0; bottom: 0; left: 0; width: 1520px;">
+        <ui:Button display-tooltip-when-elided="true" name="Background" picking-mode="Ignore" style="overflow: visible; justify-content: center; align-items: auto; flex-shrink: 1; flex-grow: 1; background-color: rgba(88, 88, 88, 0); border-left-color: rgba(255, 255, 255, 0); border-right-color: rgba(255, 255, 255, 0); border-top-color: rgba(255, 255, 255, 0); border-bottom-color: rgba(255, 255, 255, 0); position: absolute; width: 1920px; height: 1080px; background-image: url(&apos;project://database/Assets/Images/Sprites/276565.jpg?fileID=2800000&amp;guid=d5ddba22c96cdcd43a748b8d381d809b&amp;type=3#276565&apos;); top: 0; right: 0;" />
+        <ui:Button display-tooltip-when-elided="true" name="TheOneButton" style="overflow: visible; justify-content: center; align-items: auto; flex-shrink: 1; flex-grow: 1; background-color: rgba(88, 88, 88, 0); border-left-color: rgba(255, 255, 255, 0); border-right-color: rgba(255, 255, 255, 0); border-top-color: rgba(255, 255, 255, 0); border-bottom-color: rgba(255, 255, 255, 0);" />
+        <ui:Button display-tooltip-when-elided="true" name="Border" picking-mode="Ignore" style="overflow: visible; justify-content: center; align-items: auto; flex-shrink: 1; flex-grow: 1; background-color: rgba(88, 88, 88, 0); border-left-color: rgb(243, 113, 0); border-right-color: rgb(243, 113, 0); border-top-color: rgb(243, 113, 0); border-bottom-color: rgb(243, 113, 0); position: absolute; width: 70%; height: 90%; background-image: none; top: 5%; right: 5%; border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px; border-top-left-radius: 2px; border-bottom-left-radius: 2px; border-top-right-radius: 2px; border-bottom-right-radius: 2px;" />
+    </ui:VisualElement>
+    <ui:VisualElement style="flex-grow: 1; align-items: flex-start; padding-top: 96px; overflow: visible; visibility: visible; display: flex; position: absolute; top: 48px;">
+        <ui:VisualElement style="flex-direction: row;">
+            <ui:GroupBox style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;">
+                <ui:Button text="Home" display-tooltip-when-elided="true" name="HomeButton" class="box_button" />
+                <ui:Button text="Back" display-tooltip-when-elided="true" name="BackButton" class="box_button" />
+            </ui:GroupBox>
+            <ui:ScrollView name="ButtonsScrollView">
+                <ui:VisualElement style="flex-direction: row;">
+                    <ui:VisualElement name="Icon" class="icon" style="background-image: url(&apos;project://database/Assets/Images/Sprites/IconSet.png?fileID=-1791796910&amp;guid=6ff283cd38d04cd4fb0ec3a37ea43030&amp;type=3#IconSet_67&apos;);" />
+                    <ui:Button display-tooltip-when-elided="true" name="AttackButton" text="Атаковать" class="button" />
+                    <ui:VisualElement name="AttackLine" picking-mode="Ignore" style="position: absolute; flex-grow: 1; background-color: rgba(233, 65, 0, 0.5); margin-left: 50px; border-left-width: 3px; border-right-width: 3px; border-top-width: 3px; border-bottom-width: 3px; border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; height: 50px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-right: 0; width: 242px;" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-direction: row;">
+                    <ui:VisualElement name="Icon" class="icon" style="background-image: url(&apos;project://database/Assets/Images/Sprites/IconSet.png?fileID=1384873065&amp;guid=6ff283cd38d04cd4fb0ec3a37ea43030&amp;type=3#IconSet_59&apos;);" />
+                    <ui:Button display-tooltip-when-elided="true" name="MiningButton" text="Добывать" class="button" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-direction: row;">
+                    <ui:VisualElement name="Icon" class="icon" style="background-image: url(&apos;project://database/Assets/Images/Sprites/IconSet.png?fileID=-1391895346&amp;guid=6ff283cd38d04cd4fb0ec3a37ea43030&amp;type=3#IconSet_109&apos;);" />
+                    <ui:Button display-tooltip-when-elided="true" name="ProtectButton" text="Защита" class="button" />
+                    <ui:VisualElement name="ProtectLine" picking-mode="Ignore" style="position: absolute; flex-grow: 1; background-color: rgba(16, 166, 4, 0.5); margin-left: 50px; border-left-width: 3px; border-right-width: 3px; border-top-width: 3px; border-bottom-width: 3px; border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; height: 50px; width: 242px;" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-direction: row;">
+                    <ui:VisualElement name="Icon" class="icon" style="background-image: url(&apos;project://database/Assets/Images/Sprites/IconSet.png?fileID=424535959&amp;guid=6ff283cd38d04cd4fb0ec3a37ea43030&amp;type=3#IconSet_73&apos;);" />
+                    <ui:Button display-tooltip-when-elided="true" name="RunButton" text="Убежать" class="button" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-direction: row;">
+                    <ui:VisualElement name="Icon" class="icon" style="background-image: url(&apos;project://database/Assets/Images/Sprites/IconSet.png?fileID=1781219844&amp;guid=6ff283cd38d04cd4fb0ec3a37ea43030&amp;type=3#IconSet_162&apos;);" />
+                    <ui:Button display-tooltip-when-elided="true" name="NextButton" text="Искать еще" class="button" />
+                </ui:VisualElement>
+            </ui:ScrollView>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

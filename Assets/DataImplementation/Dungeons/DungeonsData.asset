@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec430d839c828d49bb433fd9626647f, type: 3}
+  m_Name: DungeonsData
+  m_EditorClassIdentifier: 
+  _dungeons:
+  - _name: "\u0425\u043E\u043B\u043C\u044B \u0442\u0440\u043E\u043B\u043B\u0435\u0439"
+    _icon: {fileID: -280665018, guid: 6ff283cd38d04cd4fb0ec3a37ea43030, type: 3}
+    _busy: 0
+    _visible: 1
+    _kDTime: 1
+    _currentKDTime: 0
+    _lutInfo:
+    - _resourceType: 1
+      _itemId: -1
+      _amount: 2
+    - _resourceType: 2
+      _itemId: -1
+      _amount: 4
+  - _name: "\u0420\u043E\u0449\u0430 \u0436\u0430\u043B\u043E\u043E\u0431\u0440\u0430\u0437\u043E\u0432"
+    _icon: {fileID: 1384873065, guid: 6ff283cd38d04cd4fb0ec3a37ea43030, type: 3}
+    _busy: 0
+    _visible: 1
+    _kDTime: 2
+    _currentKDTime: 0
+    _lutInfo: []
+  - _name: "\u041F\u043B\u0435\u0442\u0435\u043D\u044B\u0439 \u043B\u0435\u0441"
+    _icon: {fileID: 678817420, guid: 6ff283cd38d04cd4fb0ec3a37ea43030, type: 3}
+    _busy: 0
+    _visible: 1
+    _kDTime: 4
+    _currentKDTime: 0
+    _lutInfo: []
+  - _name: "\u0417\u0430 \u0431\u0435\u0441\u043A\u0440\u0430\u0439\u043D\u0438\u043C
+      \u043C\u043E\u0440\u0435\u043C"
+    _icon: {fileID: -40583076, guid: 6ff283cd38d04cd4fb0ec3a37ea43030, type: 3}
+    _busy: 0
+    _visible: 1
+    _kDTime: 6
+    _currentKDTime: 0
+    _lutInfo: []

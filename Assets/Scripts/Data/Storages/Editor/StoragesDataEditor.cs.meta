@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: e433ea7534f6fb640bbb4b8a8fbff72e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _storageTextsData: {fileID: 11400000, guid: 3c1f353a17fa0b94893a9a58b166eab4, type: 2}
+  - _storageIconsData: {fileID: 11400000, guid: d90862885554fe04d9b1b79777a9e4dd, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

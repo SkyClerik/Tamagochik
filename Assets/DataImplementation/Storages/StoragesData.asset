@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 835581bc97f19554c856f4eb972e81ea, type: 3}
+  m_Name: StoragesData
+  m_EditorClassIdentifier: 
+  _storageBase:
+  - _name: "\u0421\u043A\u043B\u0430\u0434 \u0440\u0435\u0441\u0443\u0440\u0441\u043E\u0432"
+    _icon: {fileID: 1723051716, guid: 6ff283cd38d04cd4fb0ec3a37ea43030, type: 3}
+    _visible: 1
+    _storageType: 0
+  - _name: "\u0421\u043A\u043B\u0430\u0434 \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u043E\u0432"
+    _icon: {fileID: 1423131702, guid: 6ff283cd38d04cd4fb0ec3a37ea43030, type: 3}
+    _visible: 1
+    _storageType: 1
+  - _name: "\u0421\u043A\u043B\u0430\u0434 \u043F\u0440\u043E\u0442\u0435\u0437\u043E\u0432"
+    _icon: {fileID: -1180373739, guid: 6ff283cd38d04cd4fb0ec3a37ea43030, type: 3}
+    _visible: 1
+    _storageType: 2
+  - _name: "\u0421\u043A\u043B\u0430\u0434 \u043C\u0435\u0431\u0435\u043B\u0438"
+    _icon: {fileID: 1402097057, guid: 6ff283cd38d04cd4fb0ec3a37ea43030, type: 3}
+    _visible: 1
+    _storageType: 3
+  - _name: "\u0421\u043A\u043B\u0430\u0434 \u043E\u0431\u043E\u0440\u0443\u0434\u043E\u0432\u0430\u043D\u0438\u044F"
+    _icon: {fileID: -273471691, guid: 6ff283cd38d04cd4fb0ec3a37ea43030, type: 3}
+    _visible: 1
+    _storageType: 4
+  - _name: "\u0421\u043A\u043B\u0430\u0434 \u043A\u043E\u0440\u043F\u0443\u0441\u043E\u0432"
+    _icon: {fileID: 1644411985, guid: 6ff283cd38d04cd4fb0ec3a37ea43030, type: 3}
+    _visible: 1
+    _storageType: 5
+  - _name: "\u041A\u0430\u0437\u0430\u0440\u043C\u044B"
+    _icon: {fileID: 1763014755, guid: 6ff283cd38d04cd4fb0ec3a37ea43030, type: 3}
+    _visible: 1
+    _storageType: 6
+  - _name: "\u0416\u0438\u043B\u044B\u0435 \u0431\u043B\u043E\u043A\u0438"
+    _icon: {fileID: 339410227, guid: 6ff283cd38d04cd4fb0ec3a37ea43030, type: 3}
+    _visible: 1
+    _storageType: 7
+  - _name: "\u0422\u044E\u0440\u0435\u043C\u043D\u044B\u0439 \u0431\u043B\u043E\u043A"
+    _icon: {fileID: 782471375, guid: 6ff283cd38d04cd4fb0ec3a37ea43030, type: 3}
+    _visible: 1
+    _storageType: 8
+  - _name: "\u041C\u0435\u0434 \u0431\u043B\u043E\u043A"
+    _icon: {fileID: -1048830450, guid: 6ff283cd38d04cd4fb0ec3a37ea43030, type: 3}
+    _visible: 1
+    _storageType: 9
+  - _name: "\u041A\u0440\u0438\u043E \u0431\u043B\u043E\u043A"
+    _icon: {fileID: 1219602063, guid: 6ff283cd38d04cd4fb0ec3a37ea43030, type: 3}
+    _visible: 1
+    _storageType: 10
+  - _name: "\u0424\u0435\u0440\u043C\u0430"
+    _icon: {fileID: -1383025267, guid: 6ff283cd38d04cd4fb0ec3a37ea43030, type: 3}
+    _visible: 1
+    _storageType: 11
+  - _name: "\u0428\u0430\u0445\u0442\u0430"
+    _icon: {fileID: -1215139880, guid: 6ff283cd38d04cd4fb0ec3a37ea43030, type: 3}
+    _visible: 1
+    _storageType: 12
+  - _name: "\u042D\u0434\u0435\u0440\u043E\u0441\u0442\u0430\u043D\u0446\u0438\u044F"
+    _icon: {fileID: -1470116229, guid: 6ff283cd38d04cd4fb0ec3a37ea43030, type: 3}
+    _visible: 1
+    _storageType: 13

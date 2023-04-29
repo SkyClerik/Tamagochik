@@ -1,0 +1,16 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/Scripts/GUI/Toolkit/GeneralButtonsHud/GeneralButtonsStyle.uss?fileID=7433441132597879392&amp;guid=8ce447452c3464443bf4700e9b6b801b&amp;type=3#GeneralButtonsStyle" />
+    <ui:VisualElement style="flex-direction: column;">
+        <ui:VisualElement name="Line1" style="flex-direction: row;">
+            <ui:VisualElement name="Icon" class="icon" style="background-image: url(&apos;project://database/Assets/Sprites/IconSet.png?fileID=-1343789578&amp;guid=6ff283cd38d04cd4fb0ec3a37ea43030&amp;type=3#IconSet_11&apos;);" />
+            <ui:Button display-tooltip-when-elided="true" name="MainButton" class="button" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Line2" style="flex-direction: row; padding-left: 48px; display: flex; visibility: visible; overflow: visible;">
+            <ui:VisualElement name="Icon5" class="box_button" style="background-image: url(&apos;project://database/Assets/Sprites/IconSet.png?fileID=-1343789578&amp;guid=6ff283cd38d04cd4fb0ec3a37ea43030&amp;type=3#IconSet_11&apos;);" />
+            <ui:VisualElement name="Icon4" class="box_button" style="background-image: url(&apos;project://database/Assets/Sprites/IconSet.png?fileID=-1343789578&amp;guid=6ff283cd38d04cd4fb0ec3a37ea43030&amp;type=3#IconSet_11&apos;);" />
+            <ui:VisualElement name="Icon3" class="box_button" style="background-image: url(&apos;project://database/Assets/Sprites/IconSet.png?fileID=-1343789578&amp;guid=6ff283cd38d04cd4fb0ec3a37ea43030&amp;type=3#IconSet_11&apos;);" />
+            <ui:VisualElement name="Icon2" class="box_button" style="background-image: url(&apos;project://database/Assets/Sprites/IconSet.png?fileID=-1343789578&amp;guid=6ff283cd38d04cd4fb0ec3a37ea43030&amp;type=3#IconSet_11&apos;);" />
+            <ui:VisualElement name="Icon1" class="box_button" style="background-image: url(&apos;project://database/Assets/Sprites/IconSet.png?fileID=-1343789578&amp;guid=6ff283cd38d04cd4fb0ec3a37ea43030&amp;type=3#IconSet_11&apos;);" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

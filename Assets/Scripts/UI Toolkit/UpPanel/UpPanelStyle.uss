@@ -1,0 +1,18 @@
+.label {
+    font-size: 24px;
+    margin-left: 0;
+    margin-right: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+    align-items: center;
+    color: rgb(224, 97, 0);
+    justify-content: center;
+    -unity-text-align: middle-left;
+    white-space: nowrap;
+}
+
+.value {
+    font-size: 30px;
+    color: rgb(224, 97, 0);
+    -unity-text-align: middle-left;
+}
