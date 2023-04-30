@@ -15,7 +15,7 @@ public class GameSceneStarter : MonoBehaviour
     private void Init()
     {
         _gameDataContainer.OnReady -= Init;
-        Application.targetFrameRate = 60;
+        //Application.targetFrameRate = 60;
         new StartDevelopSpace();
         Destroy(gameObject);
     }

@@ -1,10 +1,4 @@
-﻿[System.Serializable]
-public enum SoundType : byte
-{
-    Effect,
-    Music
-}
-
+﻿//TODO заглушки
 [System.Serializable]
 public enum HorizontalDirection : int
 {
@@ -21,35 +15,6 @@ public enum EquipTypes : byte
     RightArm,
     Torso,
     Feet,
-}
-
-[System.Serializable]
-public enum ProsthesisTypes : byte
-{
-    None,
-    Head,
-    LeftArm,
-    RightArm,
-    Torso,
-    LeftLeg,
-    RightLeg,
-}
-
-[System.Serializable]
-public enum ResourceTypes : byte
-{
-    None,
-    Iron,
-    Wood,
-    Gold,
-    Stone,
-}
-
-[System.Serializable]
-public enum DataTypes : byte
-{
-    Item,
-    Resource,
 }
 
 public enum StorageTypes : byte

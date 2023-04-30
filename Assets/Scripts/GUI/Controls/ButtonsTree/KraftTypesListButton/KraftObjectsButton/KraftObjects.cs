@@ -1,7 +1,7 @@
 namespace Hud.Buttons
 {
     using UnityEngine;
-    using Data.Items;
+    using Data.Item;
     using System.Collections.Generic;
 
     public class KraftObjects : IInit

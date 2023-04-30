@@ -1,30 +1,25 @@
-using Behaviours;
+using Data.Item;
 using System.Linq;
 using UnityEngine;
 
 [System.Serializable]
 public class Inventory
 {
-    [SerializeField] private CustomItem[] _itemList;
+    [SerializeField] private ItemBase[] _itemList;
 
-    public CustomItem[] ItemList => _itemList;
+    public ItemBase[] ItemList => _itemList;
 
-    public Inventory(CustomItem[] itemList)
+    public Inventory(ItemBase[] itemList)
     {
         _itemList = itemList.Take(itemList.Length).ToArray();
     }
 
-    public void AddItem(CustomItem customItem)
+    public void AddItem(ItemBase customItem)
     {
         if (_itemList[0] != customItem)
-            _itemList[0] = customItem.DeepCopy();
+            _itemList[0] = customItem.Copy();
 
         _itemList[0].Amount += customItem.Amount;
-    }
-
-    public CustomItem GetItemAt(int index)
-    {
-        return string.IsNullOrEmpty(_itemList[index].Name) ? null : _itemList[index];
     }
 
     public Inventory DeepCopy()

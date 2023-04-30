@@ -5,16 +5,12 @@ namespace Hud.Buttons
     using Data.Dungeon;
     using Behaviours;
     using System;
-    using Data.Resources;
-    using Data.Items;
 
     public class Dungeons : IInit
     {
         private GameDataContainer _gameDataContainer;
-        private HudIconData _imageIconData;
+        private SpriteData _spriteData;
         private DungeonsData _dungeonsData;
-        private ResourcesData _resourcesData;
-        private ItemsData _itemsData;
 
         private ButtonElement[] _buttons;
         private GUISkin _guiSkin;
@@ -28,17 +24,15 @@ namespace Hud.Buttons
         public void Init(params object[] list)
         {
             _gameDataContainer = GameDataContainer.Instance;
-            _imageIconData = _gameDataContainer.GetHudIconData;
+            _spriteData = _gameDataContainer.GetSpriteData;
             _dungeonsData = _gameDataContainer.GetDungeonsData;
-            _resourcesData = _gameDataContainer.GetResourcesData;
-            _itemsData = _gameDataContainer.GetItemsData;
 
             _guiSkin = _gameDataContainer.StandartGuiSkin;
             _buttonActive = _guiSkin.GetStyle($"{_leftButtonStyle}");
             _buttonLock = _guiSkin.GetStyle($"{_lockButtonStyle}");
             _iconStyle = _guiSkin.GetStyle($"{_onlyIcon}");
 
-            Texture2D IconClose = TextureConverter.SpriteToTexture(_imageIconData.Close);
+            Texture2D IconClose = TextureConverter.SpriteToTexture(_spriteData.Close);
 
             _buttons = new ButtonElement[_dungeonsData.Dungeons.Count];
             for (int i = 0; i < _dungeonsData.Dungeons.Count; i++)
@@ -55,25 +49,25 @@ namespace Hud.Buttons
             var mainIcon = new IconElement(new GUIContent(dungeonIcon), _iconStyle);
 
             List<InfoElement> additionalInfo = new();
-            foreach (var lutInfo in dungeon.LutInfo)
-            {
-                Texture2D resourceIcon = null;
-                if (lutInfo.GetResourceType != ResourceTypes.None)
-                {
-                    CustomResource resourceBase = _resourcesData.GetResourceBase(lutInfo.GetResourceType);
-                    resourceIcon = TextureConverter.SpriteToTexture(resourceBase.Icon);
-                }
-                if (lutInfo.GetItemId >= 0)
-                {
-                    ItemBase itemBase = _itemsData.GetItemBase(lutInfo.GetItemId);
-                    resourceIcon = TextureConverter.SpriteToTexture(itemBase.Icon);
-                }
+            //foreach (var lut in dungeon.LutInfo)
+            //{
+            //    Texture2D resourceIcon = null;
+            //    if (lut.GetResourceType != ResourceTypes.None)
+            //    {
+            //        CustomResource resourceBase = _resourcesData.GetResourceBase(lut.GetResourceType);
+            //        resourceIcon = TextureConverter.SpriteToTexture(resourceBase.Icon);
+            //    }
+            //    if (lut.GetItemId >= 0)
+            //    {
+            //        ItemBase itemBase = _itemsData.FindItem(lut.GetItemId);
+            //        resourceIcon = TextureConverter.SpriteToTexture(itemBase.Icon);
+            //    }
 
-                string resourceAmount = lutInfo.GetAmount.ToString();
-                additionalInfo.Add(new InfoElement(new GUIContent(resourceAmount, resourceIcon), _iconStyle));
-            }
+            //    string resourceAmount = lut.GetAmount.ToString();
+            //    additionalInfo.Add(new InfoElement(new GUIContent(resourceAmount, resourceIcon), _iconStyle));
+            //}
 
-            var kd = dungeon.Busy ? dungeon.CurrentKDTime : dungeon.KdTime;
+            var kd = dungeon.Busy ? dungeon.CurrentKDTime : dungeon.StartKDTime;
 
             if (dungeon.Busy is not true)
             {

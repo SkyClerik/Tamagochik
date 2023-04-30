@@ -1,5 +1,4 @@
-using Behaviours;
-using Data.Items;
+using Data.Item;
 using Data.Recipes;
 using Data.Rects;
 using System.Collections.Generic;
@@ -12,7 +11,7 @@ public class KraftHudWindow : MonoBehaviour
     private RectsData _rectsData;
     private RecipesData _recipesData;
     private ItemsData _itemsData;
-    private CustomItem _customItem;
+    private ItemBase _itemBase;
     private GameDataContainer _gameDataContainer;
     private GUISkin _guiSkin;
     private GUIStyle _buttonActive;
@@ -23,7 +22,7 @@ public class KraftHudWindow : MonoBehaviour
     private const string _lockButtonStyle = "lockButton";
     private const string _onlyIcon = "onlyIcon";
     private GUIContent _windowContent = new GUIContent("Info window");
-    private List<DemandResult>[] demandResultsList;
+    private List<ItemInQuantity>[] demands;
     private List<ButtonElement> _demandsIcons;
     private int _coast = 0;
 
@@ -47,51 +46,43 @@ public class KraftHudWindow : MonoBehaviour
         _buttonLock = _guiSkin.GetStyle($"{_lockButtonStyle}");
         _iconStyle = _guiSkin.GetStyle($"{_onlyIcon}");
         _icoSize = _rectsData.GetIcoSize;
-
-        //try
-        //{
-        _customItem = _itemsData.Items[itemIndex];
-        _windowContent.text = _customItem.Name;
-        Texture texture = TextureConverter.SpriteToTexture(_customItem.Icon);
+        _itemBase = _itemsData.Items[itemIndex];
+        _windowContent.text = _itemBase.Name;
+        Texture texture = TextureConverter.SpriteToTexture(_itemBase.Icon);
         _windowContent.image = texture;
         GetRecipes();
         enabled = true;
-        //}
-        //catch
-        //{
-        //    Debug.Log($"{GameDataContainer.Instance.GetHudTextData.MasterSeemsToBeProblemHere}");
-        //}
     }
 
     private void GetRecipes()
     {
-        if (_customItem.RecipesIndex.Count > 0)
-        {
-            demandResultsList = new List<DemandResult>[_customItem.RecipesIndex.Count];
-            _demandsIcons = new List<ButtonElement>();
-            foreach (int recipeIndex in _customItem.RecipesIndex)
-            {
-                for (int i = 0; i < demandResultsList.Length; i++)
-                {
-                    demandResultsList[i] = _recipesData.Recipes[recipeIndex].GetItemBase();
-                    _coast += _recipesData.Recipes[recipeIndex].Coast;
+        //if (_itemBase.RecipesIndex.Count > 0)
+        //{
+        //    demands = new List<Demand>[_itemBase.RecipesIndex.Count];
+        //    _demandsIcons = new List<ButtonElement>();
+        //    foreach (int recipeIndex in _itemBase.RecipesIndex)
+        //    {
+        //        for (int i = 0; i < demands.Length; i++)
+        //        {
+        //            demands[i] = _recipesData.Recipes[recipeIndex].GetItemBase();
+        //            _coast += _recipesData.Recipes[recipeIndex].Coast;
 
-                    foreach (DemandResult result in demandResultsList[i])
-                    {
-                        _demandsIcons.Add(new ButtonElement(
-                            mainIcon: new IconElement(new GUIContent(TextureConverter.SpriteToTexture(result.ItemBase.Icon)), _iconStyle),
-                            mainButton: new ViewElementButton(
-                            buttonText: result.Amount.ToString(),
-                            callback: null,
-                            style: _buttonActive,
-                            active: true),
-                            additionalInfo: null,
-                            endIcon: null)
-                            );
-                    }
-                }
-            }
-        }
+        //            foreach (Demand result in demands[i])
+        //            {
+        //                _demandsIcons.Add(new ButtonElement(
+        //                    mainIcon: new IconElement(new GUIContent(TextureConverter.SpriteToTexture(result.ItemBase.Icon)), _iconStyle),
+        //                    mainButton: new ViewElementButton(
+        //                    buttonText: result.Amount.ToString(),
+        //                    callback: null,
+        //                    style: _buttonActive,
+        //                    active: true),
+        //                    additionalInfo: null,
+        //                    endIcon: null)
+        //                    );
+        //            }
+        //        }
+        //    }
+        //}
     }
 
     private void OnGUI()
@@ -102,7 +93,7 @@ public class KraftHudWindow : MonoBehaviour
 
     private void View(int w)
     {
-        GUILayout.Box($"Текущее количество: {_customItem.Amount}");
+        GUILayout.Box($"Текущее количество: {_itemBase.Amount}");
         GUILayout.Box($"Стоймость крафта: {_coast}");
 
         for (int i = 0; i < _demandsIcons.Count; i++)
@@ -115,8 +106,7 @@ public class KraftHudWindow : MonoBehaviour
 
         if (GUILayout.Button("Создать"))
         {
-            _customItem.Amount++;
-            //TODO Вот тут нужно удалить все что было использовано для крафта. И крафт не мгновенный должен быть. Куда поместить текущий? От пошаговости еще не время отказываться.
+            _itemBase.Amount++;
         }
     }
 

@@ -1,4 +1,4 @@
-using Behaviours;
+using Data.Dungeon;
 using Data.Rects;
 using Data.Units;
 using Hud.Buttons;
@@ -8,7 +8,7 @@ using UnityEngine;
 public class AssembleSquadHud : MonoBehaviour
 {
     private GameDataContainer _gameDataContainer;
-    private HudIconData _imageIconData;
+    private SpriteData _spriteData;
 
     private Rect _buttonsArea;
     private Rect _leftArea;
@@ -45,7 +45,7 @@ public class AssembleSquadHud : MonoBehaviour
         _partyButtonsArea = new Rect(_buttonsArea.xMax, _buttonsArea.y, _buttonsArea.width, _icoSize * _partyCount);
         _startButtonArea = new Rect(_partyButtonsArea.x, _partyButtonsArea.yMax, _partyButtonsArea.width, _icoSize);
         _gameDataContainer = GameDataContainer.Instance;
-        _imageIconData = _gameDataContainer.GetHudIconData;
+        _spriteData = _gameDataContainer.GetSpriteData;
         _guiSkin = _gameDataContainer.StandartGuiSkin;
         _buttonActive = _guiSkin.GetStyle($"{_leftButtonStyle}");
         _buttonLock = _guiSkin.GetStyle($"{_lockButtonStyle}");

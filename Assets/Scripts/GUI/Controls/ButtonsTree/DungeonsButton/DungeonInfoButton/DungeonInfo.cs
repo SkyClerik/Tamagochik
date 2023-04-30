@@ -7,7 +7,7 @@
     public class DungeonInfo : IInit
     {
         private GameDataContainer _gameDataContainer;
-        private HudIconData _imageIconData;
+        private SpriteData _spriteData;
         private DungeonsData _dungeonsData;
         private ButtonElement[] _buttons;
         private GUISkin _guiSkin;
@@ -25,14 +25,14 @@
             _dungeon = list[0] as Dungeon;
 
             _gameDataContainer = GameDataContainer.Instance;
-            _imageIconData = _gameDataContainer.GetHudIconData;
+            _spriteData = _gameDataContainer.GetSpriteData;
             _dungeonsData = _gameDataContainer.GetDungeonsData;
             _guiSkin = _gameDataContainer.StandartGuiSkin;
             _buttonActive = _guiSkin.GetStyle($"{_leftButtonStyle}");
             _buttonLock = _guiSkin.GetStyle($"{_lockButtonStyle}");
             _iconStyle = _guiSkin.GetStyle($"{_onlyIcon}");
 
-            Texture2D IconClose = TextureConverter.SpriteToTexture(_imageIconData.Close);
+            Texture2D IconClose = TextureConverter.SpriteToTexture(_spriteData.Close);
 
             _buttons = new ButtonElement[]
             {

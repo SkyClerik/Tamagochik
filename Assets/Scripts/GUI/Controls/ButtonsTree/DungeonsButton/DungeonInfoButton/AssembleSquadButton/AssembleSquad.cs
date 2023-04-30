@@ -1,6 +1,6 @@
 namespace Hud.Buttons
 {
-    using Behaviours;
+    using Data.Dungeon;
 
     public class AssembleSquad : IInit
     {

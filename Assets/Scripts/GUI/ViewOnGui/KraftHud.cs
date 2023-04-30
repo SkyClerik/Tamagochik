@@ -31,9 +31,6 @@ public class KraftHud : MonoBehaviour
     public void Init(ButtonElement[] items, ButtonElement[] types, EquipTypes equipType)
     {
         _buttons = items;
-        //TODO Проверить что есть предметы если нет возможно нужно сменить вкладку
-        //TODO Написать кнопки вкладок. Они приходят как лист кнопок. Их функционал я пишу в KraftObjects. Они переинициализируют этот метод с другим типом предмета в качестве аргумента
-        //TODO Подумать можно ли окно вернуть в этот скрипт.
         enabled = true;
     }
 
@@ -61,11 +58,6 @@ public class KraftHud : MonoBehaviour
             new KraftTypesList().Init();
         }
         GUILayout.EndArea();
-    }
-
-    private void ViewTypesButtons()
-    { 
-    
     }
 
     private void ViewButtonList(Rect buttonsArea, ButtonElement[] buttonElements)

@@ -1,5 +1,6 @@
 ﻿namespace Hud.Buttons
 {
+    using UnityEngine;
     using UnityEngine.UIElements;
 
     public class StartDevelopSpace
@@ -35,12 +36,14 @@
 
         private void KraftTypesListButton()
         {
-            new KraftTypesList().Init();
+            Debug.Log($"Этот функционал еще в разработке");
+            //new KraftTypesList().Init();
         }
 
         private void UnitsButton()
         {
-            new Units().Init();
+            Debug.Log($"Этот функционал еще в разработке");
+            //new Units().Init();
         }
 
         private void RoomsButton()
@@ -50,7 +53,8 @@
 
         private void DungeonsButton()
         {
-            new Dungeons().Init();
+            Debug.Log($"Этот функционал еще в разработке");
+            //new Dungeons().Init();
         }
 
         private void Clicker()

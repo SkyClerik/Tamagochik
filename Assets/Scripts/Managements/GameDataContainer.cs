@@ -1,8 +1,7 @@
 using UnityEngine;
 using Data.Dungeon;
-using Data.Items;
+using Data.Item;
 using Data.Rects;
-using Data.Resources;
 using Data.Storages;
 using Data.Recipes;
 
@@ -15,8 +14,8 @@ public class GameDataContainer : Singleton<GameDataContainer>
     public GUISkin StandartGuiSkin => _standartGuiSkin;
 
     [SerializeField]
-    private HudIconData _hudIconData;
-    public HudIconData GetHudIconData => _hudIconData;
+    private SpriteData _spriteData;
+    public SpriteData GetSpriteData => _spriteData;
 
     [SerializeField]
     private HudTextData _hudTextData;
@@ -53,10 +52,6 @@ public class GameDataContainer : Singleton<GameDataContainer>
     public ItemsData GetItemsData => _itemsData;
 
     [SerializeField]
-    private ResourcesData _resourcesData;
-    public ResourcesData GetResourcesData => _resourcesData;
-
-    [SerializeField]
     private StoragesData _storagesData;
     public StoragesData GetStoragesData => _storagesData;
 
@@ -91,9 +86,6 @@ public class GameDataContainer : Singleton<GameDataContainer>
 
         if (_itemsData)
             _itemsData = Instantiate(_itemsData);
-
-        if (_resourcesData)
-            _resourcesData = Instantiate(_resourcesData);
 
         if (_storagesData)
             _storagesData = Instantiate(_storagesData);

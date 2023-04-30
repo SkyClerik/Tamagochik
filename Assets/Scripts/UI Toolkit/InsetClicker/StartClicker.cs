@@ -1,4 +1,4 @@
-using Behaviours;
+using Data.Item;
 using Data.Units;
 using Hud.Buttons;
 using UnityEngine;
@@ -11,7 +11,7 @@ public class StartClicker
     private Rect _windowArea;
 
     private Humanoid _humanoid;
-    private CustomItem[] _lutList;
+    private ItemBase[] _lutList;
 
     private float _lineMaxValue = 242; //TODO погуглить как получить размер
 
@@ -61,10 +61,10 @@ public class StartClicker
 
     private void GenerateLutList()
     {
-        _lutList = new CustomItem[3];
+        _lutList = new ItemBase[3];
         for (int i = 0; i < _lutList.Length; i++)
         {
-            _lutList[i] = _gameDataContainer.GetItemsData.Items[i].DeepCopy();
+            _lutList[i] = _gameDataContainer.GetItemsData.Items[i].Copy();
         }
     }
 

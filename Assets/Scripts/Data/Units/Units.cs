@@ -1,6 +1,6 @@
 namespace Data.Units
 {
-    using Behaviours;
+    using Data.Item;
     using UnityEngine;
 
     [System.Serializable]
@@ -25,49 +25,19 @@ namespace Data.Units
     [System.Serializable]
     public class Humanoid : UnitBase
     {
-        [SerializeField] private CustomItem[] _eqiupments;
+        [SerializeField] private EquipmentItem[] _eqiupments;
         [SerializeField] private Inventory _inventory;
-        public CustomItem[] Eqiupments { get => _eqiupments; set => _eqiupments = value; }
+        public EquipmentItem[] Eqiupments { get => _eqiupments; set => _eqiupments = value; }
         public Inventory Inventory { get => _inventory; set => _inventory = value; }
 
-        public ItemBase[] GenerateEmptyEquipment()
+        public void EquipItem(EquipmentItem equipment)
         {
-            _eqiupments = new CustomItem[]
-            {
-                new CustomItem(string.Empty, string.Empty, null, 0, 0, true, EquipTypes.Head, StorageTypes.Item,
-                    recipes: null),
-                new CustomItem(string.Empty, string.Empty, null, 0, 0, true, EquipTypes.LeftArm, StorageTypes.Item,
-                    recipes: null),
-                new CustomItem(string.Empty, string.Empty, null, 0, 0, true, EquipTypes.RightArm, StorageTypes.Item,
-                    recipes: null),
-                new CustomItem(string.Empty, string.Empty, null, 0, 0, true, EquipTypes.Torso, StorageTypes.Item,
-                    recipes: null),
-                new CustomItem(string.Empty, string.Empty, null, 0, 0, true, EquipTypes.Feet, StorageTypes.Item,
-                    recipes: null),
-            };
-            return _eqiupments;
-        }
-
-        public void ClearEquipSlot(EquipTypes equipTypes)
-        {
+            EquipTypes equipTypes = equipment.GetEquipType;
             for (int i = 0; i < _eqiupments.Length; i++)
             {
                 if (_eqiupments[i].GetEquipType == equipTypes)
                 {
-                    _eqiupments[i] = new CustomItem(string.Empty, string.Empty, null, 0, 0, true, equipTypes, StorageTypes.Item,
-                                        recipes: null);
-                }
-            }
-        }
-
-        public void EquipItem(CustomItem itemBase)
-        {
-            EquipTypes equipTypes = itemBase.GetEquipType;
-            for (int i = 0; i < _eqiupments.Length; i++)
-            {
-                if (_eqiupments[i].GetEquipType == equipTypes)
-                {
-                    _eqiupments[i] = itemBase;
+                    _eqiupments[i] = equipment;
                 }
             }
         }

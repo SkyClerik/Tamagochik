@@ -4,7 +4,7 @@
     public class KraftTypesList : IInit
     {
         private GameDataContainer _gameDataContainer;
-        private HudIconData _imageIconData;
+        private SpriteData _spriteData;
         private ButtonElement[] _buttons;
         private GUISkin _guiSkin;
         private GUIStyle _buttonActive;
@@ -17,13 +17,13 @@
         public void Init(params object[] list)
         {
             _gameDataContainer = GameDataContainer.Instance;
-            _imageIconData = _gameDataContainer.GetHudIconData;
+            _spriteData = _gameDataContainer.GetSpriteData;
             _guiSkin = _gameDataContainer.StandartGuiSkin;
             _buttonActive = _guiSkin.GetStyle($"{_leftButtonStyle}");
             _buttonLock = _guiSkin.GetStyle($"{_lockButtonStyle}");
             _iconStyle = _guiSkin.GetStyle($"{_onlyIcon}");
 
-            Texture2D IconClose = TextureConverter.SpriteToTexture(_imageIconData.Close);
+            Texture2D IconClose = TextureConverter.SpriteToTexture(_spriteData.Close);
 
             _buttons = new ButtonElement[]
             {

@@ -1,4 +1,4 @@
-using Behaviours;
+using Data.Item;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -39,7 +39,7 @@ public class StartInventory
 
         for (int i = 0; i < _inventory.ItemList.Length; i++)
         {
-            CustomItem item = _inventory.GetItemAt(i);
+            ItemBase item = _inventory.ItemList[i];
 
             if (item != null)
                 new ItemVisualElement(item, startInventory: this, parentElement: _slots[i]);
@@ -66,21 +66,21 @@ public class StartInventory
 
 public class ItemVisualElement : VisualElement
 {
-    private CustomItem _item;
+    private ItemBase _item;
     private bool _isDragging;
     private VisualElement _parentElement;
     private VisualElement _rootVisualElement;
     private StartInventory _startInventory;
 
-    public ItemVisualElement(CustomItem customItem, StartInventory startInventory, VisualElement parentElement)
+    public ItemVisualElement(ItemBase itemBase, StartInventory startInventory, VisualElement parentElement)
     {
-        _item = customItem;
+        _item = itemBase;
         _startInventory = startInventory;
         _rootVisualElement = startInventory.GetRootVisualElement;
         _parentElement = parentElement;
         _parentElement.Add(this);
 
-        style.backgroundImage = new StyleBackground(customItem.Icon);
+        style.backgroundImage = new StyleBackground(itemBase.Icon);
         AddToClassList("item-icon");
 
         RegisterCallback<MouseDownEvent>(OnMouseDownEvent);

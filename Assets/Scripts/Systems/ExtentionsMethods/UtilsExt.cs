@@ -4,9 +4,6 @@ namespace Extensions
 {
     public static class UtilsExt
     {
-        /// <summary>
-        /// Проверяет, все ли элементы != null
-        /// </summary>
         public static bool IsNullAny<T>(params T[] array)
         {
             if (array == null)

@@ -1,5 +1,4 @@
-using Behaviours;
-using Data.Items;
+using Data.Item;
 using Data.Rects;
 using Data.Units;
 using Hud.Buttons;
@@ -88,9 +87,6 @@ public class EquipmentHud : MonoBehaviour
                 return CreateItemButton(_unitHumanoid.Eqiupments[i], () => { Init(equipTypes); });
         }
 
-        //TODO Нужно еще при инициализации проверить есть ли предмет на замену.
-        // Потому что если НЕТ то кнопка не активна должна быть.
-
         return new ButtonElement(
             mainIcon: new IconElement(new GUIContent(string.Empty), _iconStyle),
             mainButton: new ViewElementButton(
@@ -108,14 +104,19 @@ public class EquipmentHud : MonoBehaviour
         var readyButtons = 0;
         for (int i = 0; i < _itemsData.Items.Count; i++)
         {
+            if (_itemsData.Items[i] is not EquipmentItem)
+                continue;
+
+            var item = _itemsData.Items[i] as EquipmentItem;
+
             int equipIndex = _unitHumanoid.GetEquipIndex(equipType);
-            if (_unitHumanoid.Eqiupments[equipIndex] == _itemsData.Items[i])
+            if (_unitHumanoid.Eqiupments[equipIndex] == item)
                 continue;
 
-            if (_itemsData.Items[i].Amount <= 0)
+            if (item.Amount <= 0)
                 continue;
 
-            if (_itemsData.Items[i].GetEquipType == equipType)
+            if (item.GetEquipType == equipType)
             {
                 euipmentButtons.Add(CreateItemButton(_itemsData.Items[i], EquipItem, i));
                 readyButtons++;
@@ -135,14 +136,16 @@ public class EquipmentHud : MonoBehaviour
     {
         TryPutAwayItemToWarehouse(index);
 
-        _unitHumanoid.EquipItem(_itemsData.Items[index].DeepCopy());
+        var item = _itemsData.Items[index] as EquipmentItem;
+        _unitHumanoid.EquipItem(item.Copy());
         _itemsData.Items[index].Amount--;
         RegistredSlotTypes();
     }
 
     public void TryPutAwayItemToWarehouse(int index)
     {
-        int equipIndex = _unitHumanoid.GetEquipIndex(_itemsData.Items[index].GetEquipType);
+        var item = _itemsData.Items[index] as EquipmentItem;
+        int equipIndex = _unitHumanoid.GetEquipIndex(item.GetEquipType);
         if (_unitHumanoid.Eqiupments[equipIndex].Id >= 0)
         {
             for (int i = 0; i < _itemsData.Items.Count; i++)

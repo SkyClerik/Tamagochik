@@ -22,105 +22,15 @@ MonoBehaviour:
     _eqiupments: []
     _inventory:
       _itemList:
-      - _name: "\u041C\u0435\u0447 \u0441\u043A\u0432\u0430\u0435\u0440\u0430"
-        _description: _item_1_Description
-        _icon: {fileID: -2000780637, guid: 6ff283cd38d04cd4fb0ec3a37ea43030, type: 3}
-        _amount: 2
-        _id: 0
-        _storageType: 0
-        _recipesIndex: 00000000
-        _coast: 0
-        _important: 0
-        _equipType: 1
-      - _name: 
-        _description: 
-        _icon: {fileID: 0}
-        _amount: 0
-        _id: 0
-        _storageType: 0
-        _recipesIndex: 
-        _coast: 0
-        _important: 0
-        _equipType: 0
-      - _name: 
-        _description: 
-        _icon: {fileID: 0}
-        _amount: 0
-        _id: 0
-        _storageType: 0
-        _recipesIndex: 
-        _coast: 0
-        _important: 0
-        _equipType: 0
-      - _name: 
-        _description: 
-        _icon: {fileID: 0}
-        _amount: 0
-        _id: 0
-        _storageType: 0
-        _recipesIndex: 
-        _coast: 0
-        _important: 0
-        _equipType: 0
-      - _name: 
-        _description: 
-        _icon: {fileID: 0}
-        _amount: 0
-        _id: 0
-        _storageType: 0
-        _recipesIndex: 
-        _coast: 0
-        _important: 0
-        _equipType: 0
-      - _name: 
-        _description: 
-        _icon: {fileID: 0}
-        _amount: 0
-        _id: 0
-        _storageType: 0
-        _recipesIndex: 
-        _coast: 0
-        _important: 0
-        _equipType: 0
-      - _name: 
-        _description: 
-        _icon: {fileID: 0}
-        _amount: 0
-        _id: 0
-        _storageType: 0
-        _recipesIndex: 
-        _coast: 0
-        _important: 0
-        _equipType: 0
-      - _name: 
-        _description: 
-        _icon: {fileID: 0}
-        _amount: 0
-        _id: 0
-        _storageType: 0
-        _recipesIndex: 
-        _coast: 0
-        _important: 0
-        _equipType: 0
-      - _name: 
-        _description: 
-        _icon: {fileID: 0}
-        _amount: 0
-        _id: 0
-        _storageType: 0
-        _recipesIndex: 
-        _coast: 0
-        _important: 0
-        _equipType: 0
-      - _name: 
-        _description: 
-        _icon: {fileID: 0}
-        _amount: 0
-        _id: 0
-        _storageType: 0
-        _recipesIndex: 
-        _coast: 0
-        _important: 0
-        _equipType: 0
+      - {fileID: 11400000, guid: ab3115081670ea546a483ca8aaabfe75, type: 2}
+      - {fileID: 11400000, guid: 51a92ffe3dc088b41a851dd977650823, type: 2}
+      - {fileID: 11400000, guid: 856026383c8b7cb4699064cf5284c744, type: 2}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
   _humanoids: []
   _animals: []

@@ -341,7 +341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _standartGuiSkin: {fileID: 11400000, guid: 8d684939891f5444985d5cab4c78238f, type: 2}
-  _hudIconData: {fileID: 11400000, guid: 599cf979730866b4c94c061335fd4867, type: 2}
+  _spriteData: {fileID: 11400000, guid: 599cf979730866b4c94c061335fd4867, type: 2}
   _hudTextData: {fileID: 11400000, guid: 15fc1851ec460a24c9e52f0476c7e73d, type: 2}
   _unitsData: {fileID: 11400000, guid: 141c3cc26257797499c693044df6f0a2, type: 2}
   _rectsData: {fileID: 11400000, guid: b15828b8b26a3244f91c3e4f819daa93, type: 2}
@@ -350,7 +350,6 @@ MonoBehaviour:
   _gameSettingsData: {fileID: 11400000, guid: c9402b3f42a88704885bb55afa99a38a, type: 2}
   _dungeonsData: {fileID: 11400000, guid: e5fa95c2effb1dc40887df91f9c270d6, type: 2}
   _itemsData: {fileID: 11400000, guid: 874492224bf7d9e43a087d1d83276adc, type: 2}
-  _resourcesData: {fileID: 11400000, guid: 3daa270a7b5751941a782d92a1696515, type: 2}
   _storagesData: {fileID: 11400000, guid: 709c87467d2922a458784d94bf3f240b, type: 2}
   _recipesData: {fileID: 11400000, guid: 1f91c40fa466e0e4b843cc15f8d25088, type: 2}
 --- !u!4 &439455289

@@ -14,34 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _recipeBase:
   - _name: "\u0420\u0435\u0446\u0435\u043F\u0442"
-    _icon: {fileID: 1225561813, guid: 6ff283cd38d04cd4fb0ec3a37ea43030, type: 3}
     _visible: 1
-    _coast: 101
-    _demands:
-    - _index: 0
+    _coast: 12
+    _resultItem:
+      _itemBase: {fileID: 11400000, guid: 835759a6528153944939e3be1cae6f91, type: 2}
+      _amount: 2
+    _itemInQuantity:
+    - _itemBase: {fileID: 11400000, guid: ab3115081670ea546a483ca8aaabfe75, type: 2}
       _amount: 1
-      _dataType: 0
-    - _index: 0
+    - _itemBase: {fileID: 11400000, guid: 856026383c8b7cb4699064cf5284c744, type: 2}
       _amount: 1
-      _dataType: 0
-  - _name: "2\u0420\u0435\u0446\u0435\u043F\u0442\u0443 \u0442\u043E\u0436\u0435
-      \u043D\u0435 \u043D\u0443\u0436\u043D\u043E \u043D\u0430\u0432\u0435\u0440\u043D\u043E\u0435
-      \u0438\u043C\u044F2"
-    _icon: {fileID: -1447861029, guid: 6ff283cd38d04cd4fb0ec3a37ea43030, type: 3}
+  - _name: "\u0420\u0435\u0446\u0435\u043F\u0442\u0438\u0449\u0435"
     _visible: 1
-    _coast: 101
-    _demands: []
-  - _name: "3\u0420\u0435\u0446\u0435\u043F\u0442\u0443 \u0442\u043E\u0436\u0435
-      \u043D\u0435 \u043D\u0443\u0436\u043D\u043E \u043D\u0430\u0432\u0435\u0440\u043D\u043E\u0435
-      \u0438\u043C\u044F3"
-    _icon: {fileID: 1189237377, guid: 6ff283cd38d04cd4fb0ec3a37ea43030, type: 3}
-    _visible: 1
-    _coast: 101
-    _demands: []
-  - _name: "4\u0420\u0435\u0446\u0435\u043F\u0442\u0443 \u0442\u043E\u0436\u0435
-      \u043D\u0435 \u043D\u0443\u0436\u043D\u043E \u043D\u0430\u0432\u0435\u0440\u043D\u043E\u0435
-      \u0438\u043C\u044F4"
-    _icon: {fileID: 1993067297, guid: 6ff283cd38d04cd4fb0ec3a37ea43030, type: 3}
-    _visible: 1
-    _coast: 101
-    _demands: []
+    _coast: 1010
+    _resultItem:
+      _itemBase: {fileID: 11400000, guid: 856026383c8b7cb4699064cf5284c744, type: 2}
+      _amount: 9
+    _itemInQuantity:
+    - _itemBase: {fileID: 11400000, guid: 51a92ffe3dc088b41a851dd977650823, type: 2}
+      _amount: 3
+    - _itemBase: {fileID: 11400000, guid: 835759a6528153944939e3be1cae6f91, type: 2}
+      _amount: 2
+    - _itemBase: {fileID: 11400000, guid: 856026383c8b7cb4699064cf5284c744, type: 2}
+      _amount: 1

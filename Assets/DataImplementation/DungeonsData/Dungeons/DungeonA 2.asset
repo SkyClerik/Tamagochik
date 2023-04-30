@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19ba05d4686f994ebd7e63afa30ee95, type: 3}
+  m_Name: DungeonA 2
+  m_EditorClassIdentifier: 
+  _name: "\u041E\u0431\u0438\u0442\u0430\u0435\u043C\u044B\u0439 \u043E\u0441\u0442\u0440\u043E\u0432"
+  _icon: {fileID: -541320753, guid: 6ff283cd38d04cd4fb0ec3a37ea43030, type: 3}
+  _busy: 0
+  _visible: 1
+  _startKDTime: 1
+  _lutData: {fileID: 11400000, guid: 916b6e8b095f1574fb048dad1ba0e04c, type: 2}
