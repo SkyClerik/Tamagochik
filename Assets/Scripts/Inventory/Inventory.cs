@@ -22,6 +22,11 @@ public class Inventory
         _itemList[0].Amount += customItem.Amount;
     }
 
+    public void Swap(int index1, int index2)
+    {
+        Extensions.UtilsExt.Swap(ref _itemList[index1], ref _itemList[index2]);
+    }
+
     public Inventory DeepCopy()
     {
         return new Inventory(_itemList);

@@ -1,4 +1,5 @@
 using Data.Item;
+using Data.Units;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEditorInternal.Profiling.Memory.Experimental;
@@ -10,7 +11,6 @@ public class StartInventory
     private Inventory _inventory;
     private VisualElement _rootVisualElement;
     private List<VisualElement> _slots = new List<VisualElement>();
-    private List<ItemVisualElement> _itemVisualElements = new List<ItemVisualElement>();
 
     public VisualElement GetRootVisualElement => _rootVisualElement;
 
@@ -42,7 +42,7 @@ public class StartInventory
         for (int i = 0; i < _inventory.ItemList.Length; i++)
         {
             ItemBase item = _inventory.ItemList[i];
-            _itemVisualElements.Add(new ItemVisualElement(item, parentVisualElement: _slots[i]));
+            _slots[i].Add(new ItemVisualElement(item, _inventory, i));
         }
     }
 }
@@ -51,13 +51,17 @@ public class ItemVisualElement : VisualElement
 {
     private ItemBase _item;
     private StyleBackground _icon;
+    private int _indexInInventory;
+    private Inventory _owner;
 
     public ItemBase Item => _item;
+    public int IndexInInventory => _indexInInventory;
 
-    public ItemVisualElement(ItemBase itemBase, VisualElement parentVisualElement)
+    public ItemVisualElement(ItemBase itemBase, Inventory owner, int indexInInventory)
     {
         _item = itemBase;
-        parentVisualElement.Add(this);
+        _owner = owner;
+        _indexInInventory = indexInInventory;
 
         AddToClassList("item-icon");
         SetItem(itemBase);
@@ -93,6 +97,8 @@ public class ItemVisualElement : VisualElement
         {
             SetItem(oldItemSlot.Item);
             oldItemSlot.SetItem(null);
+            _owner.Swap(_indexInInventory, oldItemSlot.IndexInInventory);
+
         }
         else
         {

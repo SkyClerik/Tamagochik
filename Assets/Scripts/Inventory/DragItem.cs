@@ -13,6 +13,7 @@ public class DragItem : Singleton<DragItem>
     {
         _screenHeight = Screen.height;
         _uiDocument = GetComponent<UIDocument>();
+        _uiDocument.enabled = true;
 
         VisualElement root = _uiDocument.rootVisualElement;
         _icon = root.Q<VisualElement>("Icon");
@@ -25,11 +26,13 @@ public class DragItem : Singleton<DragItem>
         if (itemVisualElement.Item == null)
             return;
 
+        _screenHeight = Screen.height;
+        _itemVisualElement = itemVisualElement;
+
         Sprite icon = itemVisualElement.Item.Icon;
         _icon.style.backgroundImage = new StyleBackground(icon);
         _icon.visible = true;
 
-        _itemVisualElement = itemVisualElement;
         enabled = true;
     }
 
