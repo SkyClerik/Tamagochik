@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Scripts/UI%20Toolkit/GeneralButtons/GeneralButtonsStyle.uss?fileID=7433441132597879392&amp;guid=8ce447452c3464443bf4700e9b6b801b&amp;type=3#GeneralButtonsStyle" />
+    <ui:VisualElement name="ChoiceLeader" style="flex-grow: 1; flex-direction: row;">
+        <ui:VisualElement style="width: 400px;" />
+        <ui:VisualElement style="align-items: stretch; width: 655px;" />
+        <ui:VisualElement style="width: 400px;" />
+    </ui:VisualElement>
+</ui:UXML>

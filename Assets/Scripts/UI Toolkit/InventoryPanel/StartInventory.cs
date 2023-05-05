@@ -1,6 +1,7 @@
 using Data.Item;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -9,6 +10,7 @@ public class StartInventory
     private Inventory _inventory;
     private VisualElement _rootVisualElement;
     private List<VisualElement> _slots = new List<VisualElement>();
+    private List<ItemVisualElement> _itemVisualElements = new List<ItemVisualElement>();
 
     public VisualElement GetRootVisualElement => _rootVisualElement;
 
@@ -40,102 +42,69 @@ public class StartInventory
         for (int i = 0; i < _inventory.ItemList.Length; i++)
         {
             ItemBase item = _inventory.ItemList[i];
-
-            if (item != null)
-                new ItemVisualElement(item, startInventory: this, parentElement: _slots[i]);
+            _itemVisualElements.Add(new ItemVisualElement(item, parentVisualElement: _slots[i]));
         }
-    }
-
-    public bool IsSlotEmpty(Vector2 mousePosition, out VisualElement emptySlot)
-    {
-        for (int i = 0; i < _slots.Count; i++)
-        {
-            if (_slots[i].worldBound.Contains(mousePosition))
-            {
-                if (_slots[i].childCount == 0)
-                {
-                    emptySlot = _slots[i];
-                    return true;
-                }
-            }
-        }
-        emptySlot = null;
-        return false;
     }
 }
 
 public class ItemVisualElement : VisualElement
 {
     private ItemBase _item;
-    private bool _isDragging;
-    private VisualElement _parentElement;
-    private VisualElement _rootVisualElement;
-    private StartInventory _startInventory;
+    private StyleBackground _icon;
 
-    public ItemVisualElement(ItemBase itemBase, StartInventory startInventory, VisualElement parentElement)
+    public ItemBase Item => _item;
+
+    public ItemVisualElement(ItemBase itemBase, VisualElement parentVisualElement)
     {
         _item = itemBase;
-        _startInventory = startInventory;
-        _rootVisualElement = startInventory.GetRootVisualElement;
-        _parentElement = parentElement;
-        _parentElement.Add(this);
+        parentVisualElement.Add(this);
 
-        style.backgroundImage = new StyleBackground(itemBase.Icon);
         AddToClassList("item-icon");
+        SetItem(itemBase);
 
         RegisterCallback<MouseDownEvent>(OnMouseDownEvent);
-        RegisterCallback<MouseMoveEvent>(OnMouseMoveEvent);
         RegisterCallback<MouseUpEvent>(OnMouseUpEvent);
     }
+
+    public void SetItem(ItemBase itemBase)
+    {
+        _item = itemBase;
+        _icon = itemBase == null ? null : new StyleBackground(itemBase.Icon);
+        style.backgroundImage = _icon;
+    }
+
     ~ItemVisualElement()
     {
-        UnregisterCallback<MouseMoveEvent>(OnMouseMoveEvent);
         UnregisterCallback<MouseDownEvent>(OnMouseDownEvent);
         UnregisterCallback<MouseUpEvent>(OnMouseUpEvent);
     }
 
     private void OnMouseDownEvent(MouseDownEvent mouseDownEvent)
     {
-        StartDrag(mouseDownEvent);
-    }
-
-    private void OnMouseMoveEvent(MouseMoveEvent mouseEvent)
-    {
-        if (!_isDragging)
-            return;
-
-        SetPosition(GetMousePosition(mouseEvent.mousePosition));
+        DragItem.Instance.AddItem(this);
+        style.backgroundImage = null;
     }
 
     private void OnMouseUpEvent(MouseUpEvent mouseUpEvent)
     {
-        if (_startInventory.IsSlotEmpty(mouseUpEvent.mousePosition, out VisualElement emptySlot))
+        DragItem dragItem = DragItem.Instance;
+        ItemVisualElement oldItemSlot = dragItem.GetItem();
+        if (IsSlotEmpty())
         {
-            emptySlot.Add(this);
-            _parentElement = emptySlot;
+            SetItem(oldItemSlot.Item);
+            oldItemSlot.SetItem(null);
         }
         else
         {
-            _parentElement.Add(this);
+            oldItemSlot.SetItem(oldItemSlot.Item);
         }
-
-        _isDragging = false;
-        SetPosition(Vector2.zero);
     }
 
-    public void StartDrag(IMouseEvent mouseEvent)
+    private bool IsSlotEmpty()
     {
-        _isDragging = true;
-        _rootVisualElement.Add(this);
-        SetPosition(GetMousePosition(mouseEvent.mousePosition));
+        if (_item == null)
+            return true;
+
+        return false;
     }
-
-    public void SetPosition(Vector2 pos)
-    {
-        style.left = pos.x;
-        style.top = pos.y;
-    }
-
-    public Vector2 GetMousePosition(Vector2 mousePosition) => new Vector2(mousePosition.x - (layout.width / 2) - parent.worldBound.position.x, mousePosition.y - (layout.height / 2) - parent.worldBound.position.y);
-
 }
