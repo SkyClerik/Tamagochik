@@ -11,7 +11,7 @@ public class InventoryHud : MonoBehaviour
 
     private Rect[] _inventorySlots;
     private Humanoid _humanoid;
-    private Inventory _inventory;
+    private ItemContainer _inventory;
 
     private void Start()
     {

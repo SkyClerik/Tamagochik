@@ -13,6 +13,8 @@ public class WindowManagement : Singleton<WindowManagement>
     [SerializeField] private KraftHud _kraftHud;
     [SerializeField] private UIDocument _clickerHudDocument;
     [SerializeField] private UIDocument _inventoryDocument;
+    [SerializeField] private UIDocument _dragItemDocument;
+    [SerializeField] private UIDocument _warehouseDocument;
 
     public UIDocument GetUpHud => _upHudDocument;
     public UIDocument GetRightHud => _rightHudDocument;
@@ -22,6 +24,8 @@ public class WindowManagement : Singleton<WindowManagement>
     public KraftHud GetKraftHud => _kraftHud;
     public UIDocument GetClickerHud => _clickerHudDocument;
     public UIDocument GetInventoryHud => _inventoryDocument;
+    public UIDocument GetDragItemDocument => _dragItemDocument;
+    public UIDocument GetWarehouseDocument => _warehouseDocument;
 
     [Header("VisualTreeAsset")]
 

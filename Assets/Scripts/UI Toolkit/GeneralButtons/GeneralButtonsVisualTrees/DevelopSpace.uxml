@@ -1,5 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
-    <Style src="project://database/Assets/Scripts/GUI/Toolkit/GeneralButtons/GeneralButtonsStyle.uss?fileID=7433441132597879392&amp;guid=8ce447452c3464443bf4700e9b6b801b&amp;type=3#GeneralButtonsStyle" />
+    <Style src="project://database/Assets/Scripts/UI%20Toolkit/GeneralButtons/GeneralButtonsStyle.uss?fileID=7433441132597879392&amp;guid=8ce447452c3464443bf4700e9b6b801b&amp;type=3#GeneralButtonsStyle" />
     <ui:VisualElement style="flex-grow: 1; align-items: flex-start; padding-top: 96px;">
         <ui:VisualElement style="flex-direction: row;">
             <ui:GroupBox style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;">
@@ -8,28 +8,32 @@
             </ui:GroupBox>
             <ui:ScrollView name="ButtonsScrollView">
                 <ui:VisualElement style="flex-direction: row;">
-                    <ui:VisualElement name="Icon" class="icon" style="background-image: url(&apos;project://database/Assets/Sprites/IconSet.png?fileID=-101090823&amp;guid=6ff283cd38d04cd4fb0ec3a37ea43030&amp;type=3#IconSet_186&apos;);" />
+                    <ui:VisualElement name="Icon" class="icon" style="background-image: url(&apos;project://database/Assets/Images/Sprites/IconSet.png?fileID=-101090823&amp;guid=6ff283cd38d04cd4fb0ec3a37ea43030&amp;type=3#IconSet_186&apos;);" />
                     <ui:Button display-tooltip-when-elided="true" name="CreateButton" text="Create Item" class="button" />
                 </ui:VisualElement>
                 <ui:VisualElement style="flex-direction: row;">
-                    <ui:VisualElement name="Icon" class="icon" style="background-image: url(&apos;project://database/Assets/Sprites/IconSet.png?fileID=424535959&amp;guid=6ff283cd38d04cd4fb0ec3a37ea43030&amp;type=3#IconSet_73&apos;);" />
+                    <ui:VisualElement name="Icon" class="icon" style="background-image: url(&apos;project://database/Assets/Images/Sprites/IconSet.png?fileID=424535959&amp;guid=6ff283cd38d04cd4fb0ec3a37ea43030&amp;type=3#IconSet_73&apos;);" />
                     <ui:Button display-tooltip-when-elided="true" name="UnitsButton" text="UnitsButton" class="button" />
                 </ui:VisualElement>
                 <ui:VisualElement style="flex-direction: row;">
-                    <ui:VisualElement name="Icon" class="icon" style="background-image: url(&apos;project://database/Assets/Sprites/IconSet.png?fileID=-1039783678&amp;guid=6ff283cd38d04cd4fb0ec3a37ea43030&amp;type=3#IconSet_264&apos;);" />
+                    <ui:VisualElement name="Icon" class="icon" style="background-image: url(&apos;project://database/Assets/Images/Sprites/IconSet.png?fileID=-1039783678&amp;guid=6ff283cd38d04cd4fb0ec3a37ea43030&amp;type=3#IconSet_264&apos;);" />
                     <ui:Button display-tooltip-when-elided="true" name="RoomsButton" text="RoomsButton" class="button" />
                 </ui:VisualElement>
                 <ui:VisualElement style="flex-direction: row;">
-                    <ui:VisualElement name="Icon" class="icon" style="background-image: url(&apos;project://database/Assets/Sprites/IconSet.png?fileID=-639187809&amp;guid=6ff283cd38d04cd4fb0ec3a37ea43030&amp;type=3#IconSet_181&apos;);" />
+                    <ui:VisualElement name="Icon" class="icon" style="background-image: url(&apos;project://database/Assets/Images/Sprites/IconSet.png?fileID=-639187809&amp;guid=6ff283cd38d04cd4fb0ec3a37ea43030&amp;type=3#IconSet_181&apos;);" />
                     <ui:Button display-tooltip-when-elided="true" name="DungeonsButton" text="DungeonsButton" class="button" />
                 </ui:VisualElement>
                 <ui:VisualElement style="flex-direction: row;">
-                    <ui:VisualElement name="Icon" class="icon" style="background-image: url(&apos;project://database/Assets/Sprites/IconSet.png?fileID=1409646160&amp;guid=6ff283cd38d04cd4fb0ec3a37ea43030&amp;type=3#IconSet_176&apos;);" />
+                    <ui:VisualElement name="Icon" class="icon" style="background-image: url(&apos;project://database/Assets/Images/Sprites/IconSet.png?fileID=1409646160&amp;guid=6ff283cd38d04cd4fb0ec3a37ea43030&amp;type=3#IconSet_176&apos;);" />
                     <ui:Button display-tooltip-when-elided="true" name="ClickerButton" text="ClickerButton" class="button" />
                 </ui:VisualElement>
                 <ui:VisualElement style="flex-direction: row;">
-                    <ui:VisualElement name="Icon" class="icon" style="background-image: url(&apos;project://database/Assets/Sprites/IconSet.png?fileID=-627059035&amp;guid=6ff283cd38d04cd4fb0ec3a37ea43030&amp;type=3#IconSet_197&apos;);" />
+                    <ui:VisualElement name="Icon" class="icon" style="background-image: url(&apos;project://database/Assets/Images/Sprites/IconSet.png?fileID=-627059035&amp;guid=6ff283cd38d04cd4fb0ec3a37ea43030&amp;type=3#IconSet_197&apos;);" />
                     <ui:Button display-tooltip-when-elided="true" name="EndDayButton" text="EndDayButton" class="button" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-direction: row;">
+                    <ui:VisualElement name="Icon" class="icon" style="background-image: url(&apos;project://database/Assets/Images/Sprites/IconSet.png?fileID=1957242655&amp;guid=6ff283cd38d04cd4fb0ec3a37ea43030&amp;type=3#IconSet_182&apos;);" />
+                    <ui:Button display-tooltip-when-elided="true" name="WarehouseButton" text="WarehouseButton" class="button" />
                 </ui:VisualElement>
             </ui:ScrollView>
         </ui:VisualElement>

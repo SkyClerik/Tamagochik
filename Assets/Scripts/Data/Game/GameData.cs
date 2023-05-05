@@ -5,10 +5,12 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "GameData", menuName = "Data/GameData")]
 public class GameData : ScriptableObject
 {
-    [SerializeField] 
+    [SerializeField]
     private byte _unitsMaxEnergy = 5;
-    [SerializeField] 
+    [SerializeField]
     private Humanoid _master;
+    [SerializeField]
+    private WarehouseData _playerWarehouse;
 
     private byte _day = 1;
     private byte _month = 1;
@@ -19,6 +21,7 @@ public class GameData : ScriptableObject
 
     public byte GetUnitsMaxEnergy => _unitsMaxEnergy;
     public Humanoid Master { get => _master; set => _master = value; }
+    public WarehouseData PlayerWarehouse { get => _playerWarehouse; set => _playerWarehouse = value; }
 
     public byte Day
     {

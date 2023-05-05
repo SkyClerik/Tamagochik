@@ -3,23 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine.UIElements;
 
-public class StartInventory
+public class StartWarehouse
 {
-    private ItemContainer _inventory;
+    private ItemContainer _itemContainer;
     private VisualElement _rootVisualElement;
     private List<VisualElement> _slots = new List<VisualElement>();
 
-    public StartInventory()
+    public StartWarehouse()
     {
         GameDataContainer gameDataContainer = GameDataContainer.Instance;
-        _inventory = gameDataContainer.GetGameData.Master.Inventory;
+        _itemContainer = gameDataContainer.GetGameData.PlayerWarehouse.GetItemContainer;
 
         WindowManagement windowManagement = WindowManagement.Instance;
-        UIDocument uiDocument = windowManagement.GetInventoryHud;
+        UIDocument uiDocument = windowManagement.GetWarehouseDocument;
         uiDocument.enabled = true;
 
         _rootVisualElement = uiDocument.rootVisualElement;
-        ScrollView scrollView = _rootVisualElement.Q<ScrollView>("InventoryScrollView");
+        ScrollView scrollView = _rootVisualElement.Q<ScrollView>("ItemsScrollView");
         List<VisualElement> lines = scrollView.Children().ToList();
 
         foreach (VisualElement line in lines)
@@ -32,10 +32,15 @@ public class StartInventory
             }
         }
 
-        for (int i = 0; i < _inventory.ItemList.Length; i++)
+        for (int i = 0; i < _itemContainer.ItemList.Length; i++)
         {
-            ItemBase item = _inventory.ItemList[i];
-            _slots[i].Add(new ItemVisualElement(item, _inventory, i));
+            ItemBase item = _itemContainer.ItemList[i];
+            _slots[i].Add(new ItemVisualElement(item, _itemContainer, i));
         }
+    }
+
+    private void BalancingSlots()
+    {
+
     }
 }

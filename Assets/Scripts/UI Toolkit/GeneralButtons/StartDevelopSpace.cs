@@ -20,6 +20,9 @@
             Button dungeonsButton = rootVisualElement.Q<Button>("DungeonsButton");
             Button clickerButton = rootVisualElement.Q<Button>("ClickerButton");
             Button endDayButton = rootVisualElement.Q<Button>("EndDayButton");
+            Button warehouseButton = rootVisualElement.Q<Button>("WarehouseButton");
+
+
             Button homeButton = rootVisualElement.Q<Button>("HomeButton");
             Button backButton = rootVisualElement.Q<Button>("BackButton");
 
@@ -29,6 +32,7 @@
             dungeonsButton.clicked += DungeonsButton;
             clickerButton.clicked += Clicker;
             endDayButton.clicked += EndTheDay;
+            warehouseButton.clicked += Warehouse;
 
             homeButton.visible = false;
             backButton.visible = false;
@@ -69,6 +73,15 @@
         private void EndTheDay()
         {
             GameDataContainer.Instance.GetGameData.Day++;
+        }
+
+        private void Warehouse()
+        {
+            var windowManagement = WindowManagement.Instance;
+            windowManagement.GetGeneralButtons.enabled = false;
+            windowManagement.GetRightHud.enabled = false;
+            new StartWarehouse();
+            new StartInventory();
         }
     }
 }

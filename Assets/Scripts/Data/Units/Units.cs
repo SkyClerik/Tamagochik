@@ -26,9 +26,9 @@ namespace Data.Units
     public class Humanoid : UnitBase
     {
         [SerializeField] private EquipmentItem[] _eqiupments;
-        [SerializeField] private Inventory _inventory;
+        [SerializeField] private ItemContainer _inventory;
         public EquipmentItem[] Eqiupments { get => _eqiupments; set => _eqiupments = value; }
-        public Inventory Inventory { get => _inventory; set => _inventory = value; }
+        public ItemContainer Inventory { get => _inventory; set => _inventory = value; }
 
         public void EquipItem(EquipmentItem equipment)
         {

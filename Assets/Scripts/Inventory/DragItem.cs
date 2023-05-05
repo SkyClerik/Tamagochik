@@ -43,6 +43,13 @@ public class DragItem : Singleton<DragItem>
         return _itemVisualElement;
     }
 
+    public void Swap(ItemContainer currentContainer, int index)
+    {
+        ItemContainer dragContainer = _itemVisualElement.Owner;
+        int indexDrag = _itemVisualElement.IndexInInventory;
+        Extensions.UtilsExt.Swap(ref currentContainer.ItemList[index], ref dragContainer.ItemList[indexDrag]);
+    }
+
     private void Update()
     {
         SetPosition();
