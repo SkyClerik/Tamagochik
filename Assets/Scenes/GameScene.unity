@@ -191,6 +191,7 @@ MonoBehaviour:
   _vtaListButton: {fileID: 9197481963319205126, guid: e6877c2c98ffd40479cbd622ad6b0b99, type: 3}
   _vtaClicker: {fileID: 9197481963319205126, guid: 3ccda3f2297a46f4bbf9a920e4179b40, type: 3}
   _vtaGeneralButtonPattern: {fileID: 9197481963319205126, guid: 79e87ac23e6398644bf26a5f47ea3fbd, type: 3}
+  _vtaItemSlotPattern: {fileID: 9197481963319205126, guid: c728c041734d7cf40b9037ea3945a5e8, type: 3}
 --- !u!1 &140056694
 GameObject:
   m_ObjectHideFlags: 0
@@ -630,7 +631,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1346459762}
-  - component: {fileID: 1346459763}
   - component: {fileID: 1346459764}
   m_Layer: 0
   m_Name: Inventory
@@ -654,18 +654,6 @@ Transform:
   m_Father: {fileID: 45251921}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1346459763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1346459761}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 938a03ff7e81d7c4f83170e80e4bd037, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1346459764
 MonoBehaviour:
   m_ObjectHideFlags: 0

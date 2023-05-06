@@ -40,7 +40,9 @@ public class WindowManagement : Singleton<WindowManagement>
     [Header("VisualTreeAsset Patterns")]
 
     [SerializeField] private VisualTreeAsset _vtaGeneralButtonPattern;
+    [SerializeField] private VisualTreeAsset _vtaItemSlotPattern;
     public VisualTreeAsset VtaGeneralButtonPattern => _vtaGeneralButtonPattern;
+    public VisualTreeAsset VtaItemSlotPattern => _vtaItemSlotPattern;
 
     public void MainHuds(bool active)
     {

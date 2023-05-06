@@ -4,7 +4,6 @@ using UnityEngine.UIElements;
 public class ItemVisualElement : VisualElement
 {
     private ItemBase _item;
-    private StyleBackground _icon;
     private int _indexInInventory;
     private ItemContainer _owner;
 
@@ -25,11 +24,11 @@ public class ItemVisualElement : VisualElement
         RegisterCallback<MouseUpEvent>(OnMouseUpEvent);
     }
 
-    public void SetItem(ItemBase itemBase)
+    private void SetItem(ItemBase itemBase)
     {
         _item = itemBase;
-        _icon = itemBase == null ? null : new StyleBackground(itemBase.Icon);
-        style.backgroundImage = _icon;
+        StyleBackground icon = itemBase == null ? null : new StyleBackground(itemBase.Icon);
+        style.backgroundImage = icon;
     }
 
     ~ItemVisualElement()
@@ -48,7 +47,7 @@ public class ItemVisualElement : VisualElement
     {
         DragItem dragItem = DragItem.Instance;
         ItemVisualElement oldItemSlot = dragItem.GetItem();
-        if (IsSlotEmpty())
+        if (IsSlotEmpty)
         {
             SetItem(oldItemSlot.Item);
             oldItemSlot.SetItem(null);
@@ -60,11 +59,14 @@ public class ItemVisualElement : VisualElement
         }
     }
 
-    private bool IsSlotEmpty()
+    private bool IsSlotEmpty
     {
-        if (_item == null)
-            return true;
+        get
+        {
+            if (_item == null)
+                return true;
 
-        return false;
+            return false;
+        }
     }
 }
