@@ -1,14 +1,14 @@
 using Data.Item;
 using Data.Units;
+using Data.World;
 using Hud.Buttons;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class StartClicker
 {
-    GameDataContainer _gameDataContainer;
-    private Rect _leftArea;
-    private Rect _windowArea;
+    private GameDataContainer _gameDataContainer;
+    private Dungeon _dungeon;
 
     private Humanoid _humanoid;
     private ItemBase[] _lutList;
@@ -24,9 +24,10 @@ public class StartClicker
     private VisualElement _attackLine;
     private VisualElement _protectLine;
 
-    public StartClicker()
+    public StartClicker(Dungeon dungeon)
     {
         _gameDataContainer = GameDataContainer.Instance;
+        _dungeon = dungeon;
 
         WindowManagement windowManagement = WindowManagement.Instance;
         UIDocument uiDocument = windowManagement.GetClickerHud;
@@ -77,7 +78,7 @@ public class StartClicker
         UIDocument uiDocument = windowManagement.GetClickerHud;
         uiDocument.enabled = false;
 
-        new StartDevelopSpace();
+        _dungeon.Outside();
     }
 
     private void AddRandomItem()

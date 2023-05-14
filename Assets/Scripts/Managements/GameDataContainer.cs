@@ -1,17 +1,12 @@
 using UnityEngine;
-using Data.Dungeon;
 using Data.Item;
-using Data.Rects;
 using Data.Storages;
 using Data.Recipes;
+using Data.World;
 
 public class GameDataContainer : Singleton<GameDataContainer>
 {
     [Header("Не клонируемые")]
-
-    [SerializeField]
-    private GUISkin _standartGuiSkin;
-    public GUISkin StandartGuiSkin => _standartGuiSkin;
 
     [SerializeField]
     private SpriteData _spriteData;
@@ -25,27 +20,19 @@ public class GameDataContainer : Singleton<GameDataContainer>
     private UnitsData _unitsData;
     public UnitsData GetUnitsData => _unitsData;
 
-    [Header("Клонируемые")]
-
     [SerializeField]
-    private RectsData _rectsData;
-    public RectsData GetRectsData => _rectsData;
+    private WorldData _worldData;
+    public WorldData GetWorldData => _worldData;
+
+    [Header("Клонируемые")]
 
     [SerializeField]
     private GameData _gameData;
     public GameData GetGameData => _gameData;
 
     [SerializeField]
-    private PersonalSpace _shopData;
-    public PersonalSpace GetShopData => _shopData;
-
-    [SerializeField]
     private GameSettingsData _gameSettingsData;
     public GameSettingsData GetGameSettingsData => _gameSettingsData;
-
-    [SerializeField]
-    private DungeonsData _dungeonsData;
-    public DungeonsData GetDungeonsData => _dungeonsData;
 
     [SerializeField]
     private ItemsData _itemsData;
@@ -59,30 +46,16 @@ public class GameDataContainer : Singleton<GameDataContainer>
     private RecipesData _recipesData;
     public RecipesData GetRecipesData => _recipesData;
 
+
     public event System.Action OnReady;
 
     public void Initialization()
     {
-        if (_rectsData)
-        {
-            _rectsData = Instantiate(_rectsData);
-            _rectsData.Init();
-        }
-
         if (_gameData)
             _gameData = Instantiate(_gameData);
 
         if (_gameSettingsData)
             _gameSettingsData = Instantiate(_gameSettingsData);
-
-        if (_shopData)
-            _shopData = Instantiate(_shopData);
-
-        if (_shopData)
-            _shopData = Instantiate(_shopData);
-
-        if (_dungeonsData)
-            _dungeonsData = Instantiate(_dungeonsData);
 
         if (_itemsData)
             _itemsData = Instantiate(_itemsData);

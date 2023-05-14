@@ -1,5 +1,4 @@
 using Data.Item;
-using Data.Rects;
 using Data.Units;
 using Hud.Buttons;
 using System;
@@ -10,7 +9,6 @@ public class EquipmentHud : MonoBehaviour
 {
     private Rect _leftArea;
     private Rect _buttonsArea;
-    private Rect _windowArea;
 
     private Action _backToAction;
     private ButtonElement[] _euipmentButtons;
@@ -27,18 +25,18 @@ public class EquipmentHud : MonoBehaviour
     private const string _onlyIcon = "onlyIcon";
     private int _maxSpaceFromEndIcon = 7; // Магическое число. Посчитано как (ButtonSizeWidth/ButtonSizeHeight - 1)==(256/32-1)
     private int _icoSize;
-
+    //TODO del
     private void Start()
     {
         var gameDataContainer = GameDataContainer.Instance;
         _itemsData = gameDataContainer.GetItemsData;
-        RectsData rectsData = gameDataContainer.GetRectsData;
-        _icoSize = rectsData.GetIcoSize;
-        _buttonOptions = rectsData.MainButtonsOption;
-        _leftArea = rectsData.LeftArea;
-        _buttonsArea = rectsData.ButtonsArea;
-        _windowArea = rectsData.KraftWindowArea;
-        _guiSkin = gameDataContainer.StandartGuiSkin;
+        //RectsData rectsData = gameDataContainer.GetRectsData;
+        //_icoSize = rectsData.GetIcoSize;
+        //_buttonOptions = rectsData.MainButtonsOption;
+        //_leftArea = rectsData.LeftArea;
+        //_buttonsArea = rectsData.ButtonsArea;
+        //_windowArea = rectsData.KraftWindowArea;
+        //_guiSkin = gameDataContainer.StandartGuiSkin;
         _buttonActive = _guiSkin.GetStyle($"{_leftButtonStyle}");
         _buttonLock = _guiSkin.GetStyle($"{_lockButtonStyle}");
         _iconStyle = _guiSkin.GetStyle($"{_onlyIcon}");

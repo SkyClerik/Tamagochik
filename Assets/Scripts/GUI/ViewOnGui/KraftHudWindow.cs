@@ -1,6 +1,5 @@
 using Data.Item;
 using Data.Recipes;
-using Data.Rects;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,12 +7,12 @@ public class KraftHudWindow : MonoBehaviour
 {
     private Rect _windowArea;
     private GUILayoutOption[] _buttonOptions;
-    private RectsData _rectsData;
+    //private RectsData _rectsData;
     private RecipesData _recipesData;
     private ItemsData _itemsData;
     private ItemBase _itemBase;
     private GameDataContainer _gameDataContainer;
-    private GUISkin _guiSkin;
+    //private GUISkin _guiSkin;
     private GUIStyle _buttonActive;
     private GUIStyle _buttonLock;
     private GUIStyle _iconStyle;
@@ -25,27 +24,27 @@ public class KraftHudWindow : MonoBehaviour
     private List<ItemInQuantity>[] demands;
     private List<ButtonElement> _demandsIcons;
     private int _coast = 0;
-
+    //TODO del
     private void Start()
     {
         var gameDataContainer = GameDataContainer.Instance;
         _itemsData = gameDataContainer.GetItemsData;
-        _rectsData = gameDataContainer.GetRectsData;
+        //_rectsData = gameDataContainer.GetRectsData;
         _recipesData = gameDataContainer.GetRecipesData;
-        _guiSkin = gameDataContainer.StandartGuiSkin;
-        _buttonOptions = _rectsData.MainButtonsOption;
-        _windowArea = _rectsData.KraftWindowArea;
+        //_guiSkin = gameDataContainer.StandartGuiSkin;
+        //_buttonOptions = _rectsData.MainButtonsOption;
+        //_windowArea = _rectsData.KraftWindowArea;
         enabled = false;
     }
 
     public void Init(int itemIndex)
     {
         _gameDataContainer = GameDataContainer.Instance;
-        _guiSkin = _gameDataContainer.StandartGuiSkin;
-        _buttonActive = _guiSkin.GetStyle($"{_leftButtonStyle}");
-        _buttonLock = _guiSkin.GetStyle($"{_lockButtonStyle}");
-        _iconStyle = _guiSkin.GetStyle($"{_onlyIcon}");
-        _icoSize = _rectsData.GetIcoSize;
+        //_guiSkin = _gameDataContainer.StandartGuiSkin;
+        //_buttonActive = _guiSkin.GetStyle($"{_leftButtonStyle}");
+        //_buttonLock = _guiSkin.GetStyle($"{_lockButtonStyle}");
+        //_iconStyle = _guiSkin.GetStyle($"{_onlyIcon}");
+        //_icoSize = _rectsData.GetIcoSize;
         _itemBase = _itemsData.Items[itemIndex];
         _windowContent.text = _itemBase.Name;
         Texture texture = TextureConverter.SpriteToTexture(_itemBase.Icon);
@@ -87,7 +86,7 @@ public class KraftHudWindow : MonoBehaviour
 
     private void OnGUI()
     {
-        GUI.skin = _guiSkin;
+        //GUI.skin = _guiSkin;
         GUI.Window(0, _windowArea, View, _windowContent);
     }
 

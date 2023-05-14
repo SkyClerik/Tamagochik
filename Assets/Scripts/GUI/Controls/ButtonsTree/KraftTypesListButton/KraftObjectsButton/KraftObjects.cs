@@ -10,24 +10,24 @@ namespace Hud.Buttons
         private ItemsData _itemsData;
         private List<ButtonElement> _buttons;
 
-        private GUISkin _guiSkin;
+        //private GUISkin _guiSkin;
         private GUIStyle _buttonActive;
         private GUIStyle _buttonLock;
         private GUIStyle _iconStyle;
         private const string _leftButtonStyle = "leftButton";
         private const string _lockButtonStyle = "lockButton";
         private const string _onlyIcon = "onlyIcon";
-
+        //TODO del
         public void Init(params object[] list)
         {
             StorageTypes type = (StorageTypes)list[0];
 
             _gameDataContainer = GameDataContainer.Instance;
             _itemsData = _gameDataContainer.GetItemsData;
-            _guiSkin = _gameDataContainer.StandartGuiSkin;
-            _buttonActive = _guiSkin.GetStyle($"{_leftButtonStyle}");
-            _buttonLock = _guiSkin.GetStyle($"{_lockButtonStyle}");
-            _iconStyle = _guiSkin.GetStyle($"{_onlyIcon}");
+            //_guiSkin = _gameDataContainer.StandartGuiSkin;
+            //_buttonActive = _guiSkin.GetStyle($"{_leftButtonStyle}");
+            //_buttonLock = _guiSkin.GetStyle($"{_lockButtonStyle}");
+            //_iconStyle = _guiSkin.GetStyle($"{_onlyIcon}");
             _buttons = new List<ButtonElement>();
 
             for (int i = 0; i < _itemsData.Items.Count; i++)

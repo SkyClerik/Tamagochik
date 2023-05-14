@@ -1,7 +1,7 @@
+using Data.World;
+
 namespace Hud.Buttons
 {
-    using Data.Dungeon;
-
     public class AssembleSquad : IInit
     {
         private Dungeon _dungeon;

@@ -20,20 +20,16 @@
                     <ui:Button display-tooltip-when-elided="true" name="RoomsButton" text="RoomsButton" class="button" />
                 </ui:VisualElement>
                 <ui:VisualElement style="flex-direction: row;">
-                    <ui:VisualElement name="Icon" class="icon" style="background-image: url(&apos;project://database/Assets/Images/Sprites/IconSet.png?fileID=-639187809&amp;guid=6ff283cd38d04cd4fb0ec3a37ea43030&amp;type=3#IconSet_181&apos;);" />
-                    <ui:Button display-tooltip-when-elided="true" name="DungeonsButton" text="DungeonsButton" class="button" />
-                </ui:VisualElement>
-                <ui:VisualElement style="flex-direction: row;">
-                    <ui:VisualElement name="Icon" class="icon" style="background-image: url(&apos;project://database/Assets/Images/Sprites/IconSet.png?fileID=1409646160&amp;guid=6ff283cd38d04cd4fb0ec3a37ea43030&amp;type=3#IconSet_176&apos;);" />
-                    <ui:Button display-tooltip-when-elided="true" name="ClickerButton" text="ClickerButton" class="button" />
-                </ui:VisualElement>
-                <ui:VisualElement style="flex-direction: row;">
                     <ui:VisualElement name="Icon" class="icon" style="background-image: url(&apos;project://database/Assets/Images/Sprites/IconSet.png?fileID=-627059035&amp;guid=6ff283cd38d04cd4fb0ec3a37ea43030&amp;type=3#IconSet_197&apos;);" />
                     <ui:Button display-tooltip-when-elided="true" name="EndDayButton" text="EndDayButton" class="button" />
                 </ui:VisualElement>
                 <ui:VisualElement style="flex-direction: row;">
                     <ui:VisualElement name="Icon" class="icon" style="background-image: url(&apos;project://database/Assets/Images/Sprites/IconSet.png?fileID=1957242655&amp;guid=6ff283cd38d04cd4fb0ec3a37ea43030&amp;type=3#IconSet_182&apos;);" />
                     <ui:Button display-tooltip-when-elided="true" name="WarehouseButton" text="WarehouseButton" class="button" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-direction: row;">
+                    <ui:VisualElement name="Icon" class="icon" style="background-image: url(&apos;project://database/Assets/Images/Sprites/IconSet.png?fileID=424535959&amp;guid=6ff283cd38d04cd4fb0ec3a37ea43030&amp;type=3#IconSet_73&apos;);" />
+                    <ui:Button display-tooltip-when-elided="true" name="LeaveHouse" text="LeaveHouse" class="button" />
                 </ui:VisualElement>
             </ui:ScrollView>
         </ui:VisualElement>

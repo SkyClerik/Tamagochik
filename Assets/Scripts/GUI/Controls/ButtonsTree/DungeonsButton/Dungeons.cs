@@ -1,44 +1,44 @@
+using Data.World;
+using System;
+using System.Collections.Generic;
+using UnityEngine;
+
 namespace Hud.Buttons
 {
-    using System.Collections.Generic;
-    using UnityEngine;
-    using Data.Dungeon;
-    using Behaviours;
-    using System;
 
     public class Dungeons : IInit
     {
         private GameDataContainer _gameDataContainer;
         private SpriteData _spriteData;
-        private DungeonsData _dungeonsData;
+        //private DungeonsData _dungeonsData;
 
         private ButtonElement[] _buttons;
-        private GUISkin _guiSkin;
+        //private GUISkin _guiSkin;
         private GUIStyle _buttonActive;
         private GUIStyle _buttonLock;
         private GUIStyle _iconStyle;
         private const string _leftButtonStyle = "leftButton";
         private const string _lockButtonStyle = "lockButton";
         private const string _onlyIcon = "onlyIcon";
-
+        //TODO del
         public void Init(params object[] list)
         {
             _gameDataContainer = GameDataContainer.Instance;
             _spriteData = _gameDataContainer.GetSpriteData;
-            _dungeonsData = _gameDataContainer.GetDungeonsData;
+            //_dungeonsData = _gameDataContainer.GetDungeonsData;
 
-            _guiSkin = _gameDataContainer.StandartGuiSkin;
-            _buttonActive = _guiSkin.GetStyle($"{_leftButtonStyle}");
-            _buttonLock = _guiSkin.GetStyle($"{_lockButtonStyle}");
-            _iconStyle = _guiSkin.GetStyle($"{_onlyIcon}");
+            //_guiSkin = _gameDataContainer.StandartGuiSkin;
+            //_buttonActive = _guiSkin.GetStyle($"{_leftButtonStyle}");
+            //_buttonLock = _guiSkin.GetStyle($"{_lockButtonStyle}");
+            //_iconStyle = _guiSkin.GetStyle($"{_onlyIcon}");
 
             Texture2D IconClose = TextureConverter.SpriteToTexture(_spriteData.Close);
 
-            _buttons = new ButtonElement[_dungeonsData.Dungeons.Count];
-            for (int i = 0; i < _dungeonsData.Dungeons.Count; i++)
-            {
-                _buttons[i] = CreateButton(_dungeonsData.Dungeons[i], Call, i);
-            }
+            //_buttons = new ButtonElement[_dungeonsData.Dungeons.Count];
+            //for (int i = 0; i < _dungeonsData.Dungeons.Count; i++)
+            //{
+            //    _buttons[i] = CreateButton(_dungeonsData.Dungeons[i], Call, i);
+            //}
 
             //WindowManagement.Instance.GetButtonsHud.Init(_buttons, BackButton);
         }
@@ -98,7 +98,7 @@ namespace Hud.Buttons
 
         private void Call(int dungeonsListIndex)
         {
-            new DungeonInfo().Init(_dungeonsData.Dungeons[dungeonsListIndex]);
+            //new DungeonInfo().Init(_dungeonsData.Dungeons[dungeonsListIndex]);
         }
 
         private void BackButton()

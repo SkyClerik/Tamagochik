@@ -1,3 +1,13 @@
+.item-icon {
+    width: 88px;
+    height: 88px;
+    position: absolute;
+}
+
+.items-line {
+    flex-direction: row;
+}
+
 .item-box {
     width: 90px;
     height: 90px;
@@ -11,7 +21,7 @@
     padding-bottom: 0;
     justify-content: center;
     align-items: center;
-    background-color: rgba(99, 99, 99, 255);
+    background-color: rgb(99, 99, 99);
     border-left-width: 0;
     border-right-width: 0;
     border-top-width: 0;
@@ -22,12 +32,27 @@
     border-bottom-right-radius: 2px;
 }
 
-.item-icon {
-    width: 88px;
-    height: 88px;
-    position: absolute;
-}
-
-.items-line {
-    flex-direction: row;
+.item-box-lock {
+    width: 90px;
+    height: 90px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    justify-content: center;
+    align-items: center;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    background-image: url('project://database/Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackLockButtonEnabled.png?fileID=2800000&guid=e8aa120f1b4731e43a2dd31eb70bbbe2&type=3#d_TrackLockButtonEnabled');
+    background-color: rgba(67, 67, 67, 255);
 }

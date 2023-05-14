@@ -10,6 +10,9 @@ public class StartInventory
     private VisualElement _rootVisualElement;
     private List<VisualElement> _slots = new List<VisualElement>();
 
+    private const string _itemBoxStyle = "item-box";
+    private const string _itemBoxLockStyle = "item-box-lock";
+
     public StartInventory()
     {
         GameDataContainer gameDataContainer = GameDataContainer.Instance;
@@ -51,7 +54,8 @@ public class StartInventory
         WindowManagement windowManagement = WindowManagement.Instance;
         VisualTreeAsset itemSlotVisualTree = windowManagement.VtaItemSlotPattern;
 
-        for (int f = 0; f < needLine; f++)
+        string templateStyle = _itemBoxStyle;
+        for (int f = 0, sc = 0; f < needLine; f++)
         {
             VisualElement line = new VisualElement();
             line.AddToClassList("items-line");
@@ -59,7 +63,12 @@ public class StartInventory
             for (int i = 0; i < slotsInLine; i++)
             {
                 TemplateContainer template = itemSlotVisualTree.Instantiate();
-                template.AddToClassList("item-box");
+
+                if (sc >= _inventory.ItemList.Length)
+                    templateStyle = _itemBoxLockStyle;
+
+                sc++;
+                template.AddToClassList(templateStyle);
                 line.Add(template);
             }
 

@@ -1,5 +1,4 @@
-using Data.Dungeon;
-using Data.Rects;
+using Data.World;
 using Data.Units;
 using Hud.Buttons;
 using System;
@@ -25,7 +24,7 @@ public class AssembleSquadHud : MonoBehaviour
     private int _partyCount = 4; // Магическое число. Временно ограничиваю партию.
     private Action _backToAction;
 
-    private GUISkin _guiSkin;
+    //private GUISkin _guiSkin;
     private GUIStyle _buttonActive;
     private GUIStyle _buttonLock;
     private GUIStyle _iconStyle;
@@ -33,23 +32,23 @@ public class AssembleSquadHud : MonoBehaviour
     private const string _lockButtonStyle = "lockButton";
     private const string _onlyIcon = "onlyIcon";
     private const string _startText = "Go to Dungeon";
-
+    //TODO del
     private void Start()
     {
         var gameDataContainer = GameDataContainer.Instance;
-        RectsData rectsData = gameDataContainer.GetRectsData;
-        _buttonOptions = rectsData.MainButtonsOption;
-        _icoSize = rectsData.GetIcoSize;
-        _leftArea = rectsData.LeftArea;
-        _buttonsArea = rectsData.ButtonsArea;
+        //RectsData rectsData = gameDataContainer.GetRectsData;
+        //_buttonOptions = rectsData.MainButtonsOption;
+        //_icoSize = rectsData.GetIcoSize;
+        //_leftArea = rectsData.LeftArea;
+        //_buttonsArea = rectsData.ButtonsArea;
         _partyButtonsArea = new Rect(_buttonsArea.xMax, _buttonsArea.y, _buttonsArea.width, _icoSize * _partyCount);
         _startButtonArea = new Rect(_partyButtonsArea.x, _partyButtonsArea.yMax, _partyButtonsArea.width, _icoSize);
         _gameDataContainer = GameDataContainer.Instance;
         _spriteData = _gameDataContainer.GetSpriteData;
-        _guiSkin = _gameDataContainer.StandartGuiSkin;
-        _buttonActive = _guiSkin.GetStyle($"{_leftButtonStyle}");
-        _buttonLock = _guiSkin.GetStyle($"{_lockButtonStyle}");
-        _iconStyle = _guiSkin.GetStyle($"{_onlyIcon}");
+        //_guiSkin = _gameDataContainer.StandartGuiSkin;
+        //_buttonActive = _guiSkin.GetStyle($"{_leftButtonStyle}");
+        //_buttonLock = _guiSkin.GetStyle($"{_lockButtonStyle}");
+        //_iconStyle = _guiSkin.GetStyle($"{_onlyIcon}");
         enabled = false;
     }
 
@@ -161,7 +160,7 @@ public class AssembleSquadHud : MonoBehaviour
 
     private void OnGUI()
     {
-        GUI.skin = _guiSkin;
+        //GUI.skin = _guiSkin;
 
         ViewBackButton();
         ViewButtonList(_buttonsArea, _unitsButtons);

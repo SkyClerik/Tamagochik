@@ -8,6 +8,9 @@ public class DragItem : Singleton<DragItem>
     private VisualElement _icon;
     private UIDocument _uiDocument;
     private float _screenHeight;
+    private const string _iconName = "Icon";
+
+    public bool IsDragging => _itemVisualElement == null ? false : true;
 
     private void Awake()
     {
@@ -16,24 +19,28 @@ public class DragItem : Singleton<DragItem>
         _uiDocument.enabled = true;
 
         VisualElement root = _uiDocument.rootVisualElement;
-        _icon = root.Q<VisualElement>("Icon");
+        _icon = root.Q<VisualElement>(_iconName);
 
         root.Add(_icon);
     }
 
     public void AddItem(ItemVisualElement itemVisualElement)
     {
-        if (itemVisualElement.Item == null)
+        _itemVisualElement = itemVisualElement;
+
+        if (itemVisualElement?.Item == null)
             return;
 
         _screenHeight = Screen.height;
-        _itemVisualElement = itemVisualElement;
-
         Sprite icon = itemVisualElement.Item.Icon;
         _icon.style.backgroundImage = new StyleBackground(icon);
         _icon.visible = true;
-
         enabled = true;
+    }
+
+    public void Clear()
+    {
+        _itemVisualElement = null;
     }
 
     public ItemVisualElement GetItem()

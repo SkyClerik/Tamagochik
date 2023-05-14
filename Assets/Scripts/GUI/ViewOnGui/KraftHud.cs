@@ -1,4 +1,3 @@
-using Data.Rects;
 using Hud.Buttons;
 using UnityEngine;
 
@@ -10,21 +9,21 @@ public class KraftHud : MonoBehaviour
     private Rect _buttonsArea;
     private ButtonElement[] _buttons;
     private GUILayoutOption[] _buttonOptions;
-    private RectsData _rectsData;
-    private GUISkin _guiSkin;
+    //private RectsData _rectsData;
+    //private GUISkin _guiSkin;
     private int _icoSize;
     private int _maxSpaceFromEndIcon = 7; // Магическое число. Посчитано как (ButtonSizeWidth/ButtonSizeHeight - 1)==(256/32-1)
-
+    //TODO del
     private void Start()
     {
         _kraftHudWindow = GetComponent<KraftHudWindow>();
         var gameDataContainer = GameDataContainer.Instance;
-        _rectsData = gameDataContainer.GetRectsData;
-        _guiSkin = gameDataContainer.StandartGuiSkin;
-        _buttonOptions = _rectsData.MainButtonsOption;
-        _leftArea = _rectsData.LeftArea;
-        _buttonsArea = _rectsData.ButtonsArea;
-        _icoSize = _rectsData.GetIcoSize;
+        //_rectsData = gameDataContainer.GetRectsData;
+        //_guiSkin = gameDataContainer.StandartGuiSkin;
+        //_buttonOptions = _rectsData.MainButtonsOption;
+        //_leftArea = _rectsData.LeftArea;
+        //_buttonsArea = _rectsData.ButtonsArea;
+        //_icoSize = _rectsData.GetIcoSize;
         enabled = false;
     }
 
@@ -42,7 +41,7 @@ public class KraftHud : MonoBehaviour
 
     private void OnGUI()
     {
-        GUI.skin = _guiSkin;
+        //GUI.skin = _guiSkin;
         ViewBackButton(_leftArea);
         ViewButtonList(_buttonsArea, _buttons);
     }

@@ -237,7 +237,7 @@ GameObject:
   m_Layer: 0
   m_Name: Equipment
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -263,7 +263,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 165154712}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45509129ba528134ebd39d953da65e63, type: 3}
   m_Name: 
@@ -278,6 +278,7 @@ GameObject:
   m_Component:
   - component: {fileID: 205093135}
   - component: {fileID: 205093137}
+  - component: {fileID: 205093138}
   m_Layer: 0
   m_Name: Clicker
   m_TagString: Untagged
@@ -316,6 +317,19 @@ MonoBehaviour:
   m_ParentUI: {fileID: 0}
   sourceAsset: {fileID: 9197481963319205126, guid: 3ccda3f2297a46f4bbf9a920e4179b40, type: 3}
   m_SortingOrder: -1
+--- !u!114 &205093138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205093134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecdd7aafa8f6e1e4689381ff867b0140, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _moveSpeed: 50
 --- !u!1 &439455287
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,15 +359,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8ff95fc161483344b269912fdecf947, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _standartGuiSkin: {fileID: 11400000, guid: 8d684939891f5444985d5cab4c78238f, type: 2}
   _spriteData: {fileID: 11400000, guid: 599cf979730866b4c94c061335fd4867, type: 2}
   _hudTextData: {fileID: 11400000, guid: 15fc1851ec460a24c9e52f0476c7e73d, type: 2}
   _unitsData: {fileID: 11400000, guid: 141c3cc26257797499c693044df6f0a2, type: 2}
-  _rectsData: {fileID: 11400000, guid: b15828b8b26a3244f91c3e4f819daa93, type: 2}
+  _worldData: {fileID: 11400000, guid: 5a5be349ca477964eb51dc13ae9f7976, type: 2}
   _gameData: {fileID: 11400000, guid: bb1f715a5dc5b6142b2ef6465f78248a, type: 2}
-  _shopData: {fileID: 11400000, guid: 66ae74b3ba10f6e4cb314d5059818987, type: 2}
   _gameSettingsData: {fileID: 11400000, guid: c9402b3f42a88704885bb55afa99a38a, type: 2}
-  _dungeonsData: {fileID: 11400000, guid: e5fa95c2effb1dc40887df91f9c270d6, type: 2}
   _itemsData: {fileID: 11400000, guid: 874492224bf7d9e43a087d1d83276adc, type: 2}
   _storagesData: {fileID: 11400000, guid: 709c87467d2922a458784d94bf3f240b, type: 2}
   _recipesData: {fileID: 11400000, guid: 1f91c40fa466e0e4b843cc15f8d25088, type: 2}
@@ -561,6 +572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6eeb14bf5c88b5a44b95d87fd8593940, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _startHouse: {fileID: 11400000, guid: b7c5ef3c039748445b310fe3b358c681, type: 2}
 --- !u!1 &652977829
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,7 +743,7 @@ GameObject:
   m_Layer: 0
   m_Name: AssembleSquad
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -757,7 +769,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1628742022}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c34e578ae7a34a24094481bce49e82e7, type: 3}
   m_Name: 
@@ -824,7 +836,7 @@ GameObject:
   m_Layer: 0
   m_Name: Kraft
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -850,7 +862,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2133623147}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65c76a12944ba28439c032593c449db8, type: 3}
   m_Name: 
@@ -862,7 +874,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2133623147}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fad302f8b1871a44db9c86eb809a25aa, type: 3}
   m_Name: 

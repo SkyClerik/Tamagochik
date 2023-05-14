@@ -6,22 +6,22 @@
         private GameDataContainer _gameDataContainer;
         private SpriteData _spriteData;
         private ButtonElement[] _buttons;
-        private GUISkin _guiSkin;
+        //private GUISkin _guiSkin;
         private GUIStyle _buttonActive;
         private GUIStyle _buttonLock;
         private GUIStyle _iconStyle;
         private const string _leftButtonStyle = "leftButton";
         private const string _lockButtonStyle = "lockButton";
         private const string _onlyIcon = "onlyIcon";
-
+        //TODO del
         public void Init(params object[] list)
         {
             _gameDataContainer = GameDataContainer.Instance;
             _spriteData = _gameDataContainer.GetSpriteData;
-            _guiSkin = _gameDataContainer.StandartGuiSkin;
-            _buttonActive = _guiSkin.GetStyle($"{_leftButtonStyle}");
-            _buttonLock = _guiSkin.GetStyle($"{_lockButtonStyle}");
-            _iconStyle = _guiSkin.GetStyle($"{_onlyIcon}");
+            //_guiSkin = _gameDataContainer.StandartGuiSkin;
+            //_buttonActive = _guiSkin.GetStyle($"{_leftButtonStyle}");
+            //_buttonLock = _guiSkin.GetStyle($"{_lockButtonStyle}");
+            //_iconStyle = _guiSkin.GetStyle($"{_onlyIcon}");
 
             Texture2D IconClose = TextureConverter.SpriteToTexture(_spriteData.Close);
 

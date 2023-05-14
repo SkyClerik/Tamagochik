@@ -1,12 +1,17 @@
-﻿namespace Hud.Buttons
-{
-    using UnityEngine;
-    using UnityEngine.UIElements;
+﻿using Data.World;
+using UnityEngine;
+using UnityEngine.UIElements;
 
+namespace Hud.Buttons
+{
     public class StartDevelopSpace
     {
-        public StartDevelopSpace()
+        private House _startHouse;
+
+        public StartDevelopSpace(House startHouse)
         {
+            _startHouse = startHouse;
+
             WindowManagement windowManagement = WindowManagement.Instance;
             UIDocument uiDocument = windowManagement.GetGeneralButtons;
             uiDocument.visualTreeAsset = windowManagement.VtaDevelopSpace;
@@ -17,11 +22,9 @@
             Button createButton = rootVisualElement.Q<Button>("CreateButton");
             Button unitsButton = rootVisualElement.Q<Button>("UnitsButton");
             Button roomsButton = rootVisualElement.Q<Button>("RoomsButton");
-            Button dungeonsButton = rootVisualElement.Q<Button>("DungeonsButton");
-            Button clickerButton = rootVisualElement.Q<Button>("ClickerButton");
             Button endDayButton = rootVisualElement.Q<Button>("EndDayButton");
             Button warehouseButton = rootVisualElement.Q<Button>("WarehouseButton");
-
+            Button leaveHouse = rootVisualElement.Q<Button>("LeaveHouse");
 
             Button homeButton = rootVisualElement.Q<Button>("HomeButton");
             Button backButton = rootVisualElement.Q<Button>("BackButton");
@@ -29,10 +32,9 @@
             createButton.clicked += KraftTypesListButton;
             unitsButton.clicked += UnitsButton;
             roomsButton.clicked += RoomsButton;
-            dungeonsButton.clicked += DungeonsButton;
-            clickerButton.clicked += Clicker;
             endDayButton.clicked += EndTheDay;
             warehouseButton.clicked += Warehouse;
+            leaveHouse.clicked += LeaveHouse;
 
             homeButton.visible = false;
             backButton.visible = false;
@@ -55,21 +57,6 @@
             new StartRooms();
         }
 
-        private void DungeonsButton()
-        {
-            Debug.Log($"Этот функционал еще в разработке");
-            //new Dungeons().Init();
-        }
-
-        private void Clicker()
-        {
-            var windowManagement = WindowManagement.Instance;
-            windowManagement.GetGeneralButtons.enabled = false;
-            windowManagement.GetRightHud.enabled = false;
-            new StartClicker();
-            new StartInventory();
-        }
-
         private void EndTheDay()
         {
             GameDataContainer.Instance.GetGameData.Day++;
@@ -82,6 +69,11 @@
             windowManagement.GetRightHud.enabled = false;
             new StartWarehouse();
             new StartInventory();
+        }
+
+        private void LeaveHouse()
+        {
+            _startHouse.Outside();
         }
     }
 }

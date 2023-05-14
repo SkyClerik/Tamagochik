@@ -1,9 +1,12 @@
-﻿using Hud.Buttons;
+﻿using Data.World;
 using UnityEngine;
 
 public class GameSceneStarter : MonoBehaviour
 {
     private GameDataContainer _gameDataContainer;
+
+    [SerializeField]
+    private House _startHouse;
 
     private void Awake()
     {
@@ -16,7 +19,7 @@ public class GameSceneStarter : MonoBehaviour
     {
         _gameDataContainer.OnReady -= Init;
         //Application.targetFrameRate = 60;
-        new StartDevelopSpace();
+        _startHouse.Inside();
         Destroy(gameObject);
     }
 }

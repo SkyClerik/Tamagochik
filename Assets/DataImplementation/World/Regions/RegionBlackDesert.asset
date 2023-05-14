@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e06ec405210de429e1e6df19bdb15d, type: 3}
+  m_Name: RegionBlackDesert
+  m_EditorClassIdentifier: 
+  _buttonText: Black Desert
+  _icon: {fileID: -941154922, guid: 6ff283cd38d04cd4fb0ec3a37ea43030, type: 3}
+  _owner: {fileID: 11400000, guid: 5a5be349ca477964eb51dc13ae9f7976, type: 2}
+  _areas:
+  - {fileID: 11400000, guid: 2c5116a3f61d9ac41ad1bc3463c170e1, type: 2}
+  - {fileID: 11400000, guid: 9c5a16f0f68a48647bd042a041d9630b, type: 2}
+  - {fileID: 11400000, guid: b796741b410f8464398549c3b9d345f5, type: 2}

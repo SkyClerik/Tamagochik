@@ -41,11 +41,12 @@
     -unity-text-align: middle-center;
     width: 48px;
     height: 48px;
+    position: absolute;
 }
 
 .label {
     font-size: 20px;
-    color: rgba(255, 255, 255, 255);
+    color: rgb(255, 255, 255);
     align-items: center;
     justify-content: center;
     flex-grow: 1;

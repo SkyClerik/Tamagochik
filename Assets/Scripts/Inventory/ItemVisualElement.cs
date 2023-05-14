@@ -3,21 +3,25 @@ using UnityEngine.UIElements;
 
 public class ItemVisualElement : VisualElement
 {
+    private DragItem _dragItem;
     private ItemBase _item;
     private int _indexInInventory;
     private ItemContainer _owner;
+    private const string _itemIconClass = "item-icon";
 
     public ItemBase Item => _item;
     public int IndexInInventory => _indexInInventory;
     public ItemContainer Owner => _owner;
 
+
     public ItemVisualElement(ItemBase itemBase, ItemContainer owner, int indexInInventory)
     {
+        _dragItem = DragItem.Instance;
         _item = itemBase;
         _owner = owner;
         _indexInInventory = indexInInventory;
 
-        AddToClassList("item-icon");
+        AddToClassList(_itemIconClass);
         SetItem(itemBase);
 
         RegisterCallback<MouseDownEvent>(OnMouseDownEvent);
@@ -39,34 +43,28 @@ public class ItemVisualElement : VisualElement
 
     private void OnMouseDownEvent(MouseDownEvent mouseDownEvent)
     {
-        DragItem.Instance.AddItem(this);
+        if (_dragItem.IsDragging)
+            SwapItems();
+
+        _dragItem.AddItem(this);
         style.backgroundImage = null;
     }
 
     private void OnMouseUpEvent(MouseUpEvent mouseUpEvent)
     {
-        DragItem dragItem = DragItem.Instance;
-        ItemVisualElement oldItemSlot = dragItem.GetItem();
-        if (IsSlotEmpty)
-        {
-            SetItem(oldItemSlot.Item);
-            oldItemSlot.SetItem(null);
-            dragItem.Swap(_owner, _indexInInventory);
-        }
-        else
-        {
-            oldItemSlot.SetItem(oldItemSlot.Item);
-        }
+        if (_dragItem.IsDragging == false)
+            return;
+
+        SwapItems();
+        _dragItem.Clear();
     }
 
-    private bool IsSlotEmpty
+    private void SwapItems()
     {
-        get
-        {
-            if (_item == null)
-                return true;
-
-            return false;
-        }
+        ItemVisualElement oldItemSlot = _dragItem.GetItem();
+        ItemBase save = oldItemSlot.Item;
+        oldItemSlot.SetItem(_item);
+        SetItem(save);
+        _dragItem.Swap(_owner, _indexInInventory);
     }
 }
