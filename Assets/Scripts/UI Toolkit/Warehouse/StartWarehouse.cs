@@ -48,7 +48,6 @@ public class StartWarehouse
         needLine = Mathf.CeilToInt(needLine);
 
         WindowManagement windowManagement = WindowManagement.Instance;
-        VisualTreeAsset itemSlotVisualTree = windowManagement.VtaItemSlotPattern;
 
         for (int f = 0; f < needLine; f++)
         {
@@ -57,7 +56,7 @@ public class StartWarehouse
 
             for (int i = 0; i < slotsInLine; i++)
             {
-                TemplateContainer template = itemSlotVisualTree.Instantiate();
+                TemplateContainer template = new TemplateContainer();
                 template.AddToClassList("item-box");
                 line.Add(template);
             }

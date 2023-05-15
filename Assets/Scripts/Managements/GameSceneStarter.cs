@@ -19,7 +19,18 @@ public class GameSceneStarter : MonoBehaviour
     {
         _gameDataContainer.OnReady -= Init;
         //Application.targetFrameRate = 60;
+        SetMaster();
         _startHouse.Inside();
         Destroy(gameObject);
+    }
+
+    void SetMaster()
+    {
+        GameDataContainer gameDataContainer = GameDataContainer.Instance;
+        UnitsData unitsData = gameDataContainer.GetUnitsData;
+        GameData gameData = gameDataContainer.GetGameData;
+
+        var randomValue = Random.Range(0, unitsData.MasterList.Count);
+        gameData.Master = unitsData.GetMasterClone(randomValue);
     }
 }

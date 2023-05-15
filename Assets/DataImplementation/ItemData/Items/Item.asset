@@ -15,7 +15,8 @@ MonoBehaviour:
   _name: 
   _description: 
   _icon: {fileID: 1208888, guid: 6ff283cd38d04cd4fb0ec3a37ea43030, type: 3}
-  _amount: 0
+  _amount: 1483
+  _maxAmount: 100
   _id: 1
   _storageType: 0
   _recipesIndex: 

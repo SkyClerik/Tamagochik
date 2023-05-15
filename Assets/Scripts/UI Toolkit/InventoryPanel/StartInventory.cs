@@ -52,7 +52,6 @@ public class StartInventory
         needLine = needLine < minLine ? minLine : needLine;
 
         WindowManagement windowManagement = WindowManagement.Instance;
-        VisualTreeAsset itemSlotVisualTree = windowManagement.VtaItemSlotPattern;
 
         string templateStyle = _itemBoxStyle;
         for (int f = 0, sc = 0; f < needLine; f++)
@@ -62,7 +61,7 @@ public class StartInventory
 
             for (int i = 0; i < slotsInLine; i++)
             {
-                TemplateContainer template = itemSlotVisualTree.Instantiate();
+                TemplateContainer template = new TemplateContainer();
 
                 if (sc >= _inventory.ItemList.Length)
                     templateStyle = _itemBoxLockStyle;

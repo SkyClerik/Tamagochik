@@ -1,5 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/Scripts/GUI/Toolkit/GeneralButtons/GeneralButtonsStyle.uss?fileID=7433441132597879392&amp;guid=8ce447452c3464443bf4700e9b6b801b&amp;type=3#GeneralButtonsStyle" />
+    <Style src="project://database/Assets/Scripts/UI%20Toolkit/GeneralButtons/GeneralButtonsStyle.uss?fileID=7433441132597879392&amp;guid=8ce447452c3464443bf4700e9b6b801b&amp;type=3#GeneralButtonsStyle" />
     <ui:VisualElement style="transform-origin: right top; align-items: flex-start; flex-shrink: 1; translate: -400px 0; left: 100%; width: 400px; flex-grow: 1; position: relative; background-color: rgba(0, 0, 0, 0.31);">
         <ui:VisualElement style="flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; flex-shrink: 1; padding-left: 16px;">
             <ui:VisualElement>
@@ -20,10 +20,10 @@
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement>
-                <ui:VisualElement style="padding-top: 96px;">
-                    <ui:Button text="Button" display-tooltip-when-elided="true" class="box_button" style="min-height: 48px; min-width: 48px; align-items: auto;" />
-                    <ui:Button text="Button" display-tooltip-when-elided="true" class="box_button" style="min-height: 48px; min-width: 48px; align-items: auto;" />
-                    <ui:Button text="Button" display-tooltip-when-elided="true" class="box_button" style="min-height: 48px; min-width: 48px; align-items: auto;" />
+                <ui:VisualElement style="padding-top: 96px; align-items: center; justify-content: flex-start; flex-grow: 0; flex-shrink: 0;">
+                    <ui:Button text="Button" display-tooltip-when-elided="true" class="box_button" style="align-items: center; flex-grow: 1; flex-shrink: 1;" />
+                    <ui:Button text="Button" display-tooltip-when-elided="true" class="box_button" style="min-height: 48px; min-width: 48px; align-items: auto; position: relative;" />
+                    <ui:Button text="Button" display-tooltip-when-elided="true" class="box_button" style="min-height: 48px; min-width: 48px; align-items: auto; position: relative;" />
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>

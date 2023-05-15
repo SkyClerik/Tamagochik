@@ -31,11 +31,9 @@ public class WindowManagement : Singleton<WindowManagement>
 
     [SerializeField] private VisualTreeAsset _vtaDevelopSpace;
     [SerializeField] private VisualTreeAsset _vtaListButton;
-    [SerializeField] private VisualTreeAsset _vtaClicker;
 
     public VisualTreeAsset VtaDevelopSpace => _vtaDevelopSpace;
     public VisualTreeAsset VtaListButton => _vtaListButton;
-    public VisualTreeAsset VtaClicker => _vtaClicker;
 
     [Header("VisualTreeAsset Patterns")]
 

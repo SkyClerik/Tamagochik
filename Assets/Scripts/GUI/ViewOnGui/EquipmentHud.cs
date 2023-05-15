@@ -135,7 +135,8 @@ public class EquipmentHud : MonoBehaviour
         TryPutAwayItemToWarehouse(index);
 
         var item = _itemsData.Items[index] as EquipmentItem;
-        _unitHumanoid.EquipItem(item.Copy());
+        item = Instantiate(item);
+        _unitHumanoid.EquipItem(item);
         _itemsData.Items[index].Amount--;
         RegistredSlotTypes();
     }

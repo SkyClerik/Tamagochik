@@ -66,10 +66,6 @@ public class GameDataContainer : Singleton<GameDataContainer>
         if (_recipesData)
             _recipesData = Instantiate(_recipesData);
 
-
-        var randomValue = Random.Range(0, _unitsData.MasterList.Count);
-        _gameData.Master = _unitsData.GetMasterDeepCopy(randomValue);
-
         Ready();
     }
 

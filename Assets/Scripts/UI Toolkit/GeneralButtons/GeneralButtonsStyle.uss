@@ -41,7 +41,7 @@
     -unity-text-align: middle-center;
     width: 48px;
     height: 48px;
-    position: absolute;
+    position: relative;
 }
 
 .label {

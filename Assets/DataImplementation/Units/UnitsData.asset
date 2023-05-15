@@ -13,24 +13,8 @@ MonoBehaviour:
   m_Name: UnitsData
   m_EditorClassIdentifier: 
   _masters:
-  - _staticName: 
-    _name: Masdter1
-    _icon: {fileID: 0}
-    _energy: 0
-    _busy: 0
-    _visible: 0
-    _eqiupments: []
-    _inventory:
-      _itemList:
-      - {fileID: 11400000, guid: ab3115081670ea546a483ca8aaabfe75, type: 2}
-      - {fileID: 11400000, guid: 51a92ffe3dc088b41a851dd977650823, type: 2}
-      - {fileID: 11400000, guid: 856026383c8b7cb4699064cf5284c744, type: 2}
-      - {fileID: 0}
-      - {fileID: 0}
-      - {fileID: 0}
-      - {fileID: 0}
-      - {fileID: 0}
-      - {fileID: 0}
-      - {fileID: 0}
+  - {fileID: 11400000, guid: ff5ab2907b9014e4483e4597e86f661e, type: 2}
+  - {fileID: 11400000, guid: 85eb6c18c7b9cac419528dcc5664ff97, type: 2}
+  - {fileID: 11400000, guid: 9ff5ff2f299bd1749b6360f807b50678, type: 2}
   _humanoids: []
   _animals: []

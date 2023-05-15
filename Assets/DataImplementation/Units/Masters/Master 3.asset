@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecb13a3162e5a664188561b43d746928, type: 3}
+  m_Name: Master 3
+  m_EditorClassIdentifier: 
+  _staticName: master 03
+  _name: master 3
+  _icon: {fileID: -2037566052, guid: 6ff283cd38d04cd4fb0ec3a37ea43030, type: 3}
+  _energy: 0
+  _busy: 0
+  _visible: 1
+  _eqiupments: []
+  _inventory:
+    _itemList:
+    - {fileID: 11400000, guid: 51a92ffe3dc088b41a851dd977650823, type: 2}
+    - {fileID: 11400000, guid: 51a92ffe3dc088b41a851dd977650823, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}

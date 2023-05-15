@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Scripts/UI%20Toolkit/InventoryPanel/InventoryStyle.uss?fileID=7433441132597879392&amp;guid=62fc6503ddc1b46448b05962c0489c13&amp;type=3#InventoryStyle[UNSUPPORTED_IN_UI_BUILDER]" />
+    <ui:VisualElement name="ItemIconBase" picking-mode="Ignore" class="item-icon" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; position: relative;">
+        <ui:VisualElement picking-mode="Ignore" style="background-color: rgb(41, 41, 41); border-top-left-radius: 6px; border-bottom-left-radius: 6px; border-top-right-radius: 6px; border-bottom-right-radius: 6px; color: rgb(255, 255, 255); border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); padding-left: 3px; padding-right: 3px; padding-top: 0; padding-bottom: 0; flex-shrink: 0; flex-grow: 0; align-items: center; justify-content: center; height: 18px;">
+            <ui:Label text="0" display-tooltip-when-elided="true" name="Quantity" picking-mode="Ignore" style="justify-content: flex-start; font-size: 16px; color: rgb(255, 255, 255); -unity-font-style: bold; flex-shrink: 0; flex-grow: 0; position: relative; -unity-text-align: middle-center;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

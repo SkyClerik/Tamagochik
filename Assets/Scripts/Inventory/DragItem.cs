@@ -43,7 +43,7 @@ public class DragItem : Singleton<DragItem>
         _itemVisualElement = null;
     }
 
-    public ItemVisualElement GetItem()
+    public ItemVisualElement GetDragItemVisualElement()
     {
         enabled = false;
         _icon.visible = false;

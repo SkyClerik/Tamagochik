@@ -13,8 +13,23 @@ public class UnitsData : ScriptableObject
     public List<Humanoid> HumanoidList => _humanoids;
     public List<Animal> AnimalList => _animals;
 
-    public Master GetMasterDeepCopy(int index)
+    public Master GetMasterClone(int index)
     {
-        return _masters[index].DeepCopy();
+        var master = Instantiate(_masters[index]);
+
+        master.Inventory.ItemList = new Data.Item.ItemBase[_masters[index].Inventory.ItemList.Length];
+        for (int i = 0; i < master.Inventory.ItemList.Length; i++)
+        {
+            if (_masters[index].Inventory.ItemList[i] != null)
+            {
+                master.Inventory.ItemList[i] = Object.Instantiate(_masters[index].Inventory.ItemList[i]);
+            }
+            else
+            {
+                master.Inventory.ItemList[i] = null;
+            }
+        }
+
+        return master;
     }
 }

@@ -189,7 +189,6 @@ MonoBehaviour:
   _warehouseDocument: {fileID: 1740776000}
   _vtaDevelopSpace: {fileID: 9197481963319205126, guid: f37e6df8e8a200644bd8cde9c5dcb3f4, type: 3}
   _vtaListButton: {fileID: 9197481963319205126, guid: e6877c2c98ffd40479cbd622ad6b0b99, type: 3}
-  _vtaClicker: {fileID: 9197481963319205126, guid: 3ccda3f2297a46f4bbf9a920e4179b40, type: 3}
   _vtaGeneralButtonPattern: {fileID: 9197481963319205126, guid: 79e87ac23e6398644bf26a5f47ea3fbd, type: 3}
   _vtaItemSlotPattern: {fileID: 9197481963319205126, guid: c728c041734d7cf40b9037ea3945a5e8, type: 3}
 --- !u!1 &140056694

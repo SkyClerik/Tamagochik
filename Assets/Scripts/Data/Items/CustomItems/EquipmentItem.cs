@@ -7,10 +7,5 @@ namespace Data.Item
         [SerializeField] private EquipTypes _equipType;
 
         public EquipTypes GetEquipType => _equipType;
-
-        public new EquipmentItem Copy()
-        {
-            return Instantiate(this);
-        }
     }
 }

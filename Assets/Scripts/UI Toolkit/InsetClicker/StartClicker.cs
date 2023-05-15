@@ -65,7 +65,7 @@ public class StartClicker
         _lutList = new ItemBase[3];
         for (int i = 0; i < _lutList.Length; i++)
         {
-            _lutList[i] = _gameDataContainer.GetItemsData.Items[i].Copy();
+            _lutList[i] = _gameDataContainer.GetItemsData.Items[i];
         }
     }
 
