@@ -1,0 +1,48 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement picking-mode="Ignore" name="VisualElement" style="align-items: flex-end; justify-content: center; flex-shrink: 0; flex-grow: 1;">
+        <ui:VisualElement name="Root" style="width: 400px;">
+            <ui:VisualElement name="Header" style="transform-origin: center; align-items: stretch; flex-shrink: 0; flex-grow: 0; position: relative; background-color: rgba(0, 0, 0, 0.31); justify-content: flex-start; flex-direction: row;">
+                <ui:VisualElement name="Image" style="background-image: url(&apos;project://database/Assets/Images/Sprites/IconSet.png?fileID=-79558654&amp;guid=6ff283cd38d04cd4fb0ec3a37ea43030&amp;type=3#IconSet_164&apos;); width: 96px; height: 96px;" />
+                <ui:VisualElement style="justify-content: center; align-items: center; flex-grow: 1; margin-left: 10px; margin-right: 10px;">
+                    <ui:Label text="Окресности Оливии" display-tooltip-when-elided="true" style="width: 100%; color: rgb(248, 104, 0); font-size: 20px; -unity-text-align: upper-center;" />
+                    <ui:Label text="Роща" display-tooltip-when-elided="true" name="Title" style="width: 100%; font-size: 25px; color: rgb(248, 104, 0); -unity-text-align: upper-center;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="Items" style="transform-origin: center; align-items: stretch; flex-shrink: 0; flex-grow: 0; position: relative; background-color: rgba(0, 0, 0, 0.31); justify-content: center; flex-direction: column;">
+                <ui:Label text="Возможные предметы" display-tooltip-when-elided="true" style="-unity-text-align: upper-center; color: rgba(255, 255, 255, 255);" />
+                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: center;">
+                    <ui:VisualElement style="width: 48px; height: 48px; background-image: url(&apos;project://database/Assets/Images/Sprites/IconSet.png?fileID=-236429475&amp;guid=6ff283cd38d04cd4fb0ec3a37ea43030&amp;type=3#IconSet_248&apos;);" />
+                    <ui:VisualElement style="width: 48px; height: 48px; background-image: url(&apos;project://database/Assets/Images/Sprites/IconSet.png?fileID=344495674&amp;guid=6ff283cd38d04cd4fb0ec3a37ea43030&amp;type=3#IconSet_261&apos;);" />
+                    <ui:VisualElement style="width: 48px; height: 48px; background-image: url(&apos;project://database/Assets/Images/Sprites/IconSet.png?fileID=-1087358790&amp;guid=6ff283cd38d04cd4fb0ec3a37ea43030&amp;type=3#IconSet_262&apos;);" />
+                    <ui:VisualElement style="width: 48px; height: 48px; background-image: url(&apos;project://database/Assets/Images/Sprites/IconSet.png?fileID=-1431803276&amp;guid=6ff283cd38d04cd4fb0ec3a37ea43030&amp;type=3#IconSet_242&apos;);" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="Complexity" style="transform-origin: center; align-items: center; flex-shrink: 0; flex-grow: 0; position: relative; background-color: rgba(0, 0, 0, 0.31); justify-content: center; flex-direction: column;">
+                <ui:Label text="Сложность" display-tooltip-when-elided="true" style="-unity-text-align: upper-center; color: rgba(255, 255, 255, 255);" />
+                <ui:VisualElement style="flex-direction: row; justify-content: space-around;">
+                    <ui:Button display-tooltip-when-elided="true" style="width: 48px; height: 48px; border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px; border-left-color: rgb(74, 255, 0); border-right-color: rgb(74, 255, 0); border-top-color: rgb(74, 255, 0); border-bottom-color: rgb(74, 255, 0);" />
+                    <ui:Button display-tooltip-when-elided="true" style="width: 48px; height: 48px; border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px; border-left-color: rgb(0, 255, 192); border-right-color: rgb(0, 255, 192); border-top-color: rgb(0, 255, 192); border-bottom-color: rgb(0, 255, 192);" />
+                    <ui:Button display-tooltip-when-elided="true" style="width: 48px; height: 48px; border-left-color: rgb(255, 221, 0); border-right-color: rgb(255, 221, 0); border-top-color: rgb(255, 221, 0); border-bottom-color: rgb(255, 221, 0); border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px;" />
+                    <ui:Button display-tooltip-when-elided="true" style="width: 48px; height: 48px; border-left-color: rgb(0, 14, 255); border-right-color: rgb(0, 14, 255); border-top-color: rgb(0, 14, 255); border-bottom-color: rgb(0, 14, 255); border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px;" />
+                    <ui:Button display-tooltip-when-elided="true" style="width: 48px; height: 48px; border-left-color: rgb(255, 94, 0); border-right-color: rgb(255, 94, 0); border-top-color: rgb(255, 94, 0); border-bottom-color: rgb(255, 94, 0); border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px;" />
+                    <ui:Button display-tooltip-when-elided="true" style="width: 48px; height: 48px; border-left-color: rgb(255, 9, 0); border-right-color: rgb(255, 9, 0); border-top-color: rgb(255, 9, 0); border-bottom-color: rgb(255, 9, 0); border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px;" />
+                    <ui:Button display-tooltip-when-elided="true" style="width: 48px; height: 48px; border-left-color: rgb(114, 0, 255); border-right-color: rgb(114, 0, 255); border-top-color: rgb(114, 0, 255); border-bottom-color: rgb(114, 0, 255); border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="Type" style="transform-origin: center; align-items: stretch; flex-shrink: 0; flex-grow: 0; position: relative; background-color: rgba(0, 0, 0, 0.31); justify-content: center; flex-direction: column;">
+                <ui:DropdownField label="Тип" index="-1" choices="System.Collections.Generic.List`1[System.String]" style="color: rgba(255, 255, 255, 255);" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Descrption" style="transform-origin: center; align-items: stretch; flex-shrink: 0; flex-grow: 0; position: relative; background-color: rgba(0, 0, 0, 0.31); justify-content: center; flex-direction: column;">
+                <ui:Foldout text="Описание" style="color: rgba(255, 255, 255, 255);">
+                    <ui:Label text="Длинное нужное описание локации.&#10;Желательно в красках." display-tooltip-when-elided="true" name="DescriptionText" style="-unity-background-image-tint-color: rgba(255, 255, 255, 255);" />
+                </ui:Foldout>
+            </ui:VisualElement>
+            <ui:VisualElement name="Time" style="transform-origin: center; align-items: stretch; flex-shrink: 0; flex-grow: 0; position: relative; background-color: rgba(0, 0, 0, 0.31); justify-content: center; flex-direction: column;">
+                <ui:SliderInt picking-mode="Ignore" label="Время выполнения" value="42" high-value="100" style="-unity-background-image-tint-color: rgba(255, 255, 255, 255); color: rgba(255, 255, 255, 255);" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Enter" style="transform-origin: center; align-items: stretch; position: relative; background-color: rgba(0, 0, 0, 0.31); justify-content: space-between;">
+                <ui:Button text="Войти" display-tooltip-when-elided="true" name="EnterButton" style="justify-content: center; align-items: auto; font-size: 16px; color: rgba(255, 255, 255, 255); -unity-font-style: bold;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

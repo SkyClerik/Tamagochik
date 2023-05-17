@@ -1,0 +1,24 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Scripts/UI%20Toolkit/GeneralButtons/GeneralButtonsStyle.uss?fileID=7433441132597879392&amp;guid=8ce447452c3464443bf4700e9b6b801b&amp;type=3#GeneralButtonsStyle" />
+    <ui:VisualElement name="Window" style="width: 216px; background-color: rgb(65, 65, 65);">
+        <ui:VisualElement name="Header" style="width: 100%; height: 30px; background-color: rgb(48, 48, 48); align-items: center; justify-content: flex-end; flex-direction: row-reverse;">
+            <ui:Button display-tooltip-when-elided="true" style="height: 30px; width: 30px; background-image: url(&apos;project://database/Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/d_Visibility_Tool@3x.png?fileID=21300000&amp;guid=46d5b7ee1aaae3c4d9fd3a54774428d5&amp;type=3#d_Visibility_Tool@3x&apos;);" />
+            <ui:VisualElement style="flex-grow: 1; flex-shrink: 0; justify-content: space-between;" />
+            <ui:VisualElement style="width: 30px; height: 30px; background-image: url(&apos;project://database/Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Weight_Slider@3x.png?fileID=21300000&amp;guid=af73899d5803d99448134360f184f348&amp;type=3#Weight_Slider@3x&apos;); align-items: center; justify-content: center;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Body" style="flex-direction: row; flex-wrap: wrap;">
+            <ui:Button display-tooltip-when-elided="true" class="box_button" />
+            <ui:Button display-tooltip-when-elided="true" class="box_button" />
+            <ui:Button display-tooltip-when-elided="true" class="box_button" />
+            <ui:Button display-tooltip-when-elided="true" class="box_button" />
+            <ui:Button display-tooltip-when-elided="true" class="box_button" />
+            <ui:Button display-tooltip-when-elided="true" class="box_button" />
+            <ui:Button display-tooltip-when-elided="true" class="box_button" />
+            <ui:Button display-tooltip-when-elided="true" class="box_button" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Bottom" style="flex-direction: row; width: 100%; height: 50px;">
+            <ui:Button text="Взять все" display-tooltip-when-elided="true" style="height: 48px; flex-grow: 1;" />
+            <ui:Button text="Отмена" display-tooltip-when-elided="true" style="height: 48px; flex-grow: 1;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
