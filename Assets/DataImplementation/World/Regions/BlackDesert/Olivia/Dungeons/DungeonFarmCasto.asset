@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e19ba05d4686f994ebd7e63afa30ee95, type: 3}
   m_Name: DungeonFarmCasto
   m_EditorClassIdentifier: 
+  _title: "\u0424\u0435\u0440\u043C\u0430 \u041A\u0430\u0441\u0442\u043E"
   _buttonText: "\u0424\u0435\u0440\u043C\u0430 \u041A\u0430\u0441\u0442\u043E"
   _icon: {fileID: -541320753, guid: 6ff283cd38d04cd4fb0ec3a37ea43030, type: 3}
   _owner: {fileID: 11400000, guid: 2c5116a3f61d9ac41ad1bc3463c170e1, type: 2}

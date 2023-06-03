@@ -22,6 +22,10 @@ namespace Hud.Buttons
             uiDocument.enabled = true;
             _rootVisualElement = uiDocument.rootVisualElement;
 
+            windowManagement.CurrentSelectNode = null;
+            windowManagement.GetRightHud.enabled = false;
+            windowManagement.GetLocationInfo.enabled = false;
+
             InitList(windowManagement.VtaGeneralButtonPattern);
             InitSlaveButtons();
         }
@@ -33,8 +37,7 @@ namespace Hud.Buttons
             {
                 buttons.Add(new ButtonContent(_shops[i].ButtonText, _shops[i].Icon, _shops[i].Inside));
             }
-            buttons.Add(new ButtonContent("to district", null, () => { _district.Outside(); }));
-
+            buttons.Add(new ButtonContent("to town", null, () => { _district.Outside(); }));
 
             _buttonsListView = _rootVisualElement.Q<ListView>("List");
             _buttonsListView.makeItem = () => { return visualElementPattern.Instantiate(); };

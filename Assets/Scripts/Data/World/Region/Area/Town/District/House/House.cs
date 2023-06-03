@@ -8,16 +8,38 @@ namespace Data.World
     {
         [SerializeField]
         private District _owner;
-        public District SetOwner { set { _owner = value; } }
+        public District Owner { get => _owner; set => _owner = value; }
 
         public void Inside()
         {
-            new StartDevelopSpace(startHouse: this);
+            Debug.Log($"Тык {base.ButtonText}");
+
+            WindowManagement windowManagement = WindowManagement.Instance;
+            if (windowManagement.CurrentSelectNode == this)
+            {
+                Entry();
+            }
+            else
+            {
+                windowManagement.CurrentSelectNode = this;
+                new StartLocationInfo(houseNode: this, entryButton: Entry);
+            }
         }
 
         public void Outside()
         {
-            _owner.Inside();
+            new CreateDistrictUI(district: _owner);
+        }
+
+        private void Entry()
+        {
+            Debug.Log($"Запуск {base.ButtonText}");
+            new StartDevelopSpace(startHouse: this);
+        }
+
+        public void StartForced()
+        {
+            Entry();
         }
     }
 }

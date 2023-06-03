@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
-    <Style src="project://database/Assets/Scripts/GUI/Toolkit/GeneralButtons/GeneralButtonsStyle.uss?fileID=7433441132597879392&amp;guid=8ce447452c3464443bf4700e9b6b801b&amp;type=3#GeneralButtonsStyle" />
-    <ui:VisualElement style="flex-grow: 1; align-items: flex-start; padding-top: 96px;">
+    <Style src="project://database/Assets/Scripts/UI%20Toolkit/GeneralButtons/GeneralButtonsStyle.uss?fileID=7433441132597879392&amp;guid=8ce447452c3464443bf4700e9b6b801b&amp;type=3#GeneralButtonsStyle" />
+    <ui:VisualElement picking-mode="Ignore" style="flex-grow: 1; align-items: flex-start; padding-top: 96px;">
         <ui:VisualElement style="flex-direction: row;">
             <ui:GroupBox style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;">
                 <ui:Button text="Home" display-tooltip-when-elided="true" name="HomeButton" class="box_button" style="display: flex;" />

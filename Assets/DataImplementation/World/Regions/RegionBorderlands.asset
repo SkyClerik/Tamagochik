@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6e06ec405210de429e1e6df19bdb15d, type: 3}
   m_Name: RegionBorderlands
   m_EditorClassIdentifier: 
+  _title: Borderlands
   _buttonText: Borderlands
   _icon: {fileID: -1679786528, guid: 6ff283cd38d04cd4fb0ec3a37ea43030, type: 3}
   _owner: {fileID: 11400000, guid: 5a5be349ca477964eb51dc13ae9f7976, type: 2}

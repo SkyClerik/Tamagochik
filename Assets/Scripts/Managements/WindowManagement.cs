@@ -1,3 +1,4 @@
+using Data.World;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -7,6 +8,7 @@ public class WindowManagement : Singleton<WindowManagement>
 
     [SerializeField] private UIDocument _upHudDocument;
     [SerializeField] private UIDocument _rightHudDocument;
+    [SerializeField] private UIDocument _locationInfoDocument;
     [SerializeField] private UIDocument _generalButtonsDocument;
     [SerializeField] private AssembleSquadHud _assembleSquadHud;
     [SerializeField] private EquipmentHud _equipmentHud;
@@ -18,6 +20,7 @@ public class WindowManagement : Singleton<WindowManagement>
 
     public UIDocument GetUpHud => _upHudDocument;
     public UIDocument GetRightHud => _rightHudDocument;
+    public UIDocument GetLocationInfo => _locationInfoDocument;
     public UIDocument GetGeneralButtons => _generalButtonsDocument;
     public AssembleSquadHud GetAssembleSquadHud => _assembleSquadHud;
     public EquipmentHud GetEquipmentHud => _equipmentHud;
@@ -41,6 +44,10 @@ public class WindowManagement : Singleton<WindowManagement>
     [SerializeField] private VisualTreeAsset _vtaItemSlotPattern;
     public VisualTreeAsset VtaGeneralButtonPattern => _vtaGeneralButtonPattern;
     public VisualTreeAsset VtaItemSlotPattern => _vtaItemSlotPattern;
+
+
+    private NodeBase _currentSelectNode;
+    public NodeBase CurrentSelectNode { get => _currentSelectNode; set => _currentSelectNode = value; }
 
     public void MainHuds(bool active)
     {

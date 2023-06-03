@@ -8,8 +8,11 @@ namespace Data.World
     public class WorldData : ScriptableObject, IInside
     {
         [SerializeField]
+        private string _title;
+        [SerializeField]
         private List<Region> _regions;
 
+        public string GetTitle => _title;
         public List<Region> Regions => _regions;
 
         public void Inside()
@@ -20,7 +23,7 @@ namespace Data.World
         private void OnValidate()
         {
             foreach (var region in _regions)
-                region.SetOwner = this;
+                region.Owner = this;
         }
     }
 }

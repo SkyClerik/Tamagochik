@@ -14,27 +14,44 @@ namespace Data.World
         [SerializeField]
         private List<Dungeon> _dungeons;
 
-        public Region SetOwner { set { _owner = value; } }
+        public Region Owner { get => _owner; set => _owner = value; }
         public List<Town> Towns => _towns;
         public List<Dungeon> Dungeons => _dungeons;
 
         private void OnValidate()
         {
             foreach (var town in _towns)
-                town.SetOwner = this;
+                town.Owner = this;
 
             foreach (var dungeons in _dungeons)
-                dungeons.SetOwner = this;
+                dungeons.Owner = this;
         }
 
         public void Inside()
         {
-            new CreateAreaUI(area: this);
+            Debug.Log($"Тык {base.ButtonText}");
+
+            WindowManagement windowManagement = WindowManagement.Instance;
+            if (windowManagement.CurrentSelectNode == this)
+            {
+                Entry();
+            }
+            else
+            {
+                windowManagement.CurrentSelectNode = this;
+                new StartLocationInfo(areaNode: this, entryButton: Entry);
+            }
         }
 
         public void Outside()
         {
-            _owner.Inside();
+            new CreateRegionUI(region: _owner);
+        }
+
+        private void Entry()
+        {
+            Debug.Log($"Запуск {base.ButtonText}");
+            new CreateAreaUI(area: this);
         }
     }
 }

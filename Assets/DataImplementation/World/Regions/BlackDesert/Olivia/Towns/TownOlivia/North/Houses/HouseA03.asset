@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31b4b40fa143e4d419fee2ade83ede77, type: 3}
   m_Name: HouseA03
   m_EditorClassIdentifier: 
+  _title: "\u0414\u0432\u043E\u0440\u0435\u0446"
   _buttonText: "\u0414\u0432\u043E\u0440\u0435\u0446"
   _icon: {fileID: 612509093, guid: 6ff283cd38d04cd4fb0ec3a37ea43030, type: 3}
   _owner: {fileID: 11400000, guid: 29f6a1ebab37bbc43bdaacd98fc2b869, type: 2}

@@ -20,6 +20,9 @@ namespace Hud.Buttons
             uiDocument.enabled = true;
             _rootVisualElement = uiDocument.rootVisualElement;
 
+            windowManagement.CurrentSelectNode = null;
+            windowManagement.GetLocationInfo.enabled = false;
+
             InitList(windowManagement.VtaGeneralButtonPattern);
             InitSlaveButtons();
         }

@@ -1,5 +1,5 @@
 using Data.Item;
-using Data.Units;
+using Hud.Buttons;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,6 +12,7 @@ namespace Data.World
     {
         [SerializeField]
         private Area _owner;
+
         [SerializeField]
         private string _name;
         [SerializeField]
@@ -28,7 +29,7 @@ namespace Data.World
         private List<UnitBase> _party = new List<UnitBase>();
         private int _currentWaitTime;
 
-        public Area SetOwner { set { _owner = value; } }
+        public Area Owner { get => _owner; set => _owner = value; }
         public string Name { get => _name; set => _name = value; }
         public bool Busy { get => _busy; set => _busy = value; }
         public bool Visible { get => _visible; set => _visible = value; }
@@ -40,16 +41,29 @@ namespace Data.World
 
         public void Inside()
         {
-            var windowManagement = WindowManagement.Instance;
-            windowManagement.GetGeneralButtons.enabled = false;
-            windowManagement.GetRightHud.enabled = false;
-            new StartClicker(dungeon: this);
-            new StartInventory();
+            Debug.Log($"Тык {base.ButtonText}");
+
+            WindowManagement windowManagement = WindowManagement.Instance;
+            if (windowManagement.CurrentSelectNode == this)
+            {
+                Entry();
+            }
+            else
+            {
+                windowManagement.CurrentSelectNode = this;
+                new StartLocationInfo(dungeonNode: this, entryButton: Entry);
+            }
         }
 
         public void Outside()
         {
-            _owner.Inside();
+            new CreateAreaUI(area: _owner);
+        }
+
+        private void Entry()
+        {
+            Debug.Log($"Запуск {base.ButtonText}");
+            new StartClicker(dungeon: this);
         }
 
         public void StartQuest()

@@ -73,6 +73,7 @@ namespace Hud.Buttons
 
         private void LeaveHouse()
         {
+            Debug.Log($"Выйти из дома");
             _startHouse.Outside();
         }
     }

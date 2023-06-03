@@ -12,7 +12,7 @@ namespace Data.World
         [SerializeField]
         private List<District> _districts;
 
-        public Area SetOwner { set { _owner = value; } }
+        public Area Owner { get => _owner; set => _owner = value; }
         public List<District> Districts => _districts;
 
         private void OnValidate()
@@ -23,12 +23,29 @@ namespace Data.World
 
         public void Inside()
         {
-            new CreateTownUI(town: this);
+            Debug.Log($"Тык {base.ButtonText}");
+
+            WindowManagement windowManagement = WindowManagement.Instance;
+            if (windowManagement.CurrentSelectNode == this)
+            {
+                Entry();
+            }
+            else
+            {
+                windowManagement.CurrentSelectNode = this;
+                new StartLocationInfo(townNode: this, entryButton: Entry);
+            }
         }
 
         public void Outside()
         {
-            _owner.Inside();
+            new CreateAreaUI(area: _owner);
+        }
+
+        private void Entry()
+        {
+            Debug.Log($"Запуск {base.ButtonText}");
+            new CreateTownUI(town: this);
         }
     }
 }

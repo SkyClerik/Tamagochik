@@ -12,23 +12,40 @@ namespace Data.World
         [SerializeField]
         private List<Area> _areas;
 
-        public WorldData SetOwner { set { _owner = value; } }
+        public WorldData Owner { get => _owner; set => _owner = value; }
         public List<Area> Areas => _areas;
 
         private void OnValidate()
         {
             foreach (var area in _areas)
-                area.SetOwner = this;
+                area.Owner = this;
         }
 
         public void Inside()
         {
-            new CreateRegionUI(region: this);
+            Debug.Log($"Тык {base.ButtonText}");
+
+            WindowManagement windowManagement = WindowManagement.Instance;
+            if (windowManagement.CurrentSelectNode == this)
+            {
+                Entry();
+            }
+            else
+            {
+                windowManagement.CurrentSelectNode = this;
+                new StartLocationInfo(regionNode: this, entryButton: Entry);
+            }
         }
 
         public void Outside()
         {
-            _owner.Inside();
+            new CreateWorldUI(worldData: _owner);
+        }
+
+        private void Entry()
+        {
+            Debug.Log($"Запуск {base.ButtonText}");
+            new CreateRegionUI(region: this);
         }
     }
 }

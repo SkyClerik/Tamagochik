@@ -9,33 +9,48 @@ namespace Data.World
     {
         [SerializeField]
         private Town _owner;
-
         [SerializeField]
         private List<Shop> _shops;
-
         [SerializeField]
         private List<House> _houses;
 
-        public Town Owner { set { _owner = value; } }
-        public List<Shop> Shops { get {  return _shops; } }
+        public Town Owner { get => _owner; set => _owner = value; }
+        public List<Shop> Shops { get { return _shops; } }
 
         private void OnValidate()
         {
             foreach (var shop in _shops)
-                shop.SetOwner = this;
+                shop.Owner = this;
 
             foreach (var house in _houses)
-                house.SetOwner = this;
+                house.Owner = this;
         }
 
         public void Inside()
         {
-            new CreateDistrictUI(district: this);
+            Debug.Log($"Тык {base.ButtonText}");
+
+            WindowManagement windowManagement = WindowManagement.Instance;
+            if (windowManagement.CurrentSelectNode == this)
+            {
+                Entry();
+            }
+            else
+            {
+                windowManagement.CurrentSelectNode = this;
+                new StartLocationInfo(districtNode: this, entryButton: Entry);
+            }
         }
 
         public void Outside()
         {
-            _owner.Inside();
+            new CreateTownUI(town: _owner);
+        }
+
+        private void Entry()
+        {
+            Debug.Log($"Запуск {base.ButtonText}");
+            new CreateDistrictUI(district: this);
         }
     }
 }

@@ -24,6 +24,9 @@ namespace Hud.Buttons
             uiDocument.enabled = true;
             _rootVisualElement = uiDocument.rootVisualElement;
 
+            windowManagement.CurrentSelectNode = null;
+            windowManagement.GetLocationInfo.enabled = false;
+
             InitList(windowManagement.VtaGeneralButtonPattern);
             InitSlaveButtons();
         }
@@ -39,7 +42,7 @@ namespace Hud.Buttons
             {
                 buttons.Add(new ButtonContent(_dungeons[i].ButtonText, _dungeons[i].Icon, _dungeons[i].Inside));
             }
-            buttons.Add(new ButtonContent("to area", null, () => { _area.Outside(); }));
+            buttons.Add(new ButtonContent("to region", null, () => { _area.Outside(); }));
 
 
             _buttonsListView = _rootVisualElement.Q<ListView>("List");

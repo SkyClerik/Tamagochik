@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d73d6e6045696949ad94b46561c3a63, type: 3}
   m_Name: DistrictNorthOlivia
   m_EditorClassIdentifier: 
+  _title: "\u0421\u0435\u0432\u0435\u0440 \u041E\u043B\u0438\u0432\u0438\u0438"
   _buttonText: "\u0421\u0435\u0432\u0435\u0440 \u041E\u043B\u0438\u0432\u0438\u0438"
   _icon: {fileID: 1342776874, guid: 6ff283cd38d04cd4fb0ec3a37ea43030, type: 3}
   _owner: {fileID: 11400000, guid: f6354d008b5c85e43b7f6b7ae154744a, type: 2}

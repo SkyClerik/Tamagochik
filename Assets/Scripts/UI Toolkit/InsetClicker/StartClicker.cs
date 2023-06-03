@@ -1,7 +1,6 @@
 using Data.Item;
 using Data.Units;
 using Data.World;
-using Hud.Buttons;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -33,6 +32,9 @@ public class StartClicker
         UIDocument uiDocument = windowManagement.GetClickerHud;
         uiDocument.enabled = true;
 
+        windowManagement.GetGeneralButtons.enabled = false;
+        windowManagement.GetLocationInfo.enabled = false;
+
         VisualElement rootVisualElement = uiDocument.rootVisualElement;
 
         _attackLine = rootVisualElement.Q<VisualElement>("AttackLine");
@@ -51,6 +53,8 @@ public class StartClicker
 
         ResetParams(ref attackButton);
         GenerateLutList();
+
+        new StartInventory();
     }
 
     private void ResetParams(ref Button button)
@@ -72,8 +76,8 @@ public class StartClicker
     private void BackButton()
     {
         var windowManagement = WindowManagement.Instance;
-        windowManagement.MainHuds(true);
         windowManagement.GetInventoryHud.enabled = false;
+        windowManagement.GetGeneralButtons.enabled = true;
 
         UIDocument uiDocument = windowManagement.GetClickerHud;
         uiDocument.enabled = false;

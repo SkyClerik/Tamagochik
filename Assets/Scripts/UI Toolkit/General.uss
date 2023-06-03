@@ -1,0 +1,102 @@
+.unity-button {
+    background-color: rgb(106, 106, 106);
+    border-left-color: rgb(142, 142, 142);
+    border-right-color: rgb(142, 142, 142);
+    border-top-color: rgb(142, 142, 142);
+    border-bottom-color: rgb(142, 142, 142);
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.unity-repeat-button {
+    background-color: rgb(51, 51, 51);
+}
+
+.unity-scroller {
+    align-items: stretch;
+    justify-content: space-around;
+}
+
+.unity-scroller--vertical {
+    justify-content: space-around;
+}
+
+.unity-scroller__low-button {
+    width: 100%;
+}
+
+.unity-scroller__high-button {
+    width: 100%;
+}
+
+.unity-slider {
+    width: 100%;
+    align-items: stretch;
+    justify-content: space-around;
+}
+
+.unity-base-slider__drag-container {
+    align-items: stretch;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.unity-base-slider__tracker {
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    background-color: rgb(41, 41, 41);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 100%;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.unity-base-slider__dragger {
+    background-color: rgb(255, 118, 0);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 50%;
+    justify-content: space-around;
+}
+
+.unity-scroll-view__vertical-scroller {
+    width: 11px;
+    justify-content: space-between;
+}
+
+.unity-button:focus {
+    background-color: rgba(161, 161, 161, 255);
+}
+
+Button#ShopButton {
+    background-color: rgb(38, 38, 38);
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 48%;
+    height: 100px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.unity-scroll-view__content-container {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}

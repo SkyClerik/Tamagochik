@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10c4cc7bfc42fcd4fac1870c0dc21b71, type: 3}
   m_Name: AreaOlivia
   m_EditorClassIdentifier: 
+  _title: "\u041E\u043B\u0438\u0432\u0438\u044F"
   _buttonText: "\u041E\u043B\u0438\u0432\u0438\u044F"
   _icon: {fileID: -999599926, guid: 6ff283cd38d04cd4fb0ec3a37ea43030, type: 3}
   _owner: {fileID: 11400000, guid: a40bbab6af9c95c4eb1ca9b465f9b4ff, type: 2}
