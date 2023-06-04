@@ -11,9 +11,22 @@ namespace Data.World
         private string _title;
         [SerializeField]
         private List<Region> _regions;
+        private NodeBase _currentSelectNode;
 
         public string GetTitle => _title;
         public List<Region> Regions => _regions;
+        public NodeBase SetCurrentSelectNode { set => _currentSelectNode = value; }
+        public bool IsEquilsCurSelect(NodeBase nodeBase)
+        {
+            if (_currentSelectNode != null)
+            {
+                if (_currentSelectNode.GetInstanceID() == nodeBase.GetInstanceID())
+                    return true;
+            }
+
+            _currentSelectNode = nodeBase;
+            return false;
+        }
 
         public void Inside()
         {

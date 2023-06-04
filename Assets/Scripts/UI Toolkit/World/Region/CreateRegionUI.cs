@@ -22,7 +22,7 @@ namespace Hud.Buttons
             uiDocument.enabled = true;
             _rootVisualElement = uiDocument.rootVisualElement;
 
-            windowManagement.CurrentSelectNode = null;
+            GameDataContainer.Instance.GetWorldData.SetCurrentSelectNode = null;
             windowManagement.GetLocationInfo.enabled = false;
 
             InitList(windowManagement.VtaGeneralButtonPattern);
@@ -36,7 +36,7 @@ namespace Hud.Buttons
             {
                 buttons.Add(new ButtonContent(_areas[i].ButtonText, _areas[i].Icon, _areas[i].Inside));
             }
-            buttons.Add(new ButtonContent("to world", null, () => { _region.Outside(); }));
+            buttons.Add(new ButtonContent("to world", null, () => { _region.EntryBackList(); }));
 
             _buttonsListView = _rootVisualElement.Q<ListView>("List");
             _buttonsListView.makeItem = () => { return visualElementPattern.Instantiate(); };

@@ -43,14 +43,13 @@ namespace Data.World
         {
             Debug.Log($"Тык {base.ButtonText}");
 
-            WindowManagement windowManagement = WindowManagement.Instance;
-            if (windowManagement.CurrentSelectNode == this)
+            WorldData worldData = GameDataContainer.Instance.GetWorldData;
+            if (worldData.IsEquilsCurSelect(this))
             {
                 Entry();
             }
             else
             {
-                windowManagement.CurrentSelectNode = this;
                 new StartLocationInfo(dungeonNode: this, entryButton: Entry);
             }
         }

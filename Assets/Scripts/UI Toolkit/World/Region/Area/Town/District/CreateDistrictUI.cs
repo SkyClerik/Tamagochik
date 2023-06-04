@@ -1,6 +1,9 @@
 using Data.World;
 using System.Collections.Generic;
+using System.Net.Sockets;
+using UnityEngine;
 using UnityEngine.UIElements;
+using static UnityEngine.EventSystems.EventTrigger;
 
 namespace Hud.Buttons
 {
@@ -22,7 +25,7 @@ namespace Hud.Buttons
             uiDocument.enabled = true;
             _rootVisualElement = uiDocument.rootVisualElement;
 
-            windowManagement.CurrentSelectNode = null;
+            GameDataContainer.Instance.GetWorldData.SetCurrentSelectNode = null;
             windowManagement.GetRightHud.enabled = false;
             windowManagement.GetLocationInfo.enabled = false;
 
@@ -37,7 +40,7 @@ namespace Hud.Buttons
             {
                 buttons.Add(new ButtonContent(_shops[i].ButtonText, _shops[i].Icon, _shops[i].Inside));
             }
-            buttons.Add(new ButtonContent("to town", null, () => { _district.Outside(); }));
+            buttons.Add(new ButtonContent("to town", null, _district.EntryBackList));
 
             _buttonsListView = _rootVisualElement.Q<ListView>("List");
             _buttonsListView.makeItem = () => { return visualElementPattern.Instantiate(); };

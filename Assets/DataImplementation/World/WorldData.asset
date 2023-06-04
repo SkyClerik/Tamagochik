@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 191cfa78b6462484fa9318a45fdf5a4e, type: 3}
   m_Name: WorldData
   m_EditorClassIdentifier: 
+  _title: "\u041E\u0433\u0440\u043E\u043C\u043D\u044B\u0439 \u043C\u0438\u0440"
   _regions:
   - {fileID: 11400000, guid: 833e5d0dbdcea8749b1f3070220956ea, type: 2}
   - {fileID: 11400000, guid: a40bbab6af9c95c4eb1ca9b465f9b4ff, type: 2}

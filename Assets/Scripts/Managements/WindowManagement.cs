@@ -45,10 +45,6 @@ public class WindowManagement : Singleton<WindowManagement>
     public VisualTreeAsset VtaGeneralButtonPattern => _vtaGeneralButtonPattern;
     public VisualTreeAsset VtaItemSlotPattern => _vtaItemSlotPattern;
 
-
-    private NodeBase _currentSelectNode;
-    public NodeBase CurrentSelectNode { get => _currentSelectNode; set => _currentSelectNode = value; }
-
     public void MainHuds(bool active)
     {
         _upHudDocument.enabled = active;

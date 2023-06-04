@@ -25,14 +25,13 @@ namespace Data.World
         {
             Debug.Log($"Тык {base.ButtonText}");
 
-            WindowManagement windowManagement = WindowManagement.Instance;
-            if (windowManagement.CurrentSelectNode == this)
+            WorldData worldData = GameDataContainer.Instance.GetWorldData;
+            if (worldData.IsEquilsCurSelect(this))
             {
                 Entry();
             }
             else
             {
-                windowManagement.CurrentSelectNode = this;
                 new StartLocationInfo(townNode: this, entryButton: Entry);
             }
         }
@@ -46,6 +45,19 @@ namespace Data.World
         {
             Debug.Log($"Запуск {base.ButtonText}");
             new CreateTownUI(town: this);
+        }
+
+        public void EntryBackList()
+        {
+            WorldData worldData = GameDataContainer.Instance.GetWorldData;
+            if (worldData.IsEquilsCurSelect(this))
+            {
+                Outside();
+            }
+            else
+            {
+                new StartLocationInfo(townNode: this, entryButton: Outside);
+            }
         }
     }
 }

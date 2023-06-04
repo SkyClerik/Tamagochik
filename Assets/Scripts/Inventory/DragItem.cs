@@ -1,5 +1,6 @@
 using UnityEngine.UIElements;
 using UnityEngine;
+using UnityEngine.Rendering.VirtualTexturing;
 
 [RequireComponent(typeof(UIDocument))]
 public class DragItem : Singleton<DragItem>
@@ -7,6 +8,7 @@ public class DragItem : Singleton<DragItem>
     private ItemVisualElement _itemVisualElement;
     private VisualElement _icon;
     private UIDocument _uiDocument;
+    private VisualElement _root;
     private float _screenHeight;
     private const string _iconName = "Icon";
 
@@ -18,10 +20,8 @@ public class DragItem : Singleton<DragItem>
         _uiDocument = GetComponent<UIDocument>();
         _uiDocument.enabled = true;
 
-        VisualElement root = _uiDocument.rootVisualElement;
-        _icon = root.Q<VisualElement>(_iconName);
-
-        root.Add(_icon);
+        _root = _uiDocument.rootVisualElement;
+        _icon = _root.Q<VisualElement>(_iconName);
     }
 
     public void AddItem(ItemVisualElement itemVisualElement)
@@ -65,7 +65,9 @@ public class DragItem : Singleton<DragItem>
     private void SetPosition()
     {
         Vector2 mousePosition = Input.mousePosition;
-        _icon.style.left = mousePosition.x;
-        _icon.style.top = _screenHeight - mousePosition.y;
+        Vector2 mousePositionCorrected = new Vector2(mousePosition.x, Screen.height - mousePosition.y);
+        mousePositionCorrected = RuntimePanelUtils.ScreenToPanel(_root.panel, mousePositionCorrected);
+        _icon.style.left = mousePositionCorrected.x;
+        _icon.style.top = mousePositionCorrected.y;
     }
 }
