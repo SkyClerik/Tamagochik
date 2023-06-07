@@ -54,7 +54,7 @@ public class EquipmentHud : MonoBehaviour
     private void BackButton()
     {
         WindowManagement windowManagement = WindowManagement.Instance;
-        windowManagement.GetEquipmentHud.enabled = false;
+        windowManagement.GetEquipmentDoc.enabled = false;
         windowManagement.MainHuds(true);
 
         new UnitInfo().Init(_unitHumanoid);

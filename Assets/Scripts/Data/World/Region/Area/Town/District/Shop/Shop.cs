@@ -21,7 +21,7 @@ namespace Data.World
             }
             else
             {
-                new StartLocationInfo(shopNode: this, entryButton: Entry);
+                new StartLocationInfo(shopNode: this, callback: Entry);
             }
         }
 

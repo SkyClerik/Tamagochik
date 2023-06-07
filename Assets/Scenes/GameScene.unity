@@ -186,11 +186,10 @@ MonoBehaviour:
   _locationInfoDocument: {fileID: 489260501}
   _generalButtonsDocument: {fileID: 1555189016}
   _assembleSquadHud: {fileID: 1628742024}
-  _equipmentHud: {fileID: 165154714}
+  _equipmentDocument: {fileID: 0}
   _kraftHud: {fileID: 2133623149}
   _clickerHudDocument: {fileID: 205093137}
   _inventoryDocument: {fileID: 1346459764}
-  _dragItemDocument: {fileID: 652977831}
   _warehouseDocument: {fileID: 1740776000}
   _vtaDevelopSpace: {fileID: 9197481963319205126, guid: f37e6df8e8a200644bd8cde9c5dcb3f4, type: 3}
   _vtaListButton: {fileID: 9197481963319205126, guid: e6877c2c98ffd40479cbd622ad6b0b99, type: 3}
@@ -238,6 +237,7 @@ GameObject:
   m_Component:
   - component: {fileID: 165154713}
   - component: {fileID: 165154714}
+  - component: {fileID: 165154715}
   m_Layer: 0
   m_Name: Equipment
   m_TagString: Untagged
@@ -272,6 +272,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45509129ba528134ebd39d953da65e63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &165154715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165154712}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PanelSettings: {fileID: 11400000, guid: c011d356146b52543a37a6f260fb57a7, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: 63efc0a86e7a29b4f95fab77049372f2, type: 3}
+  m_SortingOrder: 0
 --- !u!1 &192260262
 GameObject:
   m_ObjectHideFlags: 0
@@ -910,7 +926,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1555189013}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
@@ -1203,7 +1219,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2141036056}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 

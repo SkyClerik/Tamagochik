@@ -16,3 +16,5 @@ MonoBehaviour:
   _buttonText: "\u041B\u0430\u0447\u0443\u0433\u0430"
   _icon: {fileID: 1475762410, guid: 6ff283cd38d04cd4fb0ec3a37ea43030, type: 3}
   _owner: {fileID: 11400000, guid: 29f6a1ebab37bbc43bdaacd98fc2b869, type: 2}
+  _privce: 0
+  _id: 21054

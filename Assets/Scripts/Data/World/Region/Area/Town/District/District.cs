@@ -16,6 +16,23 @@ namespace Data.World
 
         public Town Owner { get => _owner; set => _owner = value; }
         public List<Shop> Shops { get { return _shops; } }
+        public List<House> GetPlayerHouses
+        {
+            get
+            {
+                List<House> houses = new List<House>();
+                foreach (House house in _houses)
+                {
+                    GameDataContainer dataContainer = GameDataContainer.Instance;
+                    foreach (House playerHouses in dataContainer.GetGameData.PlayerHouses)
+                    {
+                        if (playerHouses.GetID == house.GetID)
+                            houses.Add(house);
+                    }
+                }
+                return houses;
+            }
+        }
 
         private void OnValidate()
         {
@@ -37,7 +54,7 @@ namespace Data.World
             }
             else
             {
-                new StartLocationInfo(districtNode: this, entryButton: Entry);
+                new StartLocationInfo(districtNode: this, callback: Entry);
             }
         }
 
@@ -61,7 +78,7 @@ namespace Data.World
             }
             else
             {
-                new StartLocationInfo(districtNode: this, entryButton: Outside);
+                new StartLocationInfo(districtNode: this, callback: Outside);
             }
         }
     }

@@ -15,7 +15,6 @@ public class ItemVisualElement : VisualElement
     public int IndexInInventory => _indexInInventory;
     public ItemContainer Owner => _owner;
 
-
     public ItemVisualElement(ItemBase itemBase, ItemContainer owner, int indexInInventory)
     {
         _dragItem = DragItem.Instance;
@@ -31,7 +30,7 @@ public class ItemVisualElement : VisualElement
         RegisterCallback<MouseUpEvent>(OnMouseUpEvent);
     }
 
-    private void SetItem(ItemBase itemBase)
+    public void SetItem(ItemBase itemBase)
     {
         _item = itemBase;
         if (itemBase != null)
@@ -59,7 +58,7 @@ public class ItemVisualElement : VisualElement
         _itemIconBase.visible = !string.IsNullOrEmpty(amount);
     }
 
-    public void SetBorders(VisualElement e, Color color, float borderWidth)
+    private void SetBorders(VisualElement e, Color color, float borderWidth)
     {
         e.style.borderTopWidth = e.style.borderLeftWidth = e.style.borderRightWidth = e.style.borderBottomWidth = borderWidth;
         e.style.borderTopColor = e.style.borderLeftColor = e.style.borderRightColor = e.style.borderBottomColor = color;

@@ -18,7 +18,7 @@
             _storages = _gameDataContainer.GetStoragesData.Storages;
 
             WindowManagement windowManagement = WindowManagement.Instance;
-            UIDocument uiDocument = windowManagement.GetGeneralButtons;
+            UIDocument uiDocument = windowManagement.GetGeneralButtonsDoc;
             uiDocument.visualTreeAsset = windowManagement.VtaListButton;
             uiDocument.enabled = true;
             _rootVisualElement = uiDocument.rootVisualElement;

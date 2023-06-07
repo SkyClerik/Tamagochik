@@ -50,7 +50,7 @@ namespace Data.World
             }
             else
             {
-                new StartLocationInfo(dungeonNode: this, entryButton: Entry);
+                new StartLocationInfo(dungeonNode: this, callback: Entry);
             }
         }
 

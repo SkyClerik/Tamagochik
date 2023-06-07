@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _lut:
   - _itemBase: {fileID: 11400000, guid: 51a92ffe3dc088b41a851dd977650823, type: 2}
-    _amountRange: {x: 1, y: 3}
+    _amountRange: {x: 82, y: 92}
     _dropChance: 0.0001

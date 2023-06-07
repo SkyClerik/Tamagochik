@@ -4,22 +4,24 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class StartWarehouse
+public class CreateWarehouseUI
 {
     private ItemContainer _itemContainer;
+    private UIDocument _uiDocument;
     private VisualElement _rootVisualElement;
     private List<VisualElement> _slots = new List<VisualElement>();
 
-    public StartWarehouse()
+    public CreateWarehouseUI(System.Action callback)
     {
         GameDataContainer gameDataContainer = GameDataContainer.Instance;
         _itemContainer = gameDataContainer.GetGameData.PlayerWarehouse.GetItemContainer;
 
         WindowManagement windowManagement = WindowManagement.Instance;
-        UIDocument uiDocument = windowManagement.GetWarehouseDocument;
-        uiDocument.enabled = true;
+        _uiDocument = windowManagement.GetWarehouseDoc;
+        _uiDocument.enabled = true;
 
-        _rootVisualElement = uiDocument.rootVisualElement;
+        _rootVisualElement = _uiDocument.rootVisualElement;
+        _rootVisualElement.Q<Button>("BackButton").clicked += callback;
         ScrollView scrollView = _rootVisualElement.Q<ScrollView>("ItemsScrollView");
 
         CreateSlots(scrollView, 4);
@@ -47,8 +49,6 @@ public class StartWarehouse
         float needLine = (float)_itemContainer.ItemList.Length / slotsInLine;
         needLine = Mathf.CeilToInt(needLine);
 
-        WindowManagement windowManagement = WindowManagement.Instance;
-
         for (int f = 0; f < needLine; f++)
         {
             VisualElement line = new VisualElement();
@@ -63,5 +63,10 @@ public class StartWarehouse
 
             scrollView.Add(line);
         }
+    }
+
+    public void Hide()
+    {
+        _uiDocument.enabled = false;
     }
 }

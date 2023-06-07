@@ -4,18 +4,21 @@ using UnityEngine.UIElements;
 
 namespace Hud.Buttons
 {
-    public class StartDevelopSpace
+    public class CreateHouseUI
     {
-        private House _startHouse;
+        private House _house;
 
-        public StartDevelopSpace(House startHouse)
+        public CreateHouseUI(House house)
         {
-            _startHouse = startHouse;
+            _house = house;
 
             WindowManagement windowManagement = WindowManagement.Instance;
-            UIDocument uiDocument = windowManagement.GetGeneralButtons;
+            UIDocument uiDocument = windowManagement.GetGeneralButtonsDoc;
             uiDocument.visualTreeAsset = windowManagement.VtaDevelopSpace;
             uiDocument.enabled = true;
+
+            GameDataContainer.Instance.GetWorldData.SetCurrentSelectNode = null;
+            windowManagement.GetLocationInfoDoc.enabled = false;
 
             VisualElement rootVisualElement = uiDocument.rootVisualElement;
 
@@ -62,19 +65,28 @@ namespace Hud.Buttons
             GameDataContainer.Instance.GetGameData.Day++;
         }
 
+        CreateInventoryUI _inventory;
+        CreateWarehouseUI _warehouse;
         private void Warehouse()
         {
             var windowManagement = WindowManagement.Instance;
-            windowManagement.GetGeneralButtons.enabled = false;
-            windowManagement.GetRightHud.enabled = false;
-            new StartWarehouse();
-            new StartInventory();
+            windowManagement.GetGeneralButtonsDoc.enabled = false;
+            windowManagement.GetRightDoc.enabled = false;
+            _inventory = new CreateInventoryUI();
+            _warehouse = new CreateWarehouseUI(CloseWarehouse);
+        }
+
+        private void CloseWarehouse()
+        {
+            _inventory.Hide();
+            _warehouse.Hide();
+            _house.StartForced();
         }
 
         private void LeaveHouse()
         {
             Debug.Log($"Выйти из дома");
-            _startHouse.Outside();
+            _house.Outside();
         }
     }
 }

@@ -20,6 +20,7 @@ public class GameSceneStarter : MonoBehaviour
         _gameDataContainer.OnReady -= Init;
         //Application.targetFrameRate = 60;
         SetMaster();
+        _startHouse.BuyForce();
         _startHouse.StartForced();
     }
 

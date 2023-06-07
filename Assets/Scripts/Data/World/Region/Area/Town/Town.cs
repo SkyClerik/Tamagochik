@@ -32,7 +32,7 @@ namespace Data.World
             }
             else
             {
-                new StartLocationInfo(townNode: this, entryButton: Entry);
+                new StartLocationInfo(townNode: this, callback: Entry);
             }
         }
 
@@ -56,7 +56,7 @@ namespace Data.World
             }
             else
             {
-                new StartLocationInfo(townNode: this, entryButton: Outside);
+                new StartLocationInfo(townNode: this, callback: Outside);
             }
         }
     }
