@@ -1,7 +1,4 @@
 using Data.Units;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.UIElements;
 
 public class CreateRightUI
@@ -16,9 +13,9 @@ public class CreateRightUI
         UIDocument uiDocument = windowManagement.GetRightDoc;
         uiDocument.enabled = true;
 
-        VisualElement rootVisualelement = uiDocument.rootVisualElement;
+        VisualElement rootVisualElement = uiDocument.rootVisualElement;
 
-        Label avatarNameLable = rootVisualelement.Q<Label>("AvatarNameLable");
-        avatarNameLable.text = _master.Name;
+        Label avatarNameLabel = rootVisualElement.Q<Label>("AvatarNameLabel");
+        avatarNameLabel.text = _master.Name;
     }
 }

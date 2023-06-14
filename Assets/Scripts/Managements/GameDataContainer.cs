@@ -24,15 +24,9 @@ public class GameDataContainer : Singleton<GameDataContainer>
     private WorldData _worldData;
     public WorldData GetWorldData => _worldData;
 
-    [Header("Клонируемые")]
-
     [SerializeField]
-    private GameData _gameData;
-    public GameData GetGameData => _gameData;
-
-    [SerializeField]
-    private GameSettingsData _gameSettingsData;
-    public GameSettingsData GetGameSettingsData => _gameSettingsData;
+    private RecipesData _recipesData;
+    public RecipesData GetRecipesData => _recipesData;
 
     [SerializeField]
     private ItemsData _itemsData;
@@ -42,9 +36,15 @@ public class GameDataContainer : Singleton<GameDataContainer>
     private StoragesData _storagesData;
     public StoragesData GetStoragesData => _storagesData;
 
+    [Header("Клонируемые")]
+
     [SerializeField]
-    private RecipesData _recipesData;
-    public RecipesData GetRecipesData => _recipesData;
+    private GameData _gameData;
+    public GameData GetGameData => _gameData;
+
+    [SerializeField]
+    private GameSettingsData _gameSettingsData;
+    public GameSettingsData GetGameSettingsData => _gameSettingsData;
 
 
     public event System.Action OnReady;
@@ -56,15 +56,6 @@ public class GameDataContainer : Singleton<GameDataContainer>
 
         if (_gameSettingsData)
             _gameSettingsData = Instantiate(_gameSettingsData);
-
-        if (_itemsData)
-            _itemsData = Instantiate(_itemsData);
-
-        if (_storagesData)
-            _storagesData = Instantiate(_storagesData);
-
-        if (_recipesData)
-            _recipesData = Instantiate(_recipesData);
 
         Ready();
     }

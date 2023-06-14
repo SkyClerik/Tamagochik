@@ -79,10 +79,10 @@ public class EquipmentHud : MonoBehaviour
 
     private ButtonElement CreateSlotButton(string buttonName, EquipTypes equipTypes)
     {
-        for (int i = 0; i < _unitHumanoid.Eqiupments?.Length; i++)
+        for (int i = 0; i < _unitHumanoid.Equipment?.Length; i++)
         {
-            if (_unitHumanoid.Eqiupments[i].Id >= 0 && _unitHumanoid.Eqiupments[i].GetEquipType == equipTypes)
-                return CreateItemButton(_unitHumanoid.Eqiupments[i], () => { Init(equipTypes); });
+            if (_unitHumanoid.Equipment[i].Id >= 0 && _unitHumanoid.Equipment[i].GetEquipType == equipTypes)
+                return CreateItemButton(_unitHumanoid.Equipment[i], () => { Init(equipTypes); });
         }
 
         return new ButtonElement(
@@ -108,7 +108,7 @@ public class EquipmentHud : MonoBehaviour
             var item = _itemsData.Items[i] as EquipmentItem;
 
             int equipIndex = _unitHumanoid.GetEquipIndex(equipType);
-            if (_unitHumanoid.Eqiupments[equipIndex] == item)
+            if (_unitHumanoid.Equipment[equipIndex] == item)
                 continue;
 
             if (item.Amount <= 0)
@@ -145,11 +145,11 @@ public class EquipmentHud : MonoBehaviour
     {
         var item = _itemsData.Items[index] as EquipmentItem;
         int equipIndex = _unitHumanoid.GetEquipIndex(item.GetEquipType);
-        if (_unitHumanoid.Eqiupments[equipIndex].Id >= 0)
+        if (_unitHumanoid.Equipment[equipIndex].Id >= 0)
         {
             for (int i = 0; i < _itemsData.Items.Count; i++)
             {
-                if (_itemsData.Items[i].Id == _unitHumanoid.Eqiupments[equipIndex].Id)
+                if (_itemsData.Items[i].Id == _unitHumanoid.Equipment[equipIndex].Id)
                 {
                     _itemsData.Items[i].Amount++;
                     break;

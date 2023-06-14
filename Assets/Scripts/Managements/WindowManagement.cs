@@ -9,7 +9,7 @@ public class WindowManagement : Singleton<WindowManagement>
     [SerializeField] private UIDocument _rightHudDocument;
     [SerializeField] private UIDocument _locationInfoDocument;
     [SerializeField] private UIDocument _generalButtonsDocument;
-    [SerializeField] private AssembleSquadHud _assembleSquadHud;
+    [SerializeField] private UIDocument _assembleSquadDocument;
     [SerializeField] private UIDocument _equipmentDocument;
     [SerializeField] private KraftHud _kraftHud;
     [SerializeField] private UIDocument _clickerHudDocument;
@@ -19,7 +19,7 @@ public class WindowManagement : Singleton<WindowManagement>
     public UIDocument GetRightDoc => _rightHudDocument;
     public UIDocument GetLocationInfoDoc => _locationInfoDocument;
     public UIDocument GetGeneralButtonsDoc => _generalButtonsDocument;
-    public AssembleSquadHud GetAssembleSquadHud => _assembleSquadHud;
+    public UIDocument GetAssembleSquadDoc => _assembleSquadDocument;
     public UIDocument GetEquipmentDoc => _equipmentDocument;
     public KraftHud GetKraftHud => _kraftHud;
     public UIDocument GetClickerDoc => _clickerHudDocument;

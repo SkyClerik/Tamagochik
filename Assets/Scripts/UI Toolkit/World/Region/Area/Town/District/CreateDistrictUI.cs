@@ -1,9 +1,6 @@
 using Data.World;
 using System.Collections.Generic;
-using System.Net.Sockets;
-using UnityEngine;
 using UnityEngine.UIElements;
-using static UnityEngine.EventSystems.EventTrigger;
 
 namespace Hud.Buttons
 {
@@ -28,7 +25,6 @@ namespace Hud.Buttons
             _rootVisualElement = uiDocument.rootVisualElement;
 
             GameDataContainer.Instance.GetWorldData.SetCurrentSelectNode = null;
-            windowManagement.GetRightDoc.enabled = false;
             windowManagement.GetLocationInfoDoc.enabled = false;
 
             InitList(windowManagement.VtaGeneralButtonPattern);

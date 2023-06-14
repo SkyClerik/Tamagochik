@@ -185,8 +185,8 @@ MonoBehaviour:
   _rightHudDocument: {fileID: 2141036059}
   _locationInfoDocument: {fileID: 489260501}
   _generalButtonsDocument: {fileID: 1555189016}
-  _assembleSquadHud: {fileID: 1628742024}
-  _equipmentDocument: {fileID: 0}
+  _assembleSquadDocument: {fileID: 1628742025}
+  _equipmentDocument: {fileID: 165154715}
   _kraftHud: {fileID: 2133623149}
   _clickerHudDocument: {fileID: 205093137}
   _inventoryDocument: {fileID: 1346459764}
@@ -697,6 +697,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startHouse: {fileID: 11400000, guid: b7c5ef3c039748445b310fe3b358c681, type: 2}
+  _startHumanoids:
+  - {fileID: 11400000, guid: d0fee42984ba59145ac9c4e9b406625e, type: 2}
+  - {fileID: 11400000, guid: 6cadcb28eafb4ba479050aedf779b4cf, type: 2}
+  - {fileID: 11400000, guid: f6a4dd7bc6d86c744b8ce452c8e173a4, type: 2}
+  - {fileID: 11400000, guid: b0faf4cfe6658dc4489e01e8140cd36c, type: 2}
+  - {fileID: 11400000, guid: b77ff5a6a5c90b141a08acea5256f6cd, type: 2}
 --- !u!1 &652977829
 GameObject:
   m_ObjectHideFlags: 0
@@ -945,6 +951,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1628742023}
   - component: {fileID: 1628742024}
+  - component: {fileID: 1628742025}
   m_Layer: 0
   m_Name: AssembleSquad
   m_TagString: Untagged
@@ -979,6 +986,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c34e578ae7a34a24094481bce49e82e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1628742025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628742022}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PanelSettings: {fileID: 11400000, guid: c011d356146b52543a37a6f260fb57a7, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: 2600ca5a4533ce14193a5d45b37f1ee6, type: 3}
+  m_SortingOrder: 0
 --- !u!1 &1720719642
 GameObject:
   m_ObjectHideFlags: 0

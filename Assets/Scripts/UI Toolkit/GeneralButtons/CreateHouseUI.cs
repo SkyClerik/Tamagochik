@@ -7,6 +7,8 @@ namespace Hud.Buttons
     public class CreateHouseUI
     {
         private House _house;
+        private CreateInventoryUI _inventory;
+        private CreateWarehouseUI _warehouse;
 
         public CreateHouseUI(House house)
         {
@@ -33,7 +35,7 @@ namespace Hud.Buttons
             Button backButton = rootVisualElement.Q<Button>("BackButton");
 
             createButton.clicked += KraftTypesListButton;
-            unitsButton.clicked += UnitsButton;
+            unitsButton.clicked += AssembleSquad;
             roomsButton.clicked += RoomsButton;
             endDayButton.clicked += EndTheDay;
             warehouseButton.clicked += Warehouse;
@@ -49,10 +51,16 @@ namespace Hud.Buttons
             //new KraftTypesList().Init();
         }
 
-        private void UnitsButton()
+        private void AssembleSquad()
         {
-            Debug.Log($"Этот функционал еще в разработке");
             //new Units().Init();
+            Hide();
+            new CreateAssembleSquadUI(CloseAssembleSquad);
+        }
+
+        private void CloseAssembleSquad()
+        {
+            _house.StartForced();
         }
 
         private void RoomsButton()
@@ -65,13 +73,9 @@ namespace Hud.Buttons
             GameDataContainer.Instance.GetGameData.Day++;
         }
 
-        CreateInventoryUI _inventory;
-        CreateWarehouseUI _warehouse;
         private void Warehouse()
         {
-            var windowManagement = WindowManagement.Instance;
-            windowManagement.GetGeneralButtonsDoc.enabled = false;
-            windowManagement.GetRightDoc.enabled = false;
+            Hide();
             _inventory = new CreateInventoryUI();
             _warehouse = new CreateWarehouseUI(CloseWarehouse);
         }
@@ -86,7 +90,15 @@ namespace Hud.Buttons
         private void LeaveHouse()
         {
             Debug.Log($"Выйти из дома");
+            Hide();
             _house.Outside();
+        }
+
+        private void Hide()
+        { 
+            var windowManagement = WindowManagement.Instance;
+            windowManagement.GetGeneralButtonsDoc.enabled = false;
+            windowManagement.GetRightDoc.enabled = false;
         }
     }
 }

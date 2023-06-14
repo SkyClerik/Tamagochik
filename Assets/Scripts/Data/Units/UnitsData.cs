@@ -15,21 +15,29 @@ public class UnitsData : ScriptableObject
 
     public Master GetMasterClone(int index)
     {
-        var master = Instantiate(_masters[index]);
+        var master = _masters[index].Clone();
 
-        master.Inventory.ItemList = new Data.Item.ItemBase[_masters[index].Inventory.ItemList.Length];
-        for (int i = 0; i < master.Inventory.ItemList.Length; i++)
-        {
-            if (_masters[index].Inventory.ItemList[i] != null)
-            {
-                master.Inventory.ItemList[i] = Object.Instantiate(_masters[index].Inventory.ItemList[i]);
-            }
-            else
-            {
-                master.Inventory.ItemList[i] = null;
-            }
-        }
+        CloneInventory(_masters[index], master);
+        CloneHumanoids(_masters[index], master);
 
         return master;
+    }
+
+    private void CloneInventory(Master toMaster, Master fromMaster)
+    {
+        fromMaster.Inventory.ItemList = new Data.Item.ItemBase[toMaster.Inventory.ItemList.Length];
+        for (int i = 0; i < fromMaster.Inventory.ItemList.Length; i++)
+        {
+            fromMaster.Inventory.ItemList[i] = toMaster.Inventory.ItemList[i] != null ? toMaster.Inventory.ItemList[i].Clone() : null;
+        }
+    }
+
+    private void CloneHumanoids(Master toMaster, Master fromMaster)
+    {
+        fromMaster.Humanoids = new();
+        for (int i = 0; i < toMaster.Humanoids.Count; i++)
+        {
+            fromMaster.Humanoids.Add(toMaster.Humanoids[i].Clone());
+        }
     }
 }
