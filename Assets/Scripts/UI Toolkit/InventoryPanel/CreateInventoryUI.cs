@@ -4,22 +4,22 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class StartInventory
+public class CreateInventoryUI
 {
     private ItemContainer _inventory;
     private VisualElement _rootVisualElement;
-    private List<VisualElement> _slots = new List<VisualElement>();
+    private List<VisualElement> _slots = new();
 
     private const string _itemBoxStyle = "item-box";
     private const string _itemBoxLockStyle = "item-box-lock";
 
-    public StartInventory()
+    public CreateInventoryUI()
     {
         GameDataContainer gameDataContainer = GameDataContainer.Instance;
         _inventory = gameDataContainer.GetGameData.Master.Inventory;
 
         WindowManagement windowManagement = WindowManagement.Instance;
-        UIDocument uiDocument = windowManagement.GetInventoryHud;
+        UIDocument uiDocument = windowManagement.GetInventoryDoc;
         uiDocument.enabled = true;
 
         _rootVisualElement = uiDocument.rootVisualElement;
@@ -31,17 +31,32 @@ public class StartInventory
         foreach (VisualElement line in lines)
         {
             List<VisualElement> slots = line.Children().ToList();
-
             for (int i = 0; i < slots.Count; i++)
-            {
                 _slots.Add(slots[i]);
-            }
         }
 
         for (int i = 0; i < _inventory.ItemList.Length; i++)
         {
+            Debug.Log($"Добавляю предмет на отображение");
             ItemBase item = _inventory.ItemList[i];
             _slots[i].Add(new ItemVisualElement(item, _inventory, i));
+        }
+
+        _inventory.OnItemAdd += EventItemAdd;
+    }
+
+    private void EventItemAdd(ItemBase itemBase, int index)
+    {
+        Debug.Log($"в инвентарь добавлен предмет {itemBase.Name} в ячейку номер {index}");
+        var item = itemBase;
+        var childrens = _slots[index].Children().ToList();
+        foreach (VisualElement child in childrens)
+        {
+            if (child is ItemVisualElement)
+            {
+                var c = (ItemVisualElement)child;
+                c.SetItem(item);
+            }
         }
     }
 
@@ -51,7 +66,7 @@ public class StartInventory
         needLine = Mathf.CeilToInt(needLine);
         needLine = needLine < minLine ? minLine : needLine;
 
-        WindowManagement windowManagement = WindowManagement.Instance;
+        //WindowManagement windowManagement = WindowManagement.Instance;
 
         string templateStyle = _itemBoxStyle;
         for (int f = 0, sc = 0; f < needLine; f++)
@@ -73,5 +88,12 @@ public class StartInventory
 
             scrollView.Add(line);
         }
+    }
+
+    public void Hide()
+    {
+        WindowManagement windowManagement = WindowManagement.Instance;
+        UIDocument uiDocument = windowManagement.GetInventoryDoc;
+        uiDocument.enabled = false;
     }
 }

@@ -16,11 +16,13 @@ MonoBehaviour:
   _description: 
   _icon: {fileID: -134677699, guid: 6ff283cd38d04cd4fb0ec3a37ea43030, type: 3}
   _amount: 0
+  _maxAmount: 0
   _id: 2
   _storageType: 0
   _recipesIndex: 
   _coast: 0
   _important: 0
+  _equipType: 0
   _attack: 0
   _defence: 0
   _agility: 0

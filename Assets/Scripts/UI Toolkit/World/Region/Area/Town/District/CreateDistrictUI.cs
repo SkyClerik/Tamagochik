@@ -1,9 +1,6 @@
 using Data.World;
 using System.Collections.Generic;
-using System.Net.Sockets;
-using UnityEngine;
 using UnityEngine.UIElements;
-using static UnityEngine.EventSystems.EventTrigger;
 
 namespace Hud.Buttons
 {
@@ -13,21 +10,22 @@ namespace Hud.Buttons
         private VisualElement _rootVisualElement;
         private ListView _buttonsListView;
         private List<Shop> _shops;
+        private List<House> _playerHouses;
 
         public CreateDistrictUI(District district)
         {
             _district = district;
             _shops = district.Shops;
+            _playerHouses = district.GetPlayerHouses;
 
             WindowManagement windowManagement = WindowManagement.Instance;
-            UIDocument uiDocument = windowManagement.GetGeneralButtons;
+            UIDocument uiDocument = windowManagement.GetGeneralButtonsDoc;
             uiDocument.visualTreeAsset = windowManagement.VtaListButton;
             uiDocument.enabled = true;
             _rootVisualElement = uiDocument.rootVisualElement;
 
             GameDataContainer.Instance.GetWorldData.SetCurrentSelectNode = null;
-            windowManagement.GetRightHud.enabled = false;
-            windowManagement.GetLocationInfo.enabled = false;
+            windowManagement.GetLocationInfoDoc.enabled = false;
 
             InitList(windowManagement.VtaGeneralButtonPattern);
             InitSlaveButtons();
@@ -38,7 +36,13 @@ namespace Hud.Buttons
             List<ButtonContent> buttons = new List<ButtonContent>();
             for (int i = 0; i < _shops.Count; i++)
             {
-                buttons.Add(new ButtonContent(_shops[i].ButtonText, _shops[i].Icon, _shops[i].Inside));
+                var shop = _shops[i];
+                buttons.Add(new ButtonContent(shop.ButtonText, shop.Icon, shop.Inside));
+            }
+            for (int i = 0; i < _playerHouses.Count; i++)
+            {
+                var house = _playerHouses[i];
+                buttons.Add(new ButtonContent(house.ButtonText, house.Icon, house.Inside));
             }
             buttons.Add(new ButtonContent("to town", null, _district.EntryBackList));
 

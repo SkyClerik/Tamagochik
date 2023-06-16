@@ -1,4 +1,5 @@
-﻿using Data.World;
+﻿using Data.Units;
+using Data.World;
 using UnityEngine;
 
 public class GameSceneStarter : MonoBehaviour
@@ -20,6 +21,7 @@ public class GameSceneStarter : MonoBehaviour
         _gameDataContainer.OnReady -= Init;
         //Application.targetFrameRate = 60;
         SetMaster();
+        _startHouse.BuyForce();
         _startHouse.StartForced();
     }
 

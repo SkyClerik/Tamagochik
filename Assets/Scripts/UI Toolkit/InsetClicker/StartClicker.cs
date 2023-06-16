@@ -1,4 +1,3 @@
-using Data.Item;
 using Data.Units;
 using Data.World;
 using UnityEngine;
@@ -10,7 +9,6 @@ public class StartClicker
     private Dungeon _dungeon;
 
     private Humanoid _humanoid;
-    private ItemBase[] _lutList;
 
     private float _lineMaxValue = 242; //TODO погуглить как получить размер
 
@@ -29,11 +27,11 @@ public class StartClicker
         _dungeon = dungeon;
 
         WindowManagement windowManagement = WindowManagement.Instance;
-        UIDocument uiDocument = windowManagement.GetClickerHud;
+        UIDocument uiDocument = windowManagement.GetClickerDoc;
         uiDocument.enabled = true;
 
-        windowManagement.GetGeneralButtons.enabled = false;
-        windowManagement.GetLocationInfo.enabled = false;
+        windowManagement.GetGeneralButtonsDoc.enabled = false;
+        windowManagement.GetLocationInfoDoc.enabled = false;
 
         VisualElement rootVisualElement = uiDocument.rootVisualElement;
 
@@ -51,35 +49,24 @@ public class StartClicker
         backButton.visible = false;
         homeButton.clicked += BackButton;
 
-        ResetParams(ref attackButton);
-        GenerateLutList();
-
-        new StartInventory();
+        ResetParams();
+        new CreateInventoryUI();
     }
 
-    private void ResetParams(ref Button button)
+    private void ResetParams()
     {
         _humanoid = _gameDataContainer.GetGameData.Master;
         _attackLineValue = 0f;
         _protectLineValue = 0f;
     }
 
-    private void GenerateLutList()
-    {
-        _lutList = new ItemBase[3];
-        for (int i = 0; i < _lutList.Length; i++)
-        {
-            _lutList[i] = _gameDataContainer.GetItemsData.Items[i];
-        }
-    }
-
     private void BackButton()
     {
         var windowManagement = WindowManagement.Instance;
-        windowManagement.GetInventoryHud.enabled = false;
-        windowManagement.GetGeneralButtons.enabled = true;
+        windowManagement.GetInventoryDoc.enabled = false;
+        windowManagement.GetGeneralButtonsDoc.enabled = true;
 
-        UIDocument uiDocument = windowManagement.GetClickerHud;
+        UIDocument uiDocument = windowManagement.GetClickerDoc;
         uiDocument.enabled = false;
 
         _dungeon.Outside();
@@ -89,8 +76,12 @@ public class StartClicker
     {
         _attackLineValue = 0;
 
-        var randomValue = Random.Range(0, _lutList.Length);
-        _humanoid.Inventory.AddItem(_lutList[randomValue]);
+        var lutList = _dungeon.GetLutData.GetLut;
+        var lutID = Random.Range(0, lutList.Count);
+        var ammount = Random.Range(lutList[lutID].AmountRange.x, lutList[lutID].AmountRange.y);
+
+        if (_humanoid.Inventory.TryAddItem(lutList[lutID].GetItemBase, ammount) is not true)
+            Debug.Log($"Предмет не может быть добавлен. Причина мне не известна!");
     }
 
     private void ButtonClicked()

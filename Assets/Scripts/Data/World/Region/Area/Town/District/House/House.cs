@@ -1,4 +1,5 @@
 using Hud.Buttons;
+using System;
 using UnityEngine;
 
 namespace Data.World
@@ -8,7 +9,27 @@ namespace Data.World
     {
         [SerializeField]
         private District _owner;
+        [SerializeField]
+        private int _privce;
+        [SerializeField]
+        //[HideInInspector]
+        private int _id;
+
         public District Owner { get => _owner; set => _owner = value; }
+        public int Price => _privce;
+        public int GetID => _id;
+
+        private void OnValidate()
+        {
+            _id = GetInstanceID();
+        }
+
+        public void BuyForce()
+        {
+            //TODO Принудительная покупка без проверки требований и списаний
+            GameDataContainer dataContainer = GameDataContainer.Instance;
+            dataContainer.GetGameData.PlayerHouses.Add(this.Clone());
+        }
 
         public void Inside()
         {
@@ -17,11 +38,11 @@ namespace Data.World
             WorldData worldData = GameDataContainer.Instance.GetWorldData;
             if (worldData.IsEquilsCurSelect(this))
             {
-                Entry();
+                StartForced();
             }
             else
             {
-                new StartLocationInfo(houseNode: this, entryButton: Entry);
+                new StartLocationInfo(houseNode: this, callback: StartForced);
             }
         }
 
@@ -30,15 +51,11 @@ namespace Data.World
             new CreateDistrictUI(district: _owner);
         }
 
-        private void Entry()
-        {
-            Debug.Log($"Запуск {base.ButtonText}");
-            new StartDevelopSpace(startHouse: this);
-        }
-
         public void StartForced()
         {
-            Entry();
+            Debug.Log($"Запуск {base.ButtonText}");
+            new CreateHouseUI(house: this);
+            new CreateRightUI();
         }
     }
 }

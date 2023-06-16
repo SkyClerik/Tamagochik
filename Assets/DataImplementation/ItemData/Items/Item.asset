@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d68e2c1e449d2cf4dab80b006f69e7e8, type: 3}
   m_Name: Item
   m_EditorClassIdentifier: 
-  _name: 
+  _name: "\u0410\u043B\u043C\u0430\u0437"
   _description: 
   _icon: {fileID: 1208888, guid: 6ff283cd38d04cd4fb0ec3a37ea43030, type: 3}
-  _amount: 1483
+  _amount: 1
   _maxAmount: 100
   _id: 1
   _storageType: 0

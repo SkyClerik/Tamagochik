@@ -15,13 +15,13 @@ namespace Hud.Buttons
             _regions = worldData.Regions;
 
             WindowManagement windowManagement = WindowManagement.Instance;
-            UIDocument uiDocument = windowManagement.GetGeneralButtons;
+            UIDocument uiDocument = windowManagement.GetGeneralButtonsDoc;
             uiDocument.visualTreeAsset = windowManagement.VtaListButton;
             uiDocument.enabled = true;
             _rootVisualElement = uiDocument.rootVisualElement;
 
             GameDataContainer.Instance.GetWorldData.SetCurrentSelectNode = null;
-            windowManagement.GetLocationInfo.enabled = false;
+            windowManagement.GetLocationInfoDoc.enabled = false;
 
             InitList(windowManagement.VtaGeneralButtonPattern);
             InitSlaveButtons();

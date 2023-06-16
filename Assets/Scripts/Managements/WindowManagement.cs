@@ -1,4 +1,3 @@
-using Data.World;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -10,25 +9,22 @@ public class WindowManagement : Singleton<WindowManagement>
     [SerializeField] private UIDocument _rightHudDocument;
     [SerializeField] private UIDocument _locationInfoDocument;
     [SerializeField] private UIDocument _generalButtonsDocument;
-    [SerializeField] private AssembleSquadHud _assembleSquadHud;
-    [SerializeField] private EquipmentHud _equipmentHud;
+    [SerializeField] private UIDocument _assembleSquadDocument;
+    [SerializeField] private UIDocument _equipmentDocument;
     [SerializeField] private KraftHud _kraftHud;
     [SerializeField] private UIDocument _clickerHudDocument;
     [SerializeField] private UIDocument _inventoryDocument;
-    [SerializeField] private UIDocument _dragItemDocument;
     [SerializeField] private UIDocument _warehouseDocument;
 
-    public UIDocument GetUpHud => _upHudDocument;
-    public UIDocument GetRightHud => _rightHudDocument;
-    public UIDocument GetLocationInfo => _locationInfoDocument;
-    public UIDocument GetGeneralButtons => _generalButtonsDocument;
-    public AssembleSquadHud GetAssembleSquadHud => _assembleSquadHud;
-    public EquipmentHud GetEquipmentHud => _equipmentHud;
+    public UIDocument GetRightDoc => _rightHudDocument;
+    public UIDocument GetLocationInfoDoc => _locationInfoDocument;
+    public UIDocument GetGeneralButtonsDoc => _generalButtonsDocument;
+    public UIDocument GetAssembleSquadDoc => _assembleSquadDocument;
+    public UIDocument GetEquipmentDoc => _equipmentDocument;
     public KraftHud GetKraftHud => _kraftHud;
-    public UIDocument GetClickerHud => _clickerHudDocument;
-    public UIDocument GetInventoryHud => _inventoryDocument;
-    public UIDocument GetDragItemDocument => _dragItemDocument;
-    public UIDocument GetWarehouseDocument => _warehouseDocument;
+    public UIDocument GetClickerDoc => _clickerHudDocument;
+    public UIDocument GetInventoryDoc => _inventoryDocument;
+    public UIDocument GetWarehouseDoc => _warehouseDocument;
 
     [Header("VisualTreeAsset")]
 

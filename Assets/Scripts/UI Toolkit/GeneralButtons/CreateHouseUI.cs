@@ -4,18 +4,23 @@ using UnityEngine.UIElements;
 
 namespace Hud.Buttons
 {
-    public class StartDevelopSpace
+    public class CreateHouseUI
     {
-        private House _startHouse;
+        private House _house;
+        private CreateInventoryUI _inventory;
+        private CreateWarehouseUI _warehouse;
 
-        public StartDevelopSpace(House startHouse)
+        public CreateHouseUI(House house)
         {
-            _startHouse = startHouse;
+            _house = house;
 
             WindowManagement windowManagement = WindowManagement.Instance;
-            UIDocument uiDocument = windowManagement.GetGeneralButtons;
+            UIDocument uiDocument = windowManagement.GetGeneralButtonsDoc;
             uiDocument.visualTreeAsset = windowManagement.VtaDevelopSpace;
             uiDocument.enabled = true;
+
+            GameDataContainer.Instance.GetWorldData.SetCurrentSelectNode = null;
+            windowManagement.GetLocationInfoDoc.enabled = false;
 
             VisualElement rootVisualElement = uiDocument.rootVisualElement;
 
@@ -30,7 +35,7 @@ namespace Hud.Buttons
             Button backButton = rootVisualElement.Q<Button>("BackButton");
 
             createButton.clicked += KraftTypesListButton;
-            unitsButton.clicked += UnitsButton;
+            unitsButton.clicked += AssembleSquad;
             roomsButton.clicked += RoomsButton;
             endDayButton.clicked += EndTheDay;
             warehouseButton.clicked += Warehouse;
@@ -46,10 +51,16 @@ namespace Hud.Buttons
             //new KraftTypesList().Init();
         }
 
-        private void UnitsButton()
+        private void AssembleSquad()
         {
-            Debug.Log($"Этот функционал еще в разработке");
             //new Units().Init();
+            Hide();
+            new CreateAssembleSquadUI(CloseAssembleSquad);
+        }
+
+        private void CloseAssembleSquad()
+        {
+            _house.StartForced();
         }
 
         private void RoomsButton()
@@ -64,17 +75,30 @@ namespace Hud.Buttons
 
         private void Warehouse()
         {
-            var windowManagement = WindowManagement.Instance;
-            windowManagement.GetGeneralButtons.enabled = false;
-            windowManagement.GetRightHud.enabled = false;
-            new StartWarehouse();
-            new StartInventory();
+            Hide();
+            _inventory = new CreateInventoryUI();
+            _warehouse = new CreateWarehouseUI(CloseWarehouse);
+        }
+
+        private void CloseWarehouse()
+        {
+            _inventory.Hide();
+            _warehouse.Hide();
+            _house.StartForced();
         }
 
         private void LeaveHouse()
         {
             Debug.Log($"Выйти из дома");
-            _startHouse.Outside();
+            Hide();
+            _house.Outside();
+        }
+
+        private void Hide()
+        { 
+            var windowManagement = WindowManagement.Instance;
+            windowManagement.GetGeneralButtonsDoc.enabled = false;
+            windowManagement.GetRightDoc.enabled = false;
         }
     }
 }

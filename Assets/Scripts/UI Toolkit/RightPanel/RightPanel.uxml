@@ -12,10 +12,10 @@
             <ui:VisualElement>
                 <ui:VisualElement style="flex-direction: row; min-width: 256px; min-height: 256px;">
                     <ui:VisualElement name="Background" style="background-image: none; min-width: 128px; min-height: 128px; align-items: auto; position: absolute; flex-grow: 1; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; left: 32px; top: 32px; right: 32px; bottom: 32px; background-color: rgb(255, 201, 0);" />
-                    <ui:VisualElement name="MasterIcon" style="background-image: url(&apos;project://database/Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/character_Mode@4x.png?fileID=2800000&amp;guid=748ae8b33df036b46a86e0387f1602cf&amp;type=3#character_Mode@4x&apos;); min-width: 128px; min-height: 128px; align-items: auto; position: relative; flex-grow: 1; margin-left: 32px; margin-right: 32px; margin-top: 32px; margin-bottom: 32px;" />
+                    <ui:VisualElement name="MasterIcon" style="background-image: url(&apos;project://database/Packages/com.unity.2d.animation/Editor/Assets/EditorIcons/Light/character_Mode@4x.png?fileID=2800000&amp;guid=748ae8b33df036b46a86e0387f1602cf&amp;type=3#character_Mode@4x&apos;); min-width: 128px; min-height: 128px; align-items: auto; position: relative; flex-grow: 1; margin-left: 32px; margin-right: 32px; margin-top: 32px; margin-bottom: 32px;" />
                 </ui:VisualElement>
                 <ui:VisualElement style="min-height: 32px; align-items: center; justify-content: flex-start; font-size: 16px; flex-direction: row; margin-top: 0; padding-top: 0; padding-bottom: 0; margin-bottom: 32px;">
-                    <ui:Label text="Avatar" display-tooltip-when-elided="true" class="label" style="margin-left: 32px;" />
+                    <ui:Label text="Avatar" display-tooltip-when-elided="true" name="AvatarNameLabel" class="label" style="margin-left: 32px;" />
                     <ui:RadioButton class="label" style="flex-grow: 0; flex-shrink: 0; justify-content: flex-end; align-items: auto; -unity-text-align: middle-center;" />
                 </ui:VisualElement>
             </ui:VisualElement>
@@ -38,7 +38,7 @@
             <ui:VisualElement>
                 <ui:VisualElement style="flex-direction: row; min-width: 256px; min-height: 256px;">
                     <ui:VisualElement name="Background" style="background-image: none; min-width: 128px; min-height: 128px; align-items: auto; position: absolute; flex-grow: 1; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; left: 32px; top: 32px; right: 32px; bottom: 32px; background-color: rgb(255, 201, 0);" />
-                    <ui:VisualElement name="MasterIcon" style="background-image: url(&apos;project://database/Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/character_Mode@4x.png?fileID=2800000&amp;guid=748ae8b33df036b46a86e0387f1602cf&amp;type=3#character_Mode@4x&apos;); min-width: 128px; min-height: 128px; align-items: auto; position: relative; flex-grow: 1; margin-left: 32px; margin-right: 32px; margin-top: 32px; margin-bottom: 32px;" />
+                    <ui:VisualElement name="MasterIcon" style="background-image: url(&apos;project://database/Packages/com.unity.2d.animation/Editor/Assets/EditorIcons/Light/character_Mode@4x.png?fileID=2800000&amp;guid=748ae8b33df036b46a86e0387f1602cf&amp;type=3#character_Mode@4x&apos;); min-width: 128px; min-height: 128px; align-items: auto; position: relative; flex-grow: 1; margin-left: 32px; margin-right: 32px; margin-top: 32px; margin-bottom: 32px;" />
                 </ui:VisualElement>
                 <ui:VisualElement style="min-height: 32px; align-items: center; justify-content: flex-start; font-size: 16px; flex-direction: row; margin-top: 0; padding-top: 0; padding-bottom: 0; margin-bottom: 32px;">
                     <ui:Label text="Student" display-tooltip-when-elided="true" class="label" style="margin-left: 32px;" />
@@ -64,7 +64,7 @@
             <ui:VisualElement>
                 <ui:VisualElement style="flex-direction: row; min-width: 256px; min-height: 256px;">
                     <ui:VisualElement name="Background" style="background-image: none; min-width: 128px; min-height: 128px; align-items: auto; position: absolute; flex-grow: 1; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; left: 32px; top: 32px; right: 32px; bottom: 32px; background-color: rgb(255, 201, 0);" />
-                    <ui:VisualElement name="MasterIcon" style="background-image: url(&apos;project://database/Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/character_Mode@4x.png?fileID=2800000&amp;guid=748ae8b33df036b46a86e0387f1602cf&amp;type=3#character_Mode@4x&apos;); min-width: 128px; min-height: 128px; align-items: auto; position: relative; flex-grow: 1; margin-left: 32px; margin-right: 32px; margin-top: 32px; margin-bottom: 32px;" />
+                    <ui:VisualElement name="MasterIcon" style="background-image: url(&apos;project://database/Packages/com.unity.2d.animation/Editor/Assets/EditorIcons/Light/character_Mode@4x.png?fileID=2800000&amp;guid=748ae8b33df036b46a86e0387f1602cf&amp;type=3#character_Mode@4x&apos;); min-width: 128px; min-height: 128px; align-items: auto; position: relative; flex-grow: 1; margin-left: 32px; margin-right: 32px; margin-top: 32px; margin-bottom: 32px;" />
                 </ui:VisualElement>
                 <ui:VisualElement style="min-height: 32px; align-items: center; justify-content: flex-start; font-size: 16px; flex-direction: row; margin-top: 0; padding-top: 0; padding-bottom: 0; margin-bottom: 32px;">
                     <ui:Label text="Assistant" display-tooltip-when-elided="true" class="label" style="margin-left: 32px;" />

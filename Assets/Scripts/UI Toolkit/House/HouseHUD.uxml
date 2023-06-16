@@ -1,0 +1,133 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Scripts/UI%20Toolkit/House/HouseStyle.uss?fileID=7433441132597879392&amp;guid=05f7a29a0fe69b745ae0da2379959b63&amp;type=3#HouseStyle" />
+    <ui:VisualElement picking-mode="Ignore" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+        <ui:VisualElement picking-mode="Ignore" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
+        <ui:VisualElement picking-mode="Ignore" style="flex-grow: 0; background-color: rgb(89, 1, 1); height: 400px; flex-direction: row;">
+            <ui:VisualElement picking-mode="Ignore" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 500px; border-left-color: rgb(190, 81, 0); border-right-color: rgb(190, 81, 0); border-top-color: rgb(190, 81, 0); border-bottom-color: rgb(190, 81, 0); border-left-width: 3px; border-right-width: 3px; border-top-width: 3px; border-bottom-width: 3px;">
+                <ui:VisualElement picking-mode="Ignore" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); flex-direction: row; height: 50%;">
+                    <ui:VisualElement style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); justify-content: center; align-items: center;">
+                        <ui:VisualElement picking-mode="Ignore" name="BoxBackground" class="box-background" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0);">
+                            <ui:VisualElement picking-mode="Ignore" style="flex-grow: 1; background-color: rgb(73, 52, 32);" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); justify-content: flex-start; align-self: auto; margin-top: 6%; align-items: center;">
+                        <ui:VisualElement picking-mode="Ignore" style="flex-grow: 0; background-color: rgb(73, 52, 32); margin-left: 14px; margin-right: 14px; margin-top: 0; margin-bottom: 14px; height: 25px; width: 90%; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;">
+                            <ui:Label tabindex="-1" text="Даркхолд" display-tooltip-when-elided="true" picking-mode="Ignore" style="color: rgb(255, 255, 255); -unity-font-style: bold; font-size: 20px; -unity-text-align: middle-center;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); flex-direction: row; align-items: center; justify-content: space-around; width: 100%;">
+                            <ui:Button text="Button" display-tooltip-when-elided="true" style="width: 100px; height: 100px;" />
+                            <ui:Button text="Button" display-tooltip-when-elided="true" style="width: 100px; height: 100px;" />
+                            <ui:VisualElement style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 100px; height: 100px;">
+                                <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); min-width: auto; min-height: auto; height: 50%; width: 100%;" />
+                                <ui:VisualElement picking-mode="Ignore" style="flex-grow: 1; background-color: rgb(73, 52, 32); height: 50%; width: 100%; min-width: auto; min-height: auto;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement picking-mode="Ignore" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); height: 50%;">
+                    <ui:VisualElement picking-mode="Ignore" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: row; justify-content: space-around; align-items: center;">
+                        <ui:VisualElement style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); align-items: center; flex-shrink: 0;">
+                            <ui:Button text="Button" display-tooltip-when-elided="true" />
+                            <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); align-items: center; flex-shrink: 0;">
+                            <ui:Button text="Button" display-tooltip-when-elided="true" />
+                            <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); align-items: center; flex-shrink: 0;">
+                            <ui:Button text="Button" display-tooltip-when-elided="true" />
+                            <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); align-items: center; flex-shrink: 0;">
+                            <ui:Button text="Button" display-tooltip-when-elided="true" />
+                            <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement picking-mode="Ignore" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: row; justify-content: space-around; align-items: center;">
+                        <ui:VisualElement style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); align-items: center; flex-shrink: 0;">
+                            <ui:Button text="Button" display-tooltip-when-elided="true" />
+                            <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); align-items: center; flex-shrink: 0;">
+                            <ui:Button text="Button" display-tooltip-when-elided="true" />
+                            <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); align-items: center; flex-shrink: 0;">
+                            <ui:Button text="Button" display-tooltip-when-elided="true" />
+                            <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); align-items: center; flex-shrink: 0;">
+                            <ui:Button text="Button" display-tooltip-when-elided="true" />
+                            <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement picking-mode="Ignore" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); border-left-color: rgb(190, 81, 0); border-right-color: rgb(190, 81, 0); border-top-color: rgb(190, 81, 0); border-bottom-color: rgb(190, 81, 0); border-left-width: 3px; border-right-width: 3px; border-top-width: 3px; border-bottom-width: 3px;">
+                <ui:VisualElement picking-mode="Ignore" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); height: 50%; flex-direction: row; align-items: center; justify-content: space-around;">
+                    <ui:VisualElement picking-mode="Ignore" name="BoxBackground" class="box-background" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); border-left-color: rgb(132, 132, 132); border-right-color: rgb(132, 132, 132); border-top-color: rgb(132, 132, 132); border-bottom-color: rgb(132, 132, 132);">
+                        <ui:VisualElement picking-mode="Ignore" style="flex-grow: 1; background-color: rgb(176, 2, 2);" />
+                    </ui:VisualElement>
+                    <ui:VisualElement picking-mode="Ignore" name="BoxBackground" class="box-background" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0);">
+                        <ui:VisualElement picking-mode="Ignore" style="flex-grow: 1; background-color: rgb(73, 52, 32);" />
+                    </ui:VisualElement>
+                    <ui:VisualElement picking-mode="Ignore" name="BoxBackground" class="box-background" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0);">
+                        <ui:VisualElement name="VisualElement" picking-mode="Ignore" style="flex-grow: 1; background-color: rgb(73, 52, 32);" />
+                    </ui:VisualElement>
+                    <ui:VisualElement picking-mode="Ignore" name="BoxBackground" class="box-background" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0);">
+                        <ui:VisualElement picking-mode="Ignore" style="flex-grow: 1; background-color: rgb(73, 52, 32);" />
+                    </ui:VisualElement>
+                    <ui:VisualElement picking-mode="Ignore" name="BoxBackground" class="box-background" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0);">
+                        <ui:VisualElement picking-mode="Ignore" style="flex-grow: 1; background-color: rgb(73, 52, 32);" />
+                    </ui:VisualElement>
+                    <ui:VisualElement picking-mode="Ignore" name="BoxBackground" class="box-background" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0);">
+                        <ui:VisualElement picking-mode="Ignore" style="flex-grow: 1; background-color: rgb(73, 52, 32);" />
+                    </ui:VisualElement>
+                    <ui:VisualElement picking-mode="Ignore" name="BoxBackground" class="box-background" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0);">
+                        <ui:VisualElement picking-mode="Ignore" style="flex-grow: 1; background-color: rgb(73, 52, 32);" />
+                    </ui:VisualElement>
+                    <ui:VisualElement picking-mode="Ignore" name="BoxBackground" class="box-background" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0);">
+                        <ui:VisualElement picking-mode="Ignore" style="flex-grow: 1; background-color: rgb(73, 52, 32);" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement picking-mode="Ignore" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); height: 50%; flex-direction: row; align-items: center; justify-content: space-around;">
+                    <ui:VisualElement picking-mode="Ignore" name="BoxBackground" class="box-background" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0);">
+                        <ui:VisualElement picking-mode="Ignore" style="flex-grow: 1; background-color: rgb(73, 52, 32);" />
+                    </ui:VisualElement>
+                    <ui:VisualElement picking-mode="Ignore" name="BoxBackground" class="box-background" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0);">
+                        <ui:VisualElement name="VisualElement" picking-mode="Ignore" style="flex-grow: 1; background-color: rgb(73, 52, 32);" />
+                    </ui:VisualElement>
+                    <ui:VisualElement picking-mode="Ignore" name="BoxBackground" class="box-background" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0);">
+                        <ui:VisualElement picking-mode="Ignore" style="flex-grow: 1; background-color: rgb(73, 52, 32);" />
+                    </ui:VisualElement>
+                    <ui:VisualElement picking-mode="Ignore" name="BoxBackground" class="box-background" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0);">
+                        <ui:VisualElement picking-mode="Ignore" style="flex-grow: 1; background-color: rgb(73, 52, 32);" />
+                    </ui:VisualElement>
+                    <ui:VisualElement picking-mode="Ignore" name="BoxBackground" class="box-background" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0);">
+                        <ui:VisualElement picking-mode="Ignore" style="flex-grow: 1; background-color: rgb(73, 52, 32);" />
+                    </ui:VisualElement>
+                    <ui:VisualElement picking-mode="Ignore" name="BoxBackground" class="box-background" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0);">
+                        <ui:VisualElement picking-mode="Ignore" style="flex-grow: 1; background-color: rgb(73, 52, 32);" />
+                    </ui:VisualElement>
+                    <ui:VisualElement picking-mode="Ignore" name="BoxBackground" class="box-background" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0);">
+                        <ui:VisualElement picking-mode="Ignore" style="flex-grow: 1; background-color: rgb(73, 52, 32);" />
+                    </ui:VisualElement>
+                    <ui:VisualElement picking-mode="Ignore" name="BoxBackground" class="box-background" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0);">
+                        <ui:VisualElement picking-mode="Ignore" style="flex-grow: 1; background-color: rgb(73, 52, 32);" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement picking-mode="Ignore" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 110px; justify-content: space-between; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; border-left-color: rgb(190, 81, 0); border-right-color: rgb(190, 81, 0); border-top-color: rgb(190, 81, 0); border-bottom-color: rgb(190, 81, 0); border-left-width: 3px; border-right-width: 3px; border-top-width: 3px; border-bottom-width: 3px;">
+                <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); min-width: auto; min-height: auto; align-items: center; justify-content: space-around; align-self: auto;">
+                    <ui:Button text="что то" display-tooltip-when-elided="true" style="height: 50px;" />
+                    <ui:Button text="/\" display-tooltip-when-elided="true" style="height: 25px;" />
+                    <ui:Button text="дом 1" display-tooltip-when-elided="true" style="height: 50px;" />
+                    <ui:Button text="Дом 2" display-tooltip-when-elided="true" style="height: 50px;" />
+                    <ui:Button text="Дом 3" display-tooltip-when-elided="true" style="height: 50px;" />
+                    <ui:Button text="\/" display-tooltip-when-elided="true" style="height: 25px;" />
+                    <ui:Button text="Apply" display-tooltip-when-elided="true" style="height: 50px;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

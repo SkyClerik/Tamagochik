@@ -8,64 +8,64 @@ public class StartLocationInfo
     private UIDocument _uiDocument;
     private VisualElement _rootVisualElement;
 
-    public StartLocationInfo(Shop shopNode, Action entryButton)
+    public StartLocationInfo(Shop shopNode, Action callback)
     {
         Debug.Log("Shop");
-        AwakeInit(entryButton);
+        AwakeInit(callback);
         Init(shopNode);
     }
 
-    public StartLocationInfo(House houseNode, Action entryButton)
+    public StartLocationInfo(House houseNode, Action callback)
     {
         Debug.Log("House");
-        AwakeInit(entryButton);
+        AwakeInit(callback);
         Init(houseNode);
     }
 
-    public StartLocationInfo(Town townNode, Action entryButton)
+    public StartLocationInfo(Town townNode, Action callback)
     {
         Debug.Log("Town");
-        AwakeInit(entryButton);
+        AwakeInit(callback);
         Init(townNode);
     }
 
-    public StartLocationInfo(District districtNode, Action entryButton)
+    public StartLocationInfo(District districtNode, Action callback)
     {
         Debug.Log("District");
-        AwakeInit(entryButton);
+        AwakeInit(callback);
         Init(districtNode);
     }
 
-    public StartLocationInfo(Region regionNode, Action entryButton)
+    public StartLocationInfo(Region regionNode, Action callback)
     {
         Debug.Log("Region");
-        AwakeInit(entryButton);
+        AwakeInit(callback);
         Init(regionNode);
     }
 
-    public StartLocationInfo(Area areaNode, Action entryButton)
+    public StartLocationInfo(Area areaNode, Action callback)
     {
         Debug.Log("Region");
-        AwakeInit(entryButton);
+        AwakeInit(callback);
         Init(areaNode);
     }
 
-    public StartLocationInfo(Dungeon dungeonNode, Action entryButton)
+    public StartLocationInfo(Dungeon dungeonNode, Action callback)
     {
         Debug.Log("Dungeon");
-        AwakeInit(entryButton);
+        AwakeInit(callback);
         Init(dungeonNode);
     }
 
-    private void AwakeInit(Action entryButton)
+    private void AwakeInit(Action callback)
     {
         WindowManagement windowManagement = WindowManagement.Instance;
-        _uiDocument = windowManagement.GetLocationInfo;
+        _uiDocument = windowManagement.GetLocationInfoDoc;
         _uiDocument.enabled = true;
         _rootVisualElement = _uiDocument.rootVisualElement;
 
         Button enterButton = _rootVisualElement.Q<Button>("EnterButton");
-        enterButton.clicked += entryButton;
+        enterButton.clicked += callback;
     }
 
     private void Init(Shop shopNode)
